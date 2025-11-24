@@ -9,7 +9,7 @@ from PySide6.QtGui import QIcon, QPalette, QColor
 import os
 import ctypes
 from setup import Setup
-from PySide6.QtCore import QRect, Qt
+from PySide6.QtCore import QRect, Qt, QEvent
 from ctypes import windll, c_int, byref, sizeof
 from ctypes.wintypes import BOOL
 import json
@@ -193,13 +193,13 @@ class MainWindow(QMainWindow):
         self.installEventFilter(self)
 
     def eventFilter(self, obj, event):
-        # Block Enter key for QPlainTextEdit
-        if isinstance(obj, QPlainTextEdit) and event.type() == event.Type.KeyPress:
-            if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
-                if not event.modifiers() & Qt.ShiftModifier:
-                    return True
+        # Clear focus when enter is pressed
+        if event.type() == QEvent.KeyPress and (event.key() == Qt.Key_Enter or event.key() == Qt.Key_Return):
+            focused_widget = QApplication.focusWidget()
+            focused_widget.clearFocus()
+
         
-        # Handle mouse press events for focus clearing
+        # Handle mouse press events for clearing focus
         if event.type() == event.Type.MouseButtonPress:
             focused_widget = QApplication.focusWidget()
             if focused_widget and isinstance(focused_widget, QPlainTextEdit):
