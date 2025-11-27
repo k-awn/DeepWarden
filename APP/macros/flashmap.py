@@ -17,7 +17,6 @@ class flashMapListener:
             if not self.pressed and not self.activated:
                 self.pressed = True
                 self.activated = True
-                print("Key 'm' pressed, activated")
         
         def on_release(event):
             if self.pressed and self.activated:

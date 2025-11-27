@@ -12,7 +12,6 @@ class MantraSlideTechListener:
         allKeys = str(keybinds).split(',')
         allKeys = ''.join(allKeys)
         def on_key(event):
-            print('pressed')
             if event.name in allKeys:
                 time.sleep(0.05)
                 keyboard.press_and_release('ctrl')  

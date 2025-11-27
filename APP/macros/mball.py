@@ -9,9 +9,7 @@ class MbAllListener:
 
     def stack(self, keybind):
         def on_key(event):
-            print('key detected, if it prints again its the right key')
             if event.name in keybind:
-                print('its the right key')
                 time.sleep(0.05)
                 keyboard.press_and_release('/')
                 time.sleep(0.05)
