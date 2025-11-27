@@ -11,8 +11,6 @@ class autoFeintListener:
         def is_mouse_swapped():
             return win32api.GetSystemMetrics(23) != 0
         def feintparry(*_): #ignores all arguments passed to it 
-                print('feinting')
-                print(is_mouse_swapped())
                 if is_mouse_swapped():
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
                         time.sleep(0.05)
@@ -21,12 +19,10 @@ class autoFeintListener:
                         win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN,0,0)
                         time.sleep(0.05)
                         win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP,0,0)
-                print('Done')
         keyboard.on_press_key('f', feintparry)
         
 
     def run(self):
-            print('checking')
             """Start the macro thread"""
             if not self.thread or not self.thread.is_alive():
                 print('starting!!')
@@ -52,7 +48,6 @@ class autoFeintListener:
             # Keep the main thread alive
             while controller.running:  # Changed from self.running to controller.running
                 keyboard.wait(1)
-                print('loopin around')
         except KeyboardInterrupt:
             controller.stop()
 

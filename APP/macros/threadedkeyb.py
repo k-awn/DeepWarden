@@ -44,7 +44,6 @@ class AirListener:
     def on_press(self, key):
         try:
             if key == keyboard.Key.space:
-                print("Spacebar pressed")
                 self.spacebar_pressed.set()
                 Thread(target=self.wait_for_click).start()
         except AttributeError:

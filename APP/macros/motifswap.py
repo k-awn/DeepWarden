@@ -12,7 +12,6 @@ class MotifSwapListener:
     def stack(self, keybind, motifnum, weaponnum):
         def on_key(event):
             if event.name in keybind:
-                print('running')
                 keyboard.press_and_release(str(motifnum))
                 time.sleep(0.1)
                 pyautogui.click()
