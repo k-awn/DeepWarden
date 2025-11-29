@@ -1,13 +1,14 @@
 import os
 import json
+from PySide6.QtCore import QStandardPaths
 #! add file.close to all of te other thingies
 def Setup():
-    abspath = os.path.dirname(os.path.abspath(__file__))
-    dataPath = os.path.join(abspath, 'data')
-    presetNamesPath = os.path.join(abspath, 'data/PresetNames.json')
-    presetRenameContentPath = os.path.join(abspath, 'data/presetRenamecontent.txt')
-    presetRenameNumPath = os.path.join(abspath, 'data/presetRenameNum.txt')
-    SettingsPath = os.path.join(abspath, 'data/Settings.json')
+    dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
+    dataPath = os.path.join(dataLocation, 'Swinestyle', 'data')
+    presetNamesPath = os.path.join(dataPath, 'PresetNames.json')
+    presetRenameContentPath = os.path.join(dataPath, 'presetRenamecontent.txt')
+    presetRenameNumPath = os.path.join(dataPath, 'presetRenameNum.txt')
+    SettingsPath = os.path.join(dataPath, 'Settings.json')
     if not os.path.isdir(dataPath):
         os.mkdir(dataPath)
     if not os.path.isfile(SettingsPath):

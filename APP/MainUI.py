@@ -9,7 +9,7 @@ from time import sleep
 from pyqttoast import Toast, ToastPreset
 #pyside6 imports
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
-    QSize, Qt)
+    QSize, Qt, QStandardPaths)
 from PySide6.QtGui import (QFont, QIcon, QColor)
 from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QLabel, QLineEdit, QPlainTextEdit,
@@ -2237,8 +2237,8 @@ class Ui_MainWindow(object):
         ]
         for toggle in self.toggles:
                 toggle.toggled.connect(lambda: self.RunToggle.setChecked(False))
-        abspath = os.path.dirname(os.path.abspath(__file__))
-        settingsPath = os.path.join(abspath, 'data/Settings.json') 
+        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+        settingsPath = os.path.join(dataLocation, 'data/Settings.json') 
         with open(settingsPath) as f:
                 currentInfo = json.load(f)
                 if currentInfo['notifs']:
@@ -2261,8 +2261,8 @@ class Ui_MainWindow(object):
 
         def toggleNotifs():
                 if self.toggleNotifsToggle._is_checked == 2: 
-                        abspath = os.path.dirname(os.path.abspath(__file__))
-                        settingsPath = os.path.join(abspath, 'data/Settings.json')
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        settingsPath = os.path.join(dataLocation, 'data/Settings.json')
                         with open(settingsPath) as f:
                                 currentSettings = json.load(f)
                         f.close()
@@ -2270,8 +2270,8 @@ class Ui_MainWindow(object):
                         with open(settingsPath, 'w') as f:
                                json.dump(currentSettings, f)
                 if self.toggleNotifsToggle._is_checked == 0:
-                        abspath = os.path.dirname(os.path.abspath(__file__))
-                        settingsPath = os.path.join(abspath, 'data/Settings.json')
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        settingsPath = os.path.join(dataLocation, 'data/Settings.json')
                         with open(settingsPath) as f:
                                 currentSettings = json.load(f)
                         f.close()
@@ -2468,8 +2468,8 @@ class Ui_MainWindow(object):
                 toast.show()
         self.RunToggle.toggled.connect(runToggle)
         def notifs():
-                abspath = os.path.dirname(os.path.abspath(__file__))
-                settingsPath = os.path.join(abspath, 'data/Settings.json')
+                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                settingsPath = os.path.join(dataLocation, 'data/Settings.json')
                 with open(settingsPath) as f:
                         currentSettings = json.load(f)
                 if currentSettings['notifs']:
@@ -2600,8 +2600,8 @@ class Ui_MainWindow(object):
                         currentData['GoldenTongueTextArea'] = self.plainTextEdit_6.toPlainText()
                 elif self.GoldenTongueToggle._is_checked == 0:
                        currentData['GoldenTongueToggle'] = False
-                abspath = os.path.dirname(os.path.abspath(__file__))
-                filename = os.path.join(abspath, f'data/Preset{number}Data.json')
+                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                filename = os.path.join(dataLocation, f'data/Preset{number}Data.json')
                 if self.GankPingerToggle._is_checked == 2:
                        currentData['GankPingerToggle'] = True
                        currentData['GankPingerHotkey'] = self.plainTextEdit_15.toPlainText()
@@ -2651,8 +2651,8 @@ class Ui_MainWindow(object):
 
         def loadData(number):
                 #!opening fiel
-                abspath = os.path.dirname(os.path.abspath(__file__))
-                filepath = os.path.join(abspath, f'data/Preset{number}Data.json')
+                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                filepath = os.path.join(dataLocation, f'data/Preset{number}Data.json')
                 with open(filepath) as f:
                         savedData = json.load(f)
                 #!bells
@@ -2806,8 +2806,8 @@ class Ui_MainWindow(object):
         self.Preset10Save.clicked.connect(lambda:saveCurrentData(10))
         self.Preset10Load.clicked.connect(lambda:loadData(10))        
         def CheckNames():
-                abspath = os.path.dirname(os.path.abspath(__file__))
-                filename = os.path.join(abspath, 'data/PresetNames.json')
+                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                filename = os.path.join(dataLocation, 'data/PresetNames.json')
                 with open(filename) as f:
                         presetNames = json.load(f)
                 self.Preset1Name.setText(presetNames['Preset1Name'])
@@ -2833,8 +2833,8 @@ class Ui_MainWindow(object):
                 def on_focus_lost(event):
                         preset_widget.setEnabled(False)
                         preset_widget.setReadOnly(True)
-                        abspath = os.path.dirname(os.path.abspath(__file__))
-                        filename = os.path.join(abspath, 'data/PresetNames.json')
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        filename = os.path.join(dataLocation, 'data/PresetNames.json')
                         with open(filename) as f:
                                 prevData = json.load(f)
                                 varname = f'Preset{number}Name'

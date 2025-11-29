@@ -4,6 +4,7 @@ import requests
 import mss
 import json
 import os
+from PySide6.QtCore import QStandardPaths
 
 class GankPingListener:  
     def __init__(self):
@@ -37,8 +38,8 @@ class GankPingListener:
                 
                 # Handle screenshot
                 if takeimage:
-                    abspath = os.path.dirname(os.path.abspath(__file__))
-                    sspath = os.path.join(abspath, 'screenshot.png')
+                    dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
+                    sspath = os.path.join(dataLocation, 'screenshot.png')
                     
                     try:
                         mss.mss().shot(output=sspath)

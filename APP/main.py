@@ -9,7 +9,7 @@ from PySide6.QtGui import QIcon, QPalette, QColor
 import os
 import ctypes
 from setup import Setup
-from PySide6.QtCore import QRect, Qt, QEvent
+from PySide6.QtCore import QRect, Qt, QEvent, QStandardPaths
 from ctypes import windll, c_int, byref, sizeof
 from ctypes.wintypes import BOOL
 import json
@@ -131,9 +131,9 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('SwineStyle')
         
         # Set the window icon
-        self.abspath = os.path.dirname(os.path.abspath(__file__))
-        self.settings_path = os.path.join(self.abspath, 'data/Settings.json')
-        icon_path = os.path.join(self.abspath, 'logo.ico')
+        self.dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
+        self.settings_path = os.path.join(self.dataLocation, 'data/Settings.json')
+        icon_path = os.path.join(self.dataLocation, 'logo.ico')
         self.setWindowIcon(QIcon(icon_path))
 
         # Windows taskbar icon
@@ -223,13 +223,13 @@ class MainWindow(QMainWindow):
         return super().closeEvent(event)
 
 def main():
-    abspath = os.path.dirname(os.path.abspath(__file__))
-    icopath = os.path.join(abspath, 'logo.ico')
+    dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
+    icopath = os.path.join(dataLocation, 'logo.ico')
 
     app = QApplication(sys.argv)
     app.setApplicationName('SwineStyle')
     app.setWindowIcon(QIcon(icopath))
-    settings_path = os.path.join(abspath, 'data/Settings.json')
+    settings_path = os.path.join(dataLocation, 'data/Settings.json')
     
     try:
         with open(settings_path) as f:
