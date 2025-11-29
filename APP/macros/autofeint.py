@@ -6,6 +6,7 @@ class autoFeintListener:
     def __init__(self):
         self.running = False
         self.thread = None
+        self.hotkey = None
 
     def stack(self):
         def is_mouse_swapped():
@@ -19,7 +20,7 @@ class autoFeintListener:
                         win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN,0,0)
                         time.sleep(0.05)
                         win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP,0,0)
-        keyboard.on_press_key('f', feintparry)
+        self.hotkey = keyboard.on_press_key('f', feintparry)
         
 
     def run(self):
@@ -35,6 +36,7 @@ class autoFeintListener:
     def stop(self):
         """Stop the macro thread"""
         self.running = False
+        keyboard.unhook(self.hotkey) 
         if self.thread and self.thread.is_alive():
             self.thread.join(timeout=1.0)  # Wait up to 1 second for the thread to stop
             if self.thread.is_alive():
