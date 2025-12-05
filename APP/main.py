@@ -224,7 +224,9 @@ class MainWindow(QMainWindow):
 
 def main():
     dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
-    icopath = os.path.join(dataLocation, 'logo.ico')
+    abspath = os.path.abspath(__file__)
+
+    icopath = os.path.join(abspath, 'logo.ico')
 
     app = QApplication(sys.argv)
     app.setApplicationName('SwineStyle')

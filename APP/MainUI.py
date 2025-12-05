@@ -1942,7 +1942,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2282,147 +2282,50 @@ class Ui_MainWindow(object):
                                                       
 
 
-                             
+
+               
+
+
                              
         def runToggle():
+                def addMacro(name:str, toggle, listener_class, **run_kwargs):
+                        if toggle._is_checked != 2:
+                               return
+                        listener_instance = listener_class()
+                        setattr(self, name, listener_instance)
+                        self.threads.append(listener_instance)
+                        thread = Thread(
+                                        target=lambda: listener_instance.run(**run_kwargs),
+                                        name=f"{name} Thread"
+                                
+                        )
+                        thread.daemon = True
+                        thread.start()
                 if self.RunToggle._is_checked == 2:  # is checked
                         self.threads = []       
-                        if self.AirDashToggle._is_checked == 2:
-                                self.AerialListener = threadedkeyb.AirListener()  # Store as instance variable
-                                AerialListener_thread = Thread(target=self.AerialListener.run, name="KeyMouseListenerThread")
-                                AerialListener_thread.daemon = True
-                                self.threads.append(self.AerialListener)
-                                AerialListener_thread.start()
-                        if self.HoldM1Toggle._is_checked == 2:
-                                self.HoldM1Listener = holdm1.M1Listener()  # Store as instance variable
-                                HoldM1Listener_thread = Thread(target=self.HoldM1Listener.run, name="KeyMouseListenerThread")
-                                HoldM1Listener_thread.daemon = True
-                                self.threads.append(self.HoldM1Listener)
-                                HoldM1Listener_thread.start()
+                        addMacro('Air Dash M1 Movestack', self.AirDashToggle, threadedkeyb.AirListener)
+                        addMacro('Faster Hold M1', self.HoldM1Toggle, holdm1.M1Listener)
                         if self.BellMovestackToggle._is_checked == 2:
                                 if self.MovestackChoice.currentIndex() == 1:     
-                                        self.BellStackParryListener = bellStackParry.BellStackParryListener()  # Store as instance variable
-                                        BellStackParry_thread = Thread(target=self.BellStackParryListener.run, name="KeyMouseListenerThread")
-                                        BellStackParry_thread.daemon = True
-                                        self.threads.append(self.BellStackParryListener)
-                                        BellStackParry_thread.start()
+                                        addMacro('Bell Stack Parry', self.BellMovestackToggle, bellStackParry.BellStackParryListener) # Either a logic error or i need to fix some jank on this one
                                 elif self.MovestackChoice.currentIndex() == 0:
-                                        self.BellStackDodgeListener = bellStackDodge.BellStackDodgeListener()
-                                        BellStackDodge_thread = Thread(target=self.BellStackDodgeListener.run, name="KeyMouseListenerThread")
-                                        BellStackDodge_thread.daemon = True
-                                        self.threads.append(self.BellStackDodgeListener)
-                                        BellStackDodge_thread.start()
-                        if self.mantraTechRollToggle._is_checked == 2:
-                                self.mantraTechRollListener = mantraTechRoll.MantraRollTechListener()  # Store as instance variable
-                                KeystoRoll = self.plainTextEdit_3.toPlainText()
-                                mantraTechRoll_thread = Thread(target= lambda: self.mantraTechRollListener.run(keybinds=KeystoRoll), name="KeyMouseListenerThread")
-                                mantraTechRoll_thread.daemon = True
-                                self.threads.append(self.mantraTechRollListener)
-                                
-                                mantraTechRoll_thread.start()
-                        if self.mantraTechSlidetoggle._is_checked == 2: 
-                                self.mantraTechSlideListener = mantraTechSlide.MantraSlideTechListener()  # Store as instance variable
-                                KeystoSlide = self.plainTextEdit_2.toPlainText()
-                                mantraTechSlide_thread = Thread(target=lambda: self.mantraTechSlideListener.run(keybinds=KeystoSlide), name="KeyMouseListenerThread")
-                                mantraTechSlide_thread.daemon = True
-                                self.threads.append(self.mantraTechSlideListener)
-                                mantraTechSlide_thread.start()
-                        if self.MbAllToggle._is_checked == 2:
-                                self.mbAllListener = mball.MbAllListener()  # Store as instance variable
-                                KeytoMball = self.MbAllHotkeyArea.toPlainText()
-                                Mball_thread = Thread(target= lambda: self.mbAllListener.run(keybind=KeytoMball), name="KeyMouseListenerThread")
-                                Mball_thread.daemon = True
-                                self.threads.append(self.mbAllListener)
-                                Mball_thread.start()
-                        if self.GoldenTongueToggle._is_checked == 2:
-                                self.GoldentongueListener = goldentongue.GoldenTongueListener()  # Store as instance variable
-                                KeytoGoldenTongue = self.GoldenTongueHotkeyArea.toPlainText()
-                                ContentofGoldenTongue = self.plainTextEdit_6.toPlainText()
-                                GoldenTongue_thread = Thread(target= lambda: self.GoldentongueListener.run(keybind=KeytoGoldenTongue, content=ContentofGoldenTongue), name="KeyMouseListenerThread")
-                                GoldenTongue_thread.daemon = True
-                                self.threads.append(self.GoldentongueListener)
-                                GoldenTongue_thread.start()
-                        if self.mantraVariantToggle._is_checked == 2:
-                                self.MantraVariantListener = autovariants.MantraVariantListener()
-                                keybinds = self.AutoMantraVariantsKeysArea.toPlainText()
-                                MantraVariant_thread = Thread(target=lambda: self.MantraVariantListener.run(keybinds=keybinds), name="KeyMouseListenerThread")
-                                MantraVariant_thread.daemon = True
-                                self.threads.append(self.MantraVariantListener)
-                                MantraVariant_thread.start()
-                        if self.MotifSwapToggle._is_checked == 2:
-                                print('doing')
-                                self.MotifSwapListener = motifswap.MotifSwapListener()
-                                keybind = self.MotifHotkeyArea.toPlainText()
-                                weaponnum = self.plainTextEdit_7.toPlainText()
-                                motifnum = self.MotifToolbarNumberArea.toPlainText()
-                                MotifSwap_thread = Thread(target=lambda: self.MotifSwapListener.run(keybind=keybind, motifnum=motifnum, weaponnum=weaponnum), name="KeyMouseListenerThread")
-                                MotifSwap_thread.daemon = True
-                                self.threads.append(self.MotifSwapListener)
-                                MotifSwap_thread.start()         
-                        if self.RitualCastToggle._is_checked == 2:
-                                self.RitualCastListener = autoritualcast.RitualCastListener()
-                                keybinds = self.plainTextEdit_10.toPlainText()
-                                notes = self.plainTextEdit_11.toPlainText()
-                                RitualCastListener_thread = Thread(target=lambda: self.RitualCastListener.run(keybinds=keybinds, notes=notes), name="KeyMouseListenerThread")
-                                RitualCastListener_thread.daemon = True
-                                self.threads.append(self.RitualCastListener)
-                                RitualCastListener_thread.start()
-                        if self.CharismaAutofillToggle._is_checked == 2: 
-                                self.CharismaAutofillListener = autocharisma.autoCharismaListener()  # Store as instance variable
-                                CharismaAutofill_thread = Thread(target=self.CharismaAutofillListener.run, name="KeyMouseListenerThread")
-                                CharismaAutofill_thread.daemon = True
-                                self.threads.append(self.CharismaAutofillListener)
-                                CharismaAutofill_thread.start()
-                        if self.AutoFortitudeToggle._is_checked == 2:
-                                self.AutoFortitudeListener = autofortitude.AutoFortitudeListener()  # Store as instance variable
-                                startBoulderHotkey = self.BoulderTrainingHotkey.toPlainText()
-                                AutoFortitude_thread = Thread(target=lambda:self.AutoFortitudeListener.run(keybind=startBoulderHotkey), name="KeyMouseListenerThread")
-                                AutoFortitude_thread.daemon = True
-                                self.threads.append(self.AutoFortitudeListener)
-                                AutoFortitude_thread.start()
-                        if self.AutoAgilityToggle._is_checked == 2:
-                                self.AutoAgilityListener = autoagility.AutoAgilityListener()  # Store as instance variable
-                                startAgilityHotkey = self.AnkleWeightsTrainingHotkey.toPlainText()
-                                AutoAgility_thread = Thread(target=lambda:self.AutoAgilityListener.run(keybind=startAgilityHotkey), name="KeyMouseListenerThread")
-                                AutoAgility_thread.daemon = True
-                                self.threads.append(self.AutoAgilityListener)
-                                AutoAgility_thread.start()
-                        if self.GankPingerToggle._is_checked == 2:
-                                self.GankPingListener = gankpinger.GankPingListener()  # Store as instance variable
-                                sendMsgHotkey = self.plainTextEdit_15.toPlainText()
-                                webhook_url = self.plainTextEdit.toPlainText()
-                                message = self.plainTextEdit_12.toPlainText()
-                                username = self.plainTextEdit_13.toPlainText()
-                                avatar_url = self.plainTextEdit_14.toPlainText()
-                                takeimage = (self.ScreenshotToggle._is_checked == 2)
-                                GankPing_thread = Thread(target=lambda:self.GankPingListener.run(hotkey=sendMsgHotkey,  webhook_url=webhook_url, message=message, username=username, avatar_url=avatar_url, takeimage=takeimage), name="KeyMouseListenerThread")
-                                GankPing_thread.daemon = True
-                                self.threads.append(self.GankPingListener)
-                                GankPing_thread.start()   
-                        if self.uppercutToggle._is_checked == 2:
-                                self.uppercutListener = autoUppercutAlways.UppercutListener()  # Store as instance variable
-                                uppercutListener_thread = Thread(target=self.uppercutListener.run, name="KeyMouseListenerThread")
-                                uppercutListener_thread.daemon = True
-                                self.threads.append(self.uppercutListener)
-                                uppercutListener_thread.start()
-                        if self.uppercutDynamicToggle._is_checked == 2:
-                                self.DynamicUppercutListener = autoUppercutDYNAMIC.DynamicUppercutListener()
-                                dynamicUppercutListener_thread = Thread(target=self.DynamicUppercutListener.run, name="KeyMouseListenerThread")
-                                dynamicUppercutListener_thread.daemon = True
-                                self.threads.append(self.DynamicUppercutListener)
-                                dynamicUppercutListener_thread.start()
-                        if self.autoFeintToggle._is_checked == 2:
-                                self.autoFeintListener = autofeint.autoFeintListener()  # Store as instance variable
-                                autoFeintListener_thread = Thread(target=self.autoFeintListener.run, name="KeyMouseListenerThread")
-                                autoFeintListener_thread.daemon = True
-                                self.threads.append(self.autoFeintListener)
-                                autoFeintListener_thread.start()
-                        if self.FlashMapToggle._is_checked == 2:
-                                self.flashMapListener = flashmap.flashMapListener()  # Store as instance variable
-                                flashMapListener_thread = Thread(target=self.flashMapListener.run, name="KeyMouseListenerThread")
-                                flashMapListener_thread.daemon = True
-                                self.threads.append(self.flashMapListener)
-                                flashMapListener_thread.start()                                
+                                        addMacro('Bell Stack Dodge', self.BellMovestackToggle, bellStackDodge.BellStackDodgeListener)
+                        addMacro('Mantra Roll Tech', self.mantraTechRollToggle, mantraTechRoll.MantraRollTechListener, keybinds=self.plainTextEdit_3.toPlainText())
+                        addMacro('Mantra Slide Tech', self.mantraTechSlidetoggle, mantraTechSlide.MantraSlideTechListener, keybinds=self.plainTextEdit_2.toPlainText())
+                        addMacro('Mb All', self.MbAllToggle, mball.MbAllListener, keybind=self.MbAllHotkeyArea.toPlainText())
+                        addMacro('Golden Tongue', self.GoldenTongueToggle, goldentongue.GoldenTongueListener, keybind=self.GoldenTongueHotkeyArea.toPlainText(), content=self.plainTextEdit_6.toPlainText())
+                        addMacro('Mantra Variants', self.mantraVariantToggle, autovariants.MantraVariantListener, keybinds=self.AutoMantraVariantsKeysArea.toPlainText())
+                        #To test:
+                        addMacro('Motif Swap', self.MotifSwapToggle, motifswap.MotifSwapListener, keybind=self.MotifHotkeyArea.toPlainText(), motifnum=self.MotifToolbarNumberArea.toPlainText(), weaponnum=self.plainTextEdit_7.toPlainText())
+                        addMacro('Ritual Cast', self.RitualCastToggle, autoritualcast.RitualCastListener, keybinds=self.plainTextEdit_10.toPlainText(), notes=self.plainTextEdit_11.toPlainText())
+                        addMacro('Charisma Autofill', self.CharismaAutofillToggle, autocharisma.autoCharismaListener)
+                        addMacro('Auto Fortitude', self.AutoFortitudeToggle, autofortitude.AutoFortitudeListener, keybind=self.BoulderTrainingHotkey.toPlainText())
+                        addMacro('Auto Agility', self.AutoAgilityToggle, autoagility.AutoAgilityListener, keybind=self.AnkleWeightsTrainingHotkey.toPlainText())
+                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), takeimage=(self.ScreenshotToggle._is_checked == 2))
+                        addMacro('Auto Uppercut', self.uppercutToggle, autoUppercutAlways.UppercutListener)
+                        addMacro('Dynamic Auto Uppercut', self.uppercutDynamicToggle, autoUppercutDYNAMIC.DynamicUppercutListener)
+                        addMacro('Auto Feint', self.autoFeintToggle, autofeint.autoFeintListener)
+                        addMacro('Flash Map', self.FlashMapToggle, flashmap.flashMapListener)                            
         
                 else:
                         print('start')
