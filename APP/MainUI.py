@@ -2297,7 +2297,6 @@ class Ui_MainWindow(object):
                         thread = Thread(
                                         target=lambda: listener_instance.run(**run_kwargs),
                                         name=f"{name} Thread"
-                                
                         )
                         thread.daemon = True
                         thread.start()
@@ -2321,7 +2320,7 @@ class Ui_MainWindow(object):
                         addMacro('Charisma Autofill', self.CharismaAutofillToggle, autocharisma.autoCharismaListener)
                         addMacro('Auto Fortitude', self.AutoFortitudeToggle, autofortitude.AutoFortitudeListener, keybind=self.BoulderTrainingHotkey.toPlainText())
                         addMacro('Auto Agility', self.AutoAgilityToggle, autoagility.AutoAgilityListener, keybind=self.AnkleWeightsTrainingHotkey.toPlainText())
-                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), takeimage=(self.ScreenshotToggle._is_checked == 2))
+                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), ScreenshotToggle=(self.ScreenshotToggle._is_checked == 2))
                         addMacro('Auto Uppercut', self.uppercutToggle, autoUppercutAlways.UppercutListener)
                         addMacro('Dynamic Auto Uppercut', self.uppercutDynamicToggle, autoUppercutDYNAMIC.DynamicUppercutListener)
                         addMacro('Auto Feint', self.autoFeintToggle, autofeint.autoFeintListener)
@@ -2427,11 +2426,11 @@ class Ui_MainWindow(object):
 
                 #!mantras
                 if self.RitualCastToggle._is_checked == 2:
-                        currentData['ritualCastToggle'] = True
+                        currentData['RitualCastToggle'] = True
                         currentData['ritualCastMantraKeys'] = self.plainTextEdit_10.toPlainText()
                         currentData['ritualCastMantraNotes'] = self.plainTextEdit_11.toPlainText()
                 elif self.RitualCastToggle._is_checked == 0:
-                        currentData['ritualCastToggle'] = False
+                        currentData['RitualCastToggle'] = False
 
 
                 if self.mantraVariantToggle._is_checked == 2:
@@ -2512,7 +2511,7 @@ class Ui_MainWindow(object):
                        currentData['message'] = self.plainTextEdit_12.toPlainText()
                        currentData['username'] = self.plainTextEdit_13.toPlainText()
                        currentData['avatar_url'] = self.plainTextEdit_14.toPlainText()
-                       currentData['takeimage'] = (self.ScreenshotToggle._is_checked == 2)
+                       currentData['ScreenshotToggle'] = (self.ScreenshotToggle._is_checked == 2)
                 elif self.GankPingerToggle._is_checked == 0:
                        currentData['GankPingerToggle'] = False
 
@@ -2558,124 +2557,63 @@ class Ui_MainWindow(object):
                 filepath = os.path.join(dataLocation, f'data/Preset{number}Data.json')
                 with open(filepath) as f:
                         savedData = json.load(f)
+                def loadMacro(savedData, name, elementName=None, elementData = None): # generic loader for most toggles
+                        toggle = getattr(self, name)
+                        if savedData[name]:
+                                toggle.setChecked(True)
+                                if elementName and elementData:
+                                        for i in range(len(elementName)):
+                                                try:
+                                                        nameOfElement = elementName[i]
+                                                        dataOfElement = elementData[i] # location of element data in json
+                                                except:
+                                                        print('macro fields not filled out properly')
+                                                element = getattr(self, nameOfElement)
+                                                element.setPlainText(str(savedData[dataOfElement]))
+                                return True
+                        elif not savedData[name]:
+                                toggle.setChecked(False)
+                                return False
+                        #load toggle data if applicable
+
                 #!bells
-                if savedData['BellMovestackToggle']:
+
+                if savedData['BellMovestackToggle']: # can't pass element data here bc of combobox
                         self.BellMovestackToggle.setChecked(True)
                         self.MovestackChoice.setCurrentIndex(int(savedData['MovestackChoice']))
                 elif not savedData['BellMovestackToggle']:
                        self.BellMovestackToggle.setChecked(False)
-                if savedData['ritualCastToggle']:
-                        self.RitualCastToggle.setChecked(True)
-                        self.plainTextEdit_10.setPlainText(str(savedData['ritualCastMantraKeys']))
-                        self.plainTextEdit_11.setPlainText(str(savedData['ritualCastMantraNotes']))
-                elif not savedData['ritualCastToggle']:
-                        self.RitualCastToggle.setChecked(False)
-                if savedData['mantraVariantToggle']:
-                        self.mantraVariantToggle.setChecked(True)
-                        self.AutoMantraVariantsKeysArea.setPlainText(str(savedData['AutoMantraVariantsKeysArea']))
-                elif not savedData['mantraVariantToggle']:
-                       self.mantraVariantToggle.setChecked(False)
 
-
-                if savedData['mantraTechRollToggle']:
-                        self.mantraTechRollToggle.setChecked(True)
-                        self.plainTextEdit_3.setPlainText(str(savedData['mantraTechRollToggleKeysArea']))
-                elif not savedData['mantraTechRollToggle']:
-                       self.mantraTechRollToggle.setChecked(False)
-
-                if savedData['mantraTechSlidetoggle']:
-                       self.mantraTechSlidetoggle.setChecked(True)
-                       self.plainTextEdit_2.setPlainText(str(savedData['mantraTechSlidetoggleKeysArea']))
-                elif not savedData['mantraTechSlidetoggle']:
-                       self.mantraTechSlidetoggle.setChecked(False)
+                loadMacro(savedData, 'RitualCastToggle', ['plainTextEdit_10', 'plainTextEdit_11'], ['ritualCastMantraKeys', 'ritualCastMantraNotes'])
+                loadMacro(savedData, 'mantraVariantToggle', ['AutoMantraVariantsKeysArea'], ['AutoMantraVariantsKeysArea'])
+                loadMacro(savedData, 'mantraTechRollToggle', ['plainTextEdit_3'], ['mantraTechRollToggleKeysArea'])
+                loadMacro(savedData, 'mantraTechSlidetoggle', ['plainTextEdit_2'], ['mantraTechSlidetoggleKeysArea'])
 
                 #!weapons
 
-                if savedData['AirDashToggle']:
-                        self.AirDashToggle.setChecked(True)
-                elif not savedData['AirDashToggle']:
-                       self.AirDashToggle.setChecked(False)
+                loadMacro(savedData, 'HoldM1Toggle')
+                loadMacro(savedData, 'AirDashToggle')
+                loadMacro(savedData, 'uppercutDynamicToggle')
+                loadMacro(savedData, 'uppercutToggle')
+                loadMacro(savedData, 'autoFeintToggle')
+                loadMacro(savedData, 'MotifSwapToggle', ['MotifHotkeyArea', 'MotifToolbarNumberArea', 'plainTextEdit_7'], ['MotifHotkeyArea', 'MotifToolbarNumberArea', 'MotifWeaponNumberArea'])
 
-                if savedData['HoldM1Toggle']:
-                        self.HoldM1Toggle.setChecked(True)
-                elif not savedData['HoldM1Toggle']:
-                       self.HoldM1Toggle.setChecked(False)
-
-                if savedData['MotifSwapToggle']:
-                        self.MotifSwapToggle.setChecked(True)
-                        self.MotifHotkeyArea.setPlainText(str(savedData['MotifHotkeyArea']))
-                        self.MotifToolbarNumberArea.setPlainText(str(savedData['MotifToolbarNumberArea']))
-                        self.plainTextEdit_7.setPlainText(str(savedData['MotifWeaponNumberArea']))
-                elif not savedData['MotifSwapToggle']:
-                       self.MotifSwapToggle.setChecked(False)
-                if savedData['uppercutToggle']:
-                       self.uppercutToggle.setChecked(True)
-                elif not savedData['uppercutToggle']:
-                       self.uppercutToggle.setChecked(False)
-                if savedData['uppercutDynamicToggle']:
-                       self.uppercutDynamicToggle.setChecked(True)
-                elif not savedData['uppercutDynamicToggle']:
-                       self.uppercutDynamicToggle.setChecked(False)
-
-                if savedData['autoFeintToggle']:
-                       self.autoFeintToggle.setChecked(True)
-                elif not savedData['autoFeintToggle']:
-                       self.autoFeintToggle.setChecked(False)
                 #!misc
+                loadMacro(savedData, 'MbAllToggle')
+                loadMacro(savedData, 'GoldenTongueToggle', ['GoldenTongueHotkeyArea', 'plainTextEdit_6'], ['GoldenTongueHotkeyArea', 'GoldenTongueTextArea'])
+
+                if loadMacro(savedData, 'GankPingerToggle', ['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14'], ['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url']):
+                        loadMacro(savedData, 'ScreenshotToggle')
                 
-                if savedData['MbAllToggle']:
-                        self.MbAllToggle.setChecked(True)
-                        self.MbAllHotkeyArea.setPlainText(str(savedData['MbAllHotkeyArea']))
-                elif not savedData['MbAllToggle']:
-                       self.MbAllToggle.setChecked(False)
-
-                if savedData['GoldenTongueToggle']:
-                        self.GoldenTongueToggle.setChecked(True)
-                        self.plainTextEdit_6.setPlainText(savedData['GoldenTongueTextArea'])
-                        self.GoldenTongueHotkeyArea.setPlainText(savedData['GoldenTongueHotkeyArea'])
-                elif not savedData['GoldenTongueToggle']:
-                       self.GoldenTongueToggle.setChecked(False)
-
-                if savedData['GankPingerToggle']:
-                       self.GankPingerToggle.setChecked(True)
-                       self.plainTextEdit_15.setPlainText(str(savedData['GankPingerHotkey']))
-                       self.plainTextEdit.setPlainText(str(savedData['webhook_url']))
-                       self.plainTextEdit_12.setPlainText(str(savedData['message']))
-                       self.plainTextEdit_13.setPlainText(str(savedData['username']))
-                       self.plainTextEdit_14.setPlainText(str(savedData['avatar_url']))
-                       if savedData['takeimage']:
-                              self.ScreenshotToggle.setChecked(True)
-                       elif not savedData['takeimage']:
-                              self.ScreenshotToggle.setChecked(False)
-                elif not savedData['GankPingerToggle']:
-                       self.GankPingerToggle.setChecked(False)
                        
                 #!progression
 
-                if savedData['CharismaAutofillToggle']:
-                       self.CharismaAutofillToggle.setChecked(True)
-                elif not savedData['CharismaAutofillToggle']:
-                       self.CharismaAutofillToggle.setChecked(False)
-
-                if savedData['AutoFortitudeToggle']:
-                       self.AutoFortitudeToggle.setChecked(True)
-                       self.BoulderTrainingHotkey.setPlainText(str(savedData['BoulderTrainingHotkey']))
-                elif not savedData['AutoFortitudeToggle']:
-                        self.AutoFortitudeToggle.setChecked(False)
-
-                if savedData['AutoAgilityToggle']:
-                       self.AutoAgilityToggle.setChecked(True)
-                       self.AnkleWeightsTrainingHotkey.setPlainText(str(savedData['AnkleWeightsTrainingHotkey']))
-                elif not savedData['AutoAgilityToggle']:
-                        self.AutoAgilityToggle.setChecked(False)
+                loadMacro(savedData, 'CharismaAutofillToggle')
+                loadMacro(savedData, 'AutoFortitudeToggle', ['BoulderTrainingHotkey'],['BoulderTrainingHotkey'])
+                loadMacro(savedData, 'AutoAgilityToggle', ['AnkleWeightsTrainingHotkey'], ['AnkleWeightsTrainingHotkey'])
                 
                 #!running
-
-                if savedData['RunKeybindToggle']:
-                       self.RunKeybindToggle.setChecked(True)
-                       self.plainTextEdit_17.setPlainText(str(savedData['RunKeybindToggleKeybind']))
-                elif not savedData['RunKeybindToggle']:
-                       self.RunKeybindToggle.setChecked(False)
+                loadMacro(savedData, 'RunKeybindToggle', ['plainTextEdit_17'], ['RunKeybindToggleKeybind'])
                 
 
                 
