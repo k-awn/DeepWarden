@@ -2338,20 +2338,20 @@ class Ui_MainWindow(object):
                                 print(f'Error stopping {thread}: {e}')
 
         def show_toast(title='', text=''):
-                # Create and configure the toast
+                # configurations
                 toast = Toast(self.centralwidget)
                 toast.setStayOnTop(True)
-                toast.setDuration(3000)  # 5 seconds
+                toast.setDuration(3000)  # 3 seconds
                 toast.setTitle(title)
                 toast.setText(text)
                 
-                # Apply a preset as a base (optional)
+                # style preset
                 toast.applyPreset(ToastPreset.SUCCESS)
 
-                # Set dark mode styles with QColor
+                # background color
                 toast.setBackgroundColor(QColor("#333333"))  # Use QColor instead of string
                 
-                # Use stylesheet for border and text color
+                # stylesheet
                 toast.setStyleSheet("""
                 QWidget {
                         background-color: #333333;  /* Dark gray background */
@@ -2416,7 +2416,21 @@ class Ui_MainWindow(object):
         #! saving mechanism (fuck this)
 
         def saveCurrentData(number):
+
                 currentData = {}
+                def saveMacro(currentData, toggleName, params=None, elements=None):
+                        element = getattr(self, toggleName)
+                        if element._is_checked == 2:
+                                currentData[toggleName] = True
+                                if params and elements:
+                                       for i in range(len(params)):
+                                              parameterName = params[i]
+                                              elementName = getattr(self, elements[i])
+                                              currentData[parameterName] = elementName.toPlainText()
+                        else:
+                                currentData[toggleName] = False
+                        
+                       
                 #!bells
                 if self.BellMovestackToggle._is_checked == 2:
                         currentData['BellMovestackToggle'] = True
@@ -2425,126 +2439,44 @@ class Ui_MainWindow(object):
                        currentData['BellMovestackToggle'] = False
 
                 #!mantras
-                if self.RitualCastToggle._is_checked == 2:
-                        currentData['RitualCastToggle'] = True
-                        currentData['ritualCastMantraKeys'] = self.plainTextEdit_10.toPlainText()
-                        currentData['ritualCastMantraNotes'] = self.plainTextEdit_11.toPlainText()
-                elif self.RitualCastToggle._is_checked == 0:
-                        currentData['RitualCastToggle'] = False
 
-
-                if self.mantraVariantToggle._is_checked == 2:
-                        currentData['mantraVariantToggle'] = True
-                        currentData['AutoMantraVariantsKeysArea'] = self.AutoMantraVariantsKeysArea.toPlainText()
-                elif self.mantraVariantToggle._is_checked == 0:
-                       currentData['mantraVariantToggle'] = False
-
-                if self.mantraTechSlidetoggle._is_checked == 2:
-                       currentData['mantraTechSlidetoggle'] = True 
-                       currentData['mantraTechSlidetoggleKeysArea'] = self.plainTextEdit_2.toPlainText()
-                elif self.mantraTechSlidetoggle._is_checked == 0:
-                       currentData['mantraTechSlidetoggle'] = False
-                       
-                if self.mantraTechRollToggle._is_checked == 2:
-                        currentData['mantraTechRollToggle'] = True
-                        currentData['mantraTechRollToggleKeysArea'] = self.plainTextEdit_3.toPlainText()
-                elif self.mantraTechRollToggle._is_checked == 0:
-                       currentData['mantraTechRollToggle'] = False
+                saveMacro(currentData, 'RitualCastToggle', params=['ritualCastMantraKeys', 'ritualCastMantraNotes'], elements=['plainTextEdit_10', 'plainTextEdit_11'])
+                saveMacro(currentData, 'mantraVariantToggle', params=['AutoMantraVariantsKeysArea'], elements=['AutoMantraVariantsKeysArea'])
+                saveMacro(currentData, 'mantraTechSlidetoggle', params=['mantraTechSlidetoggleKeysArea'], elements=['plainTextEdit_2'])
+                saveMacro(currentData, 'mantraTechRollToggle', params=['mantraTechRollToggleKeysArea'], elements=['plainTextEdit_3'])
 
                 #!weapons
 
-                if self.AirDashToggle._is_checked == 2:
-                        currentData['AirDashToggle'] = True
-                elif self.AirDashToggle._is_checked == 0:
-                       currentData['AirDashToggle'] = False
-
-                if self.HoldM1Toggle._is_checked == 2:
-                        currentData['HoldM1Toggle'] = True
-                elif self.HoldM1Toggle._is_checked == 0:
-                       currentData['HoldM1Toggle'] = False
-
-                if self.MotifSwapToggle._is_checked == 2:
-                        currentData['MotifSwapToggle'] = True
-                        currentData['MotifHotkeyArea'] = self.MotifHotkeyArea.toPlainText()
-                        currentData['MotifToolbarNumberArea'] = self.MotifToolbarNumberArea.toPlainText()
-                        currentData['MotifWeaponNumberArea'] = self.plainTextEdit_7.toPlainText()
-                elif self.GoldenTongueToggle._is_checked == 0:
-                       currentData['MotifSwapToggle'] = False
-                
-                if self.uppercutToggle._is_checked == 2:
-                       currentData['uppercutToggle'] = True
-                elif self.uppercutToggle._is_checked == 0:
-                       currentData['uppercutToggle'] = False
-                
-                if self.uppercutDynamicToggle._is_checked == 2:
-                       currentData['uppercutDynamicToggle'] = True
-                elif self.uppercutDynamicToggle._is_checked == 0:
-                       currentData['uppercutDynamicToggle'] = False
-
-                if self.autoFeintToggle._is_checked == 2:
-                       currentData['autoFeintToggle'] = True
-                elif self.autoFeintToggle._is_checked == 0:
-                       currentData['autoFeintToggle'] = False
-
-
+                saveMacro(currentData, 'AirDashToggle')
+                saveMacro(currentData, 'HoldM1Toggle')
+                saveMacro(currentData, 'MotifSwapToggle', params=['MotifHotkeyArea', 'MotifToolbarNumberArea', 'MotifWeaponNumberArea'], elements=['MotifHotkeyArea', 'MotifToolbarNumberArea', 'plainTextEdit_7'])
+                saveMacro(currentData, 'uppercutToggle')
+                saveMacro(currentData, 'uppercutDynamicToggle')
+                saveMacro(currentData, 'autoFeintToggle')
 
                 #! misc
-                
-                if self.MbAllToggle._is_checked == 2:
-                        currentData['MbAllToggle'] = True
-                        currentData['MbAllHotkeyArea'] = self.MbAllHotkeyArea.toPlainText()
-                elif self.MbAllToggle._is_checked == 0:
-                       currentData['MbAllToggle'] = False
 
-                if self.GoldenTongueToggle._is_checked == 2:
-                        currentData['GoldenTongueToggle'] = True
-                        currentData['GoldenTongueHotkeyArea'] = self.GoldenTongueHotkeyArea.toPlainText()
-                        currentData['GoldenTongueTextArea'] = self.plainTextEdit_6.toPlainText()
-                elif self.GoldenTongueToggle._is_checked == 0:
-                       currentData['GoldenTongueToggle'] = False
-                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
-                filename = os.path.join(dataLocation, f'data/Preset{number}Data.json')
-                if self.GankPingerToggle._is_checked == 2:
-                       currentData['GankPingerToggle'] = True
-                       currentData['GankPingerHotkey'] = self.plainTextEdit_15.toPlainText()
-                       currentData['webhook_url'] = self.plainTextEdit.toPlainText()
-                       currentData['message'] = self.plainTextEdit_12.toPlainText()
-                       currentData['username'] = self.plainTextEdit_13.toPlainText()
-                       currentData['avatar_url'] = self.plainTextEdit_14.toPlainText()
-                       currentData['ScreenshotToggle'] = (self.ScreenshotToggle._is_checked == 2)
-                elif self.GankPingerToggle._is_checked == 0:
-                       currentData['GankPingerToggle'] = False
+                saveMacro(currentData, 'MbAllToggle', params=['MbAllHotkeyArea'], elements=['MbAllHotkeyArea'])
+                saveMacro(currentData, 'GoldenTongueToggle', params=['GoldenTongueHotkeyArea', 'GoldenTongueTextArea'], elements=['GoldenTongueHotkeyArea', 'plainTextEdit_6'])
+                saveMacro(currentData, 'GankPingerToggle', params=['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url', 'ScreenshotToggle'], elements=['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14'])
 
                 #! progresssion
-                if self.CharismaAutofillToggle._is_checked == 2:
-                       currentData['CharismaAutofillToggle'] = True
-                elif self.CharismaAutofillToggle._is_checked == 0:
-                       currentData['CharismaAutofillToggle'] = False
 
-                if self.AutoFortitudeToggle._is_checked == 2:
-                        currentData['AutoFortitudeToggle'] = True
-                        currentData['BoulderTrainingHotkey'] = self.BoulderTrainingHotkey.toPlainText()
-                elif self.AutoFortitudeToggle._is_checked == 0:
-                       currentData['AutoFortitudeToggle'] = False
+                saveMacro(currentData, 'CharismaAutofillToggle')
+                saveMacro(currentData, 'AutoFortitudeToggle', params=['BoulderTrainingHotkey'], elements=['BoulderTrainingHotkey'])
+                saveMacro(currentData, 'AutoAgilityToggle', params=['AnkleWeightsTrainingHotkey'], elements=['AnkleWeightsTrainingHotkey'])
 
-                if self.AutoAgilityToggle._is_checked == 2:
-                        currentData['AutoAgilityToggle'] = True
-                        currentData['AnkleWeightsTrainingHotkey'] = self.AnkleWeightsTrainingHotkey.toPlainText()
-                elif self.AutoAgilityToggle._is_checked == 0:
-                       currentData['AutoAgilityToggle'] = False
+                dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                filename = os.path.join(dataLocation, f'data/Preset{number}Data.json')
                 try:
                         # Create the file if it doesn't exist
                         with open(filename, 'x') as f:
-                                json.dump({}, f)  # Initialize with empty JSON object
+                                json.dump({}, f)  # create empty JSON object
                 except FileExistsError:
                         print('file already exists')
                 #!running
-                if self.RunKeybindToggle._is_checked == 2:
-                       currentData['RunKeybindToggle'] = True
-                       currentData['RunKeybindToggleKeybind'] = self.plainTextEdit_17.toPlainText()
-                elif self.RunKeybindToggle._is_checked == 0:
-                       currentData['RunKeybindToggle'] = False
 
+                saveMacro(currentData, 'RunKeybindToggle', params=['RunKeybindToggleKeybind'], elements=['plainTextEdit_17'])
 
                 # Write the current data
                 with open(filename, 'w') as f:
