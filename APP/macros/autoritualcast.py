@@ -8,7 +8,6 @@ import keyboard
 import threading
 
 # --- CONFIGURATION ---
-REPLACE_Z_WITH_Y = False   # Set to True if you need Z swapped to Y
 PING_MS = 100              # Your ping in milliseconds
 DEBUG_MODE = True          # Set to False to hide console logs
 
@@ -18,13 +17,7 @@ MAX_SCAN_ATTEMPTS = 10
 SCAN_TIMEOUT = 2.0
 FAST_POLL = 0.001          # How fast to loop when active
 
-# Determine paths (Safe for PyInstaller)
-if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
-    SCRIPT_DIR = sys._MEIPASS
-else:
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-TEMPLATE_FOLDER = os.path.join(SCRIPT_DIR, 'letter_templates')
 
 # Region Definitions
 LETTER_REGIONS = [
@@ -54,14 +47,14 @@ class RitualCastListener:
             timestamp = time.strftime('%H:%M:%S')
             print(f"[{timestamp}] {msg}")
 
-    def load_templates(self):
+    def load_templates(self, filepath):
         """Loads images from the template folder."""
-        if not os.path.isdir(TEMPLATE_FOLDER):
-            print(f"ERROR: Template folder not found at: {TEMPLATE_FOLDER}")
+        if not os.path.isdir(filepath):
+            print(f"ERROR: Template folder not found at: {filepath}")
             return False
 
         count = 0
-        for f in os.listdir(TEMPLATE_FOLDER):
+        for f in os.listdir(filepath):
             if not f.endswith('.png') or f == 'background.png':
                 continue
             
@@ -74,7 +67,7 @@ class RitualCastListener:
                     break
             
             if char:
-                path = os.path.join(TEMPLATE_FOLDER, f)
+                path = os.path.join(filepath, f)
                 img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
                 if img is not None:
                     self.templates[char] = img
@@ -168,8 +161,6 @@ class RitualCastListener:
             final_seq = []
             for char in sequence:
                 c = char.upper()
-                if REPLACE_Z_WITH_Y and c == 'Z':
-                    c = 'Y'
                 final_seq.append(c)
 
             try:
@@ -185,11 +176,11 @@ class RitualCastListener:
         
         time.sleep(FAST_POLL)
 
-    def stack(self, ping_ms):
+    def stack(self, ping_ms, filepath):
         """Main execution logic"""
-        self.log(f"Ping: {ping_ms}ms | Z->Y Swap: {REPLACE_Z_WITH_Y}")
+        self.log(f"Ping: {ping_ms}ms")
         
-        if not self.load_templates():
+        if not self.load_templates(filepath):
             self.running = False
             return
 
@@ -205,13 +196,13 @@ class RitualCastListener:
                     self.log(f"Unhandled runtime error: {e}")
                     time.sleep(0.1)
 
-    def run(self, ping_ms=PING_MS):
+    def run(self, filepath, ping_ms=PING_MS):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.stack(ping_ms)  # Just call stack directly
+            self.stack(ping_ms, filepath)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
