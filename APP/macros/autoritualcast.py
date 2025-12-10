@@ -9,6 +9,7 @@ import keyboard
 DETECTION_THRESHOLD = 0.85
 MAX_SCAN_ATTEMPTS = 10
 SCAN_TIMEOUT = 2.0
+DEFAULTPING = 100
 
 # Region Definitions
 LETTER_REGIONS = [
@@ -27,7 +28,7 @@ class RitualCastListener:
         self.running = False
         self.thread = None
         self.templates = {}
-        self.region_arrays = [None] * len(LETTER_REGIONS)
+        self.images = [None] * len(LETTER_REGIONS)
 
     def load_templates(self, filepath):
         """Loads images from the template folder."""
@@ -63,7 +64,7 @@ class RitualCastListener:
         return True
 
     def grab_regions(self, sct):
-        """Grabs screen regions efficiently."""
+        """Takes screenshots of each region in letter_region, returns list"""
         for i, roi in enumerate(LETTER_REGIONS):
             img = np.array(sct.grab(roi))
             
@@ -71,8 +72,7 @@ class RitualCastListener:
             if img.ndim == 3 and img.shape[2] == 4:
                 img = img[:, :, :3]
                 
-            self.region_arrays[i] = img
-        return self.region_arrays
+            self.images[i] = img
 
     def detect_letter(self, region_img, template_list):
         """Finds the best matching letter in a single region."""
@@ -107,11 +107,11 @@ class RitualCastListener:
         attempts = 0
 
         while attempts < MAX_SCAN_ATTEMPTS and (time.time() - start_time) < SCAN_TIMEOUT:
-            if not self.running: break
+            if not self.running: 
+                break
             
-            images = self.grab_regions(sct)
-            
-            for i, img in enumerate(images):
+            self.grab_regions(sct)
+            for i, img in enumerate(self.images):
                 if detected[i] is None:
                     letter, score = self.detect_letter(img, template_list)
                     if letter:
@@ -175,6 +175,8 @@ class RitualCastListener:
                     time.sleep(0.1)
 
     def run(self, filepath, ping_ms=100):
+        if ping_ms is None or not str(ping_ms).isdigit():
+            ping_ms = DEFAULTPING
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
