@@ -2,6 +2,7 @@ import win32api
 import win32con
 import time
 import threading
+from keyboard import press_and_release
 
 class M1Listener:
     def __init__(self):
@@ -16,10 +17,9 @@ class M1Listener:
             return "right"
         return "left"
 
-    def simulate_click(self):
+    def simulate_click(self, key):
         #x, y = win32api.GetCursorPos()
-        win32api.keybd_event(192, 41, 0, 0)  # Press backtick key
-        win32api.keybd_event(192, 41, win32con.KEYEVENTF_KEYUP, 0)  # Release backtick k
+        press_and_release(key)
         #if self.get_primary_button() == "right":
             #win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, x, y, 0, 0)
         #else:
@@ -29,7 +29,7 @@ class M1Listener:
         state = win32api.GetAsyncKeyState(vk_code)
         return (state & 0x8000) != 0
 
-    def macro_thread(self):
+    def macro_thread(self, key):
         hold_start = 0
         is_auto_clicking = False
         
@@ -54,7 +54,7 @@ class M1Listener:
                     if hold_duration >= 0.2:
                         if not is_auto_clicking:
                             is_auto_clicking = True
-                        self.simulate_click()
+                        self.simulate_click(key)
                         time.sleep(0.04)
                 
                 # Button released
@@ -68,13 +68,13 @@ class M1Listener:
                 print("\nStopping...")
                 break
 
-    def run(self):
+    def run(self, key='`'):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.thread = threading.Thread(target=self.macro_thread)
+            self.thread = threading.Thread(target=self.macro_thread, args=key)
             self.thread.daemon = True
             self.thread.start()
 

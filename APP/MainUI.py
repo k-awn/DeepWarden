@@ -15,11 +15,10 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QLabel, QLineEdit, QPlainTextEdit,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
-
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Demo1ZtaQOI.ui'
+## Form generated from reading UI file 'Demo1VXpDZq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.0
 ##
@@ -461,28 +460,38 @@ class Ui_MainWindow(object):
         self.weaponsPage.setObjectName(u"weaponsPage")
         self.gridLayout_10 = QGridLayout(self.weaponsPage)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
-        self.label_23 = QLabel(self.weaponsPage)
-        self.label_23.setObjectName(u"label_23")
+        self.label_24 = QLabel(self.weaponsPage)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setFont(font)
+        self.label_24.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_10.addWidget(self.label_23, 9, 0, 1, 1)
-
-        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_10.addItem(self.verticalSpacer_7, 15, 0, 1, 1)
-
-        self.MotifSwapLabel = QLabel(self.weaponsPage)
-        self.MotifSwapLabel.setObjectName(u"MotifSwapLabel")
-
-        self.gridLayout_10.addWidget(self.MotifSwapLabel, 4, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.label_24, 11, 0, 1, 2)
 
         self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout_10.addItem(self.verticalSpacer_13, 15, 1, 1, 2)
+        self.gridLayout_10.addItem(self.verticalSpacer_13, 16, 1, 1, 2)
 
-        self.label_35 = QLabel(self.weaponsPage)
-        self.label_35.setObjectName(u"label_35")
+        self.label_16 = QLabel(self.weaponsPage)
+        self.label_16.setObjectName(u"label_16")
 
-        self.gridLayout_10.addWidget(self.label_35, 11, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.label_16, 9, 0, 1, 1)
+
+        self.MotifHotkeyLabel = QLabel(self.weaponsPage)
+        self.MotifHotkeyLabel.setObjectName(u"MotifHotkeyLabel")
+
+        self.gridLayout_10.addWidget(self.MotifHotkeyLabel, 7, 0, 1, 1)
+
+        self.label_36 = QLabel(self.weaponsPage)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setFont(font)
+        self.label_36.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_10.addWidget(self.label_36, 13, 0, 1, 2)
+
+        self.MotifToolbarNumberLabel = QLabel(self.weaponsPage)
+        self.MotifToolbarNumberLabel.setObjectName(u"MotifToolbarNumberLabel")
+
+        self.gridLayout_10.addWidget(self.MotifToolbarNumberLabel, 8, 0, 1, 1)
 
         self.label_2 = QLabel(self.weaponsPage)
         self.label_2.setObjectName(u"label_2")
@@ -492,32 +501,32 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.label_2, 3, 0, 1, 2)
 
-        self.MotifHotkeyLabel = QLabel(self.weaponsPage)
-        self.MotifHotkeyLabel.setObjectName(u"MotifHotkeyLabel")
+        self.label_12 = QLabel(self.weaponsPage)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font)
+        self.label_12.setStyleSheet(u"color:grey;")
+        self.label_12.setWordWrap(True)
 
-        self.gridLayout_10.addWidget(self.MotifHotkeyLabel, 6, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.label_12, 6, 0, 1, 2)
 
-        self.AerialAirDashLabel = QLabel(self.weaponsPage)
-        self.AerialAirDashLabel.setObjectName(u"AerialAirDashLabel")
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout_10.addWidget(self.AerialAirDashLabel, 0, 0, 1, 1)
+        self.gridLayout_10.addItem(self.verticalSpacer_7, 16, 0, 1, 1)
+
+        self.label_18 = QLabel(self.weaponsPage)
+        self.label_18.setObjectName(u"label_18")
+
+        self.gridLayout_10.addWidget(self.label_18, 14, 0, 1, 1)
 
         self.HoldM1Label = QLabel(self.weaponsPage)
         self.HoldM1Label.setObjectName(u"HoldM1Label")
 
         self.gridLayout_10.addWidget(self.HoldM1Label, 2, 0, 1, 1)
 
-        self.label_36 = QLabel(self.weaponsPage)
-        self.label_36.setObjectName(u"label_36")
-        self.label_36.setFont(font)
-        self.label_36.setStyleSheet(u"color:grey;")
+        self.MotifSwapLabel = QLabel(self.weaponsPage)
+        self.MotifSwapLabel.setObjectName(u"MotifSwapLabel")
 
-        self.gridLayout_10.addWidget(self.label_36, 12, 0, 1, 2)
-
-        self.label_18 = QLabel(self.weaponsPage)
-        self.label_18.setObjectName(u"label_18")
-
-        self.gridLayout_10.addWidget(self.label_18, 13, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.MotifSwapLabel, 5, 0, 1, 1)
 
         self.label_11 = QLabel(self.weaponsPage)
         self.label_11.setObjectName(u"label_11")
@@ -527,30 +536,15 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.label_11, 1, 0, 1, 2)
 
-        self.plainTextEdit_7 = QPlainTextEdit(self.weaponsPage)
-        self.plainTextEdit_7.setObjectName(u"plainTextEdit_7")
-        self.plainTextEdit_7.setMinimumSize(QSize(0, 30))
-        self.plainTextEdit_7.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_7.setStyleSheet(u"")
+        self.label_23 = QLabel(self.weaponsPage)
+        self.label_23.setObjectName(u"label_23")
 
-        self.gridLayout_10.addWidget(self.plainTextEdit_7, 8, 1, 1, 1)
+        self.gridLayout_10.addWidget(self.label_23, 10, 0, 1, 1)
 
-        self.label_24 = QLabel(self.weaponsPage)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setFont(font)
-        self.label_24.setStyleSheet(u"color:grey;")
+        self.AerialAirDashLabel = QLabel(self.weaponsPage)
+        self.AerialAirDashLabel.setObjectName(u"AerialAirDashLabel")
 
-        self.gridLayout_10.addWidget(self.label_24, 10, 0, 1, 2)
-
-        self.MotifToolbarNumberLabel = QLabel(self.weaponsPage)
-        self.MotifToolbarNumberLabel.setObjectName(u"MotifToolbarNumberLabel")
-
-        self.gridLayout_10.addWidget(self.MotifToolbarNumberLabel, 7, 0, 1, 1)
-
-        self.label_16 = QLabel(self.weaponsPage)
-        self.label_16.setObjectName(u"label_16")
-
-        self.gridLayout_10.addWidget(self.label_16, 8, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.AerialAirDashLabel, 0, 0, 1, 1)
 
         self.MotifHotkeyArea = QPlainTextEdit(self.weaponsPage)
         self.MotifHotkeyArea.setObjectName(u"MotifHotkeyArea")
@@ -558,15 +552,7 @@ class Ui_MainWindow(object):
         self.MotifHotkeyArea.setMaximumSize(QSize(16777215, 30))
         self.MotifHotkeyArea.setStyleSheet(u"")
 
-        self.gridLayout_10.addWidget(self.MotifHotkeyArea, 6, 1, 1, 1)
-
-        self.label_12 = QLabel(self.weaponsPage)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setFont(font)
-        self.label_12.setStyleSheet(u"color:grey;")
-        self.label_12.setWordWrap(True)
-
-        self.gridLayout_10.addWidget(self.label_12, 5, 0, 1, 2)
+        self.gridLayout_10.addWidget(self.MotifHotkeyArea, 7, 1, 1, 1)
 
         self.MotifToolbarNumberArea = QPlainTextEdit(self.weaponsPage)
         self.MotifToolbarNumberArea.setObjectName(u"MotifToolbarNumberArea")
@@ -574,13 +560,38 @@ class Ui_MainWindow(object):
         self.MotifToolbarNumberArea.setMaximumSize(QSize(16777215, 30))
         self.MotifToolbarNumberArea.setStyleSheet(u"")
 
-        self.gridLayout_10.addWidget(self.MotifToolbarNumberArea, 7, 1, 1, 1)
+        self.gridLayout_10.addWidget(self.MotifToolbarNumberArea, 8, 1, 1, 1)
+
+        self.plainTextEdit_7 = QPlainTextEdit(self.weaponsPage)
+        self.plainTextEdit_7.setObjectName(u"plainTextEdit_7")
+        self.plainTextEdit_7.setMinimumSize(QSize(0, 30))
+        self.plainTextEdit_7.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_7.setStyleSheet(u"")
+
+        self.gridLayout_10.addWidget(self.plainTextEdit_7, 9, 1, 1, 1)
+
+        self.label_35 = QLabel(self.weaponsPage)
+        self.label_35.setObjectName(u"label_35")
+
+        self.gridLayout_10.addWidget(self.label_35, 12, 0, 1, 1)
 
         self.label_19 = QLabel(self.weaponsPage)
         self.label_19.setObjectName(u"label_19")
         self.label_19.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_10.addWidget(self.label_19, 14, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.label_19, 15, 0, 1, 1)
+
+        self.label_22 = QLabel(self.weaponsPage)
+        self.label_22.setObjectName(u"label_22")
+
+        self.gridLayout_10.addWidget(self.label_22, 4, 0, 1, 1)
+
+        self.HoldM1Key = QPlainTextEdit(self.weaponsPage)
+        self.HoldM1Key.setObjectName(u"HoldM1Key")
+        self.HoldM1Key.setMinimumSize(QSize(0, 30))
+        self.HoldM1Key.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_10.addWidget(self.HoldM1Key, 4, 1, 1, 1)
 
         self.stackedWidget.addWidget(self.weaponsPage)
         self.progressionPage = QWidget()
@@ -1977,7 +1988,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2017,24 +2028,26 @@ class Ui_MainWindow(object):
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
         self.plainTextEdit_10.setPlainText("")
         self.plainTextEdit_10.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Approximate ping, default is 100 (Shift + F3 to see ping)", None))
-        self.label_23.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Uppercut</span></p></body></html>", None))
-        self.MotifSwapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Motif Swap</span></p></body></html>", None))
-        self.label_35.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Dynamic Uppercuts</span></p></body></html>", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Bind your key to ` which is the key right below esc at the top left of the keyboard. Disable Deepwoken's Hold M1 before using, disabling input buffering is also recommended", None))
-        self.MotifHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.AerialAirDashLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Aerial M1 Dash</span></p></body></html>", None))
-        self.HoldM1Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Faster Hold M1</span></p></body></html>", None))
-        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Same as auto uppercut but doesn't trigger when you're running", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Feint</span></p></body></html>", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Does an air dash / roll in the middle of your aerial attack. Does not activate when you do not jump shortly before", None))
-        self.plainTextEdit_7.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The toolbar number of the weapon", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Uppercuts as soon as you press ctrl", None))
-        self.MotifToolbarNumberLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Motif Toolbar Number</span></p></body></html>", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Weapon Toolbar Number</span></p></body></html>", None))
-        self.MotifHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The key you want to press to swap motifs", None))
+        self.MotifHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Same as auto uppercut but doesn't trigger when you're running", None))
+        self.MotifToolbarNumberLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Motif Toolbar Number</span></p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Automatically spams any key when M1 is held (default `). The key MUST be binded to basic attack (you can have two keybinds at a time)", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Quickly swaps your weapon's motif (the critical attack of your weapon) for you.", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Feint</span></p></body></html>", None))
+        self.HoldM1Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Faster Hold M1</span></p></body></html>", None))
+        self.MotifSwapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Motif Swap</span></p></body></html>", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Does an air dash / roll in the middle of your aerial attack. Does not activate when you do not jump shortly before", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Uppercut</span></p></body></html>", None))
+        self.AerialAirDashLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Aerial M1 Dash</span></p></body></html>", None))
+        self.MotifHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The key you want to press to swap motifs", None))
         self.MotifToolbarNumberArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The toolbar number of the motif", None))
+        self.plainTextEdit_7.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The toolbar number of the weapon", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Dynamic Uppercuts</span></p></body></html>", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Feints for you when you press F</span></p></body></html>", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Key</span></p></body></html>", None))
+        self.HoldM1Key.setPlaceholderText(QCoreApplication.translate("MainWindow", u"The key you want to be spammed when m1 is held", None))
         self.CharismaAutofillLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Charisma Autofill</span></p></body></html>", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Type out part of the charisma line and it will finish it for you", None))
@@ -2141,6 +2154,8 @@ class Ui_MainWindow(object):
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
     # retranslateUi
 
+
+
         print('importing macros')
         from macros.training import autocharisma, autofortitude, autoagility
         from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast
@@ -2203,13 +2218,13 @@ class Ui_MainWindow(object):
         self.HoldM1Toggle = CustomToggle(self.weaponsPage)
         self.gridLayout_10.addWidget(self.HoldM1Toggle, 2,1,1,2)
         self.MotifSwapToggle = CustomToggle(self.weaponsPage)
-        self.gridLayout_10.addWidget(self.MotifSwapToggle, 4,1,1,2)
+        self.gridLayout_10.addWidget(self.MotifSwapToggle, 5,1,1,2)
         self.uppercutToggle = CustomToggle(self.weaponsPage)
-        self.gridLayout_10.addWidget(self.uppercutToggle, 9,1,1,1)
+        self.gridLayout_10.addWidget(self.uppercutToggle, 10,1,1,1)
         self.uppercutDynamicToggle = CustomToggle(self.weaponsPage)
-        self.gridLayout_10.addWidget(self.uppercutDynamicToggle, 11,1,1,1)
+        self.gridLayout_10.addWidget(self.uppercutDynamicToggle, 12,1,1,1)
         self.autoFeintToggle = CustomToggle(self.weaponsPage)
-        self.gridLayout_10.addWidget(self.autoFeintToggle, 13,1,1,1)
+        self.gridLayout_10.addWidget(self.autoFeintToggle, 14,1,1,1)
 
         #functions
 
@@ -2336,7 +2351,7 @@ class Ui_MainWindow(object):
                 if self.RunToggle._is_checked == 2:  # is checked
                         self.threads = []       
                         addMacro('Air Dash M1 Movestack', self.AirDashToggle, threadedkeyb.AirListener)
-                        addMacro('Faster Hold M1', self.HoldM1Toggle, holdm1.M1Listener)
+                        addMacro('Faster Hold M1', self.HoldM1Toggle, holdm1.M1Listener, key=self.HoldM1Key.toPlainText())
                         if self.BellMovestackToggle._is_checked == 2:
                                 if self.MovestackChoice.currentIndex() == 1:     
                                         addMacro('Bell Stack Parry', self.BellMovestackToggle, bellStackParry.BellStackParryListener) # Either a logic error or i need to fix some jank on this one
