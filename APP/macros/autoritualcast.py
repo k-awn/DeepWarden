@@ -1,23 +1,14 @@
 import os
-import sys
 import time
 import cv2
 import numpy as np
 import mss
 import keyboard
-import threading
-
-# --- CONFIGURATION ---
-PING_MS = 100              # Your ping in milliseconds
-DEBUG_MODE = True          # Set to False to hide console logs
 
 # --- CONSTANTS ---
 DETECTION_THRESHOLD = 0.85
 MAX_SCAN_ATTEMPTS = 10
 SCAN_TIMEOUT = 2.0
-FAST_POLL = 0.001          # How fast to loop when active
-
-
 
 # Region Definitions
 LETTER_REGIONS = [
@@ -31,21 +22,12 @@ LETTER_REGIONS = [
     {"left": 1135, "top": 300, "width": 50, "height": 50},
 ]
 
-# Calculate Key Delay based on ping
-KEY_DELAY = 0.09 + (PING_MS * 0.001)
-
 class RitualCastListener:  
     def __init__(self):
         self.running = False
         self.thread = None
         self.templates = {}
         self.region_arrays = [None] * len(LETTER_REGIONS)
-
-    def log(self, msg):
-        """Simple logging helper"""
-        if DEBUG_MODE:
-            timestamp = time.strftime('%H:%M:%S')
-            print(f"[{timestamp}] {msg}")
 
     def load_templates(self, filepath):
         """Loads images from the template folder."""
@@ -77,7 +59,7 @@ class RitualCastListener:
             print("ERROR: No .png templates found!")
             return False
         
-        self.log(f"Loaded {count} templates.")
+        print(f"Loaded {count} templates.")
         return True
 
     def grab_regions(self, sct):
@@ -156,29 +138,25 @@ class RitualCastListener:
         sequence = [d for d in detected if d is not None]
 
         if sequence:
-            self.log(f"Detected: {''.join(sequence)}")
+            print(f"Detected: {''.join(sequence)}")
             
             final_seq = []
             for char in sequence:
                 c = char.upper()
                 final_seq.append(c)
 
-            try:
-                ping_value = int(ping_ms) if ping_ms else PING_MS
-            except (ValueError, TypeError):
-                ping_value = PING_MS
-            key_delay = 0.09 + (ping_value * 0.001)
+            key_delay = 0.09 + (int(ping_ms) * 0.001)
             for k in final_seq:
                 keyboard.press(k.lower())
                 keyboard.release(k.lower())
                 if key_delay > 0:
                     time.sleep(key_delay)
         
-        time.sleep(FAST_POLL)
+        time.sleep(0.001)
 
     def stack(self, ping_ms, filepath):
         """Main execution logic"""
-        self.log(f"Ping: {ping_ms}ms")
+        print(f"Ping: {ping_ms}ms")
         
         if not self.load_templates(filepath):
             self.running = False
@@ -193,10 +171,10 @@ class RitualCastListener:
                 try:
                     self.perform_macro_cycle(sct, template_list, ping_ms)
                 except Exception as e:
-                    self.log(f"Unhandled runtime error: {e}")
+                    print(f"Unhandled runtime error: {e}")
                     time.sleep(0.1)
 
-    def run(self, filepath, ping_ms=PING_MS):
+    def run(self, filepath, ping_ms=100):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
