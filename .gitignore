@@ -7,6 +7,7 @@ __pycache__
 Demo1_ui.py
 introform.ui
 main.spec
+APP\assets
 
 #compiled app should not be inside the app's source code
 *.spec
