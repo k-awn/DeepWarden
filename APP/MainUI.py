@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Demo1VXpDZq.ui'
+## Form generated from reading UI file 'Demo1ugbbEC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.0
 ##
@@ -908,7 +908,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 566, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
@@ -1988,7 +1988,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2055,13 +2055,13 @@ class Ui_MainWindow(object):
         self.AnkleWeightsLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Agility Auto-train</span></p></body></html>", None))
         self.BoulderTrainingHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Hotkey to start/stop training fortitude(boulder)", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.WillpowerTrainingHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Hotkey to start/stop training fortitude(boulder)", None))
-        self.label_27.setText(QCoreApplication.translate("MainWindow", u"Make sure Ankle Weights are equipped before starting", None))
+        self.WillpowerTrainingHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Hotkey to start/stop training willpower", None))
+        self.label_27.setText(QCoreApplication.translate("MainWindow", u"Make sure the Ankle Weights tool is equipped before starting", None))
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
         self.BoulderTrainingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Boulder Auto-train</span></p></body></html>", None))
         self.WillpowerTrainingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Prayer Auto-train</span></p></body></html>", None))
-        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Make sure Boulder is equipped before starting and you are near a campfire", None))
-        self.label_38.setText(QCoreApplication.translate("MainWindow", u"Make sure Prayer Beads are equipped before starting", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Make sure the Boulder tool is held out before starting and you are near a campfire", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"Make sure the Prayer Beads tool is held out before starting", None))
         self.plainTextEdit_14.setPlainText("")
         self.plainTextEdit_14.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
         self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
@@ -2156,8 +2156,10 @@ class Ui_MainWindow(object):
 
 
 
+
+
         print('importing macros')
-        from macros.training import autocharisma, autofortitude, autoagility
+        from macros.training import autocharisma, autofortitude, autoagility, autowillpower
         from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast
         from macros.bellStack import bellStackParry, bellStackDodge
         from macros.mantraTech import mantraTechRoll, mantraTechSlide
@@ -2254,6 +2256,8 @@ class Ui_MainWindow(object):
         self.gridLayout_12.addWidget(self.AutoAgilityToggle, 2,3,1,1)
         self.AutoFortitudeToggle = CustomToggle(self.miscPage)
         self.gridLayout_12.addWidget(self.AutoFortitudeToggle, 5,3,1,1)
+        self.AutoWillpowerToggle = CustomToggle(self.miscPage)
+        self.gridLayout_12.addWidget(self.AutoWillpowerToggle, 13,3,1,1)
 
         #!SETTINGS
         self.toggleNotifsToggle = CustomToggle(self.settingsPage)
@@ -2282,6 +2286,7 @@ class Ui_MainWindow(object):
                 self.CharismaAutofillToggle,
                 self.AutoAgilityToggle,
                 self.AutoFortitudeToggle,
+                self.AutoWillpowerToggle
         ]
         for toggle in self.toggles:
                 toggle.toggled.connect(lambda: self.RunToggle.setChecked(False))
@@ -2367,6 +2372,8 @@ class Ui_MainWindow(object):
                         addMacro('Ritual Cast', self.RitualCastToggle, autoritualcast.RitualCastListener, ping_ms=self.plainTextEdit_10.toPlainText())
                         addMacro('Charisma Autofill', self.CharismaAutofillToggle, autocharisma.autoCharismaListener)
                         addMacro('Auto Fortitude', self.AutoFortitudeToggle, autofortitude.AutoFortitudeListener, keybind=self.BoulderTrainingHotkey.toPlainText())
+                        addMacro('Auto Willpower', self.AutoWillpowerToggle, autowillpower.AutoWillpowerListener, keybind=self.WillpowerTrainingHotkey.toPlainText())
+
                         addMacro('Auto Agility', self.AutoAgilityToggle, autoagility.AutoAgilityListener, keybind=self.AnkleWeightsTrainingHotkey.toPlainText())
                         addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), ScreenshotToggle=(self.ScreenshotToggle._is_checked == 2))
                         addMacro('Auto Uppercut', self.uppercutToggle, autoUppercutAlways.UppercutListener)
@@ -2512,6 +2519,7 @@ class Ui_MainWindow(object):
 
                 saveMacro(currentData, 'CharismaAutofillToggle')
                 saveMacro(currentData, 'AutoFortitudeToggle', params=['BoulderTrainingHotkey'], elements=['BoulderTrainingHotkey'])
+                saveMacro(currentData, 'AutoWillpowerToggle', params=['WillpowerTrainingHotkey'], elements=['WillpowerTrainingHotkey'])
                 saveMacro(currentData, 'AutoAgilityToggle', params=['AnkleWeightsTrainingHotkey'], elements=['AnkleWeightsTrainingHotkey'])
 
                 dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
@@ -2590,6 +2598,7 @@ class Ui_MainWindow(object):
 
                 loadMacro(savedData, 'CharismaAutofillToggle')
                 loadMacro(savedData, 'AutoFortitudeToggle', ['BoulderTrainingHotkey'],['BoulderTrainingHotkey'])
+                loadMacro(savedData, 'AutoWillpowerToggle', ['WillpowerTrainingHotkey'], ['WillpowerTrainingHotkey'])
                 loadMacro(savedData, 'AutoAgilityToggle', ['AnkleWeightsTrainingHotkey'], ['AnkleWeightsTrainingHotkey'])
                 
                 #!running
