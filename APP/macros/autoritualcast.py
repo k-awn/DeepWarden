@@ -7,8 +7,8 @@ import keyboard
 
 # --- CONSTANTS ---
 DETECTION_THRESHOLD = 0.85
-MAX_SCAN_ATTEMPTS = 10
-SCAN_TIMEOUT = 2.0
+MAX_SCAN_ATTEMPTS = 2
+SCAN_TIMEOUT = 1
 DEFAULTPING = 100
 
 # Region Definitions
@@ -119,8 +119,8 @@ class RitualCastListener:
 
             columns_satisfied = True
             for col in range(4):
-                idx1, idx2 = col * 2, col * 2 + 1
-                if detected[idx1] is None and detected[idx2] is None:
+                topRow, bottomRow = col * 2, col * 2 + 1
+                if detected[bottomRow] is None and detected[topRow] is None:
                     columns_satisfied = False
                     break
             
@@ -145,12 +145,10 @@ class RitualCastListener:
                 c = char.upper()
                 final_seq.append(c)
 
-            key_delay = 0.09 + (int(ping_ms) * 0.001)
+            key_delay = 0.01 + (int(ping_ms) * 0.001)
             for k in final_seq:
-                keyboard.press(k.lower())
-                keyboard.release(k.lower())
-                if key_delay > 0:
-                    time.sleep(key_delay)
+                time.sleep(key_delay)
+                keyboard.press_and_release(k.lower())
         
         time.sleep(0.001)
 
@@ -174,9 +172,9 @@ class RitualCastListener:
                     print(f"Unhandled runtime error: {e}")
                     time.sleep(0.1)
 
-    def run(self, filepath, ping_ms=100):
+    def run(self, filepath, ping_ms):
         if ping_ms is None or not str(ping_ms).isdigit():
-            ping_ms = DEFAULTPING
+            ping_ms = DEFAULTPING # if field is empty it inputs '' so ping_ms = 100 doesnt work
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
