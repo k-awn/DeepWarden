@@ -7,7 +7,7 @@ import keyboard
 
 # --- CONSTANTS ---
 DETECTION_THRESHOLD = 0.85
-MAX_SCAN_ATTEMPTS = 2
+MAX_SCAN_ATTEMPTS = 3
 SCAN_TIMEOUT = 1
 DEFAULTPING = 100
 
@@ -149,6 +149,7 @@ class RitualCastListener:
             for k in final_seq:
                 time.sleep(key_delay)
                 keyboard.press_and_release(k.lower())
+            time.sleep(0.1)
         
         time.sleep(0.001)
 
