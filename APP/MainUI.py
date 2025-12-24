@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.WindowModality.NonModal)
-        MainWindow.resize(686, 686)
+        MainWindow.resize(688, 688)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -332,25 +332,58 @@ class Ui_MainWindow(object):
         self.mantrasPage.setObjectName(u"mantrasPage")
         self.gridLayout_6 = QGridLayout(self.mantrasPage)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.AutoMantraVariantsDescriptor = QLabel(self.mantrasPage)
+        self.AutoMantraVariantsDescriptor.setObjectName(u"AutoMantraVariantsDescriptor")
+        self.AutoMantraVariantsDescriptor.setFont(font)
+        self.AutoMantraVariantsDescriptor.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_6.addWidget(self.AutoMantraVariantsDescriptor, 6, 0, 1, 2)
+
+        self.label_47 = QLabel(self.mantrasPage)
+        self.label_47.setObjectName(u"label_47")
+        self.label_47.setFont(font)
+        self.label_47.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_6.addWidget(self.label_47, 12, 0, 1, 2)
+
+        self.plainTextEdit_10 = QPlainTextEdit(self.mantrasPage)
+        self.plainTextEdit_10.setObjectName(u"plainTextEdit_10")
+        self.plainTextEdit_10.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_10.setStyleSheet(u"")
+
+        self.gridLayout_6.addWidget(self.plainTextEdit_10, 2, 1, 1, 1)
+
+        self.AutoMantraVariants = QLabel(self.mantrasPage)
+        self.AutoMantraVariants.setObjectName(u"AutoMantraVariants")
+
+        self.gridLayout_6.addWidget(self.AutoMantraVariants, 5, 0, 1, 1)
+
         self.label_21 = QLabel(self.mantrasPage)
         self.label_21.setObjectName(u"label_21")
 
         self.gridLayout_6.addWidget(self.label_21, 2, 0, 1, 1)
 
-        self.AutoMantraVariantsKeysArea = QPlainTextEdit(self.mantrasPage)
-        self.AutoMantraVariantsKeysArea.setObjectName(u"AutoMantraVariantsKeysArea")
-        self.AutoMantraVariantsKeysArea.setMinimumSize(QSize(0, 30))
-        self.AutoMantraVariantsKeysArea.setMaximumSize(QSize(16777215, 30))
-        self.AutoMantraVariantsKeysArea.setStyleSheet(u"")
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout_6.addWidget(self.AutoMantraVariantsKeysArea, 5, 1, 1, 1)
+        self.gridLayout_6.addItem(self.verticalSpacer_3, 16, 0, 1, 2)
 
-        self.label_46 = QLabel(self.mantrasPage)
-        self.label_46.setObjectName(u"label_46")
-        self.label_46.setFont(font)
-        self.label_46.setStyleSheet(u"color:grey;")
+        self.AutoMantraVariantsKeysLabel = QLabel(self.mantrasPage)
+        self.AutoMantraVariantsKeysLabel.setObjectName(u"AutoMantraVariantsKeysLabel")
 
-        self.gridLayout_6.addWidget(self.label_46, 7, 0, 1, 2)
+        self.gridLayout_6.addWidget(self.AutoMantraVariantsKeysLabel, 7, 0, 1, 1)
+
+        self.plainTextEdit_3 = QPlainTextEdit(self.mantrasPage)
+        self.plainTextEdit_3.setObjectName(u"plainTextEdit_3")
+        self.plainTextEdit_3.setMinimumSize(QSize(0, 30))
+        self.plainTextEdit_3.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_3.setStyleSheet(u"")
+
+        self.gridLayout_6.addWidget(self.plainTextEdit_3, 13, 1, 1, 1)
+
+        self.label_8 = QLabel(self.mantrasPage)
+        self.label_8.setObjectName(u"label_8")
+
+        self.gridLayout_6.addWidget(self.label_8, 10, 0, 1, 1)
 
         self.plainTextEdit_2 = QPlainTextEdit(self.mantrasPage)
         self.plainTextEdit_2.setObjectName(u"plainTextEdit_2")
@@ -358,7 +391,42 @@ class Ui_MainWindow(object):
         self.plainTextEdit_2.setMaximumSize(QSize(16777215, 30))
         self.plainTextEdit_2.setStyleSheet(u"")
 
-        self.gridLayout_6.addWidget(self.plainTextEdit_2, 8, 1, 1, 1)
+        self.gridLayout_6.addWidget(self.plainTextEdit_2, 10, 1, 1, 1)
+
+        self.label_39 = QLabel(self.mantrasPage)
+        self.label_39.setObjectName(u"label_39")
+
+        self.gridLayout_6.addWidget(self.label_39, 3, 0, 1, 1)
+
+        self.AutoMantraVariantsKeysArea = QPlainTextEdit(self.mantrasPage)
+        self.AutoMantraVariantsKeysArea.setObjectName(u"AutoMantraVariantsKeysArea")
+        self.AutoMantraVariantsKeysArea.setMinimumSize(QSize(0, 30))
+        self.AutoMantraVariantsKeysArea.setMaximumSize(QSize(16777215, 30))
+        self.AutoMantraVariantsKeysArea.setStyleSheet(u"")
+
+        self.gridLayout_6.addWidget(self.AutoMantraVariantsKeysArea, 7, 1, 1, 1)
+
+        self.label_46 = QLabel(self.mantrasPage)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setFont(font)
+        self.label_46.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_6.addWidget(self.label_46, 9, 0, 1, 2)
+
+        self.AutoRitualCast = QLabel(self.mantrasPage)
+        self.AutoRitualCast.setObjectName(u"AutoRitualCast")
+
+        self.gridLayout_6.addWidget(self.AutoRitualCast, 0, 0, 1, 1)
+
+        self.label_7 = QLabel(self.mantrasPage)
+        self.label_7.setObjectName(u"label_7")
+
+        self.gridLayout_6.addWidget(self.label_7, 8, 0, 1, 1)
+
+        self.label_10 = QLabel(self.mantrasPage)
+        self.label_10.setObjectName(u"label_10")
+
+        self.gridLayout_6.addWidget(self.label_10, 13, 0, 1, 1)
 
         self.label_20 = QLabel(self.mantrasPage)
         self.label_20.setObjectName(u"label_20")
@@ -370,70 +438,26 @@ class Ui_MainWindow(object):
         self.label_9 = QLabel(self.mantrasPage)
         self.label_9.setObjectName(u"label_9")
 
-        self.gridLayout_6.addWidget(self.label_9, 9, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.label_9, 11, 0, 1, 1)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.label_44 = QLabel(self.mantrasPage)
+        self.label_44.setObjectName(u"label_44")
 
-        self.gridLayout_6.addItem(self.verticalSpacer_3, 14, 0, 1, 2)
+        self.gridLayout_6.addWidget(self.label_44, 4, 0, 1, 1)
 
-        self.label_10 = QLabel(self.mantrasPage)
-        self.label_10.setObjectName(u"label_10")
+        self.screenResolution = QComboBox(self.mantrasPage)
+        self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
+        self.screenResolution.setObjectName(u"screenResolution")
 
-        self.gridLayout_6.addWidget(self.label_10, 11, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.screenResolution, 3, 1, 1, 1)
 
-        self.AutoMantraVariantsDescriptor = QLabel(self.mantrasPage)
-        self.AutoMantraVariantsDescriptor.setObjectName(u"AutoMantraVariantsDescriptor")
-        self.AutoMantraVariantsDescriptor.setFont(font)
-        self.AutoMantraVariantsDescriptor.setStyleSheet(u"color:grey;")
+        self.screenScale = QComboBox(self.mantrasPage)
+        self.screenScale.addItem("")
+        self.screenScale.addItem("")
+        self.screenScale.setObjectName(u"screenScale")
 
-        self.gridLayout_6.addWidget(self.AutoMantraVariantsDescriptor, 4, 0, 1, 2)
-
-        self.AutoMantraVariants = QLabel(self.mantrasPage)
-        self.AutoMantraVariants.setObjectName(u"AutoMantraVariants")
-
-        self.gridLayout_6.addWidget(self.AutoMantraVariants, 3, 0, 1, 1)
-
-        self.AutoRitualCast = QLabel(self.mantrasPage)
-        self.AutoRitualCast.setObjectName(u"AutoRitualCast")
-
-        self.gridLayout_6.addWidget(self.AutoRitualCast, 0, 0, 1, 1)
-
-        self.AutoMantraVariantsKeysLabel = QLabel(self.mantrasPage)
-        self.AutoMantraVariantsKeysLabel.setObjectName(u"AutoMantraVariantsKeysLabel")
-
-        self.gridLayout_6.addWidget(self.AutoMantraVariantsKeysLabel, 5, 0, 1, 1)
-
-        self.label_47 = QLabel(self.mantrasPage)
-        self.label_47.setObjectName(u"label_47")
-        self.label_47.setFont(font)
-        self.label_47.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_6.addWidget(self.label_47, 10, 0, 1, 2)
-
-        self.plainTextEdit_3 = QPlainTextEdit(self.mantrasPage)
-        self.plainTextEdit_3.setObjectName(u"plainTextEdit_3")
-        self.plainTextEdit_3.setMinimumSize(QSize(0, 30))
-        self.plainTextEdit_3.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_3.setStyleSheet(u"")
-
-        self.gridLayout_6.addWidget(self.plainTextEdit_3, 11, 1, 1, 1)
-
-        self.label_7 = QLabel(self.mantrasPage)
-        self.label_7.setObjectName(u"label_7")
-
-        self.gridLayout_6.addWidget(self.label_7, 6, 0, 1, 1)
-
-        self.label_8 = QLabel(self.mantrasPage)
-        self.label_8.setObjectName(u"label_8")
-
-        self.gridLayout_6.addWidget(self.label_8, 8, 0, 1, 1)
-
-        self.plainTextEdit_10 = QPlainTextEdit(self.mantrasPage)
-        self.plainTextEdit_10.setObjectName(u"plainTextEdit_10")
-        self.plainTextEdit_10.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_10.setStyleSheet(u"")
-
-        self.gridLayout_6.addWidget(self.plainTextEdit_10, 2, 1, 1, 1)
+        self.gridLayout_6.addWidget(self.screenScale, 4, 1, 1, 1)
 
         self.stackedWidget.addWidget(self.mantrasPage)
         self.weaponsPage = QWidget()
@@ -1968,7 +1992,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1991,23 +2015,33 @@ class Ui_MainWindow(object):
 
         self.BellMovestack.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Bell Movestack</span></p></body></html>", None))
         self.label_40.setText(QCoreApplication.translate("MainWindow", u"Rolls or parries whenever you press C (activating bell)", None))
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Ping</span></p></body></html>", None))
-        self.AutoMantraVariantsKeysArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Performs a slide when using a mantra while running", None))
-        self.plainTextEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Automatically activates all ritual casts. Full-screen on 1920 x 1080 resolution required. </p></body></html>", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mantra Roll Tech</span></p></body></html>", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
         self.AutoMantraVariantsDescriptor.setText(QCoreApplication.translate("MainWindow", u"Performs the special variant of a mantra activated by pressing F during windup", None))
-        self.AutoMantraVariants.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Mantra Variants </span></p></body></html>", None))
-        self.AutoRitualCast.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Ritual Casts</span></p></body></html>", None))
-        self.AutoMantraVariantsKeysLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
         self.label_47.setText(QCoreApplication.translate("MainWindow", u"Performs a roll when using a mantra", None))
-        self.plainTextEdit_3.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mantra Slide Tech</span></p></body></html>", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
         self.plainTextEdit_10.setPlainText("")
         self.plainTextEdit_10.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Approximate ping, default is 100 (Shift + F3 to see ping)", None))
+        self.AutoMantraVariants.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Mantra Variants </span></p></body></html>", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Ping</span></p></body></html>", None))
+        self.AutoMantraVariantsKeysLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
+        self.plainTextEdit_3.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
+        self.plainTextEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
+        self.label_39.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Screen Resolution</span></p></body></html>", None))
+        self.AutoMantraVariantsKeysArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Numbers or letters separated by commas, like 1,2,e,3,z", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Performs a slide when using a mantra while running", None))
+        self.AutoRitualCast.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Ritual Casts</span></p></body></html>", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mantra Slide Tech</span></p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Mantra Keys</span></p></body></html>", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Automatically activates all ritual casts.</p></body></html>", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mantra Roll Tech</span></p></body></html>", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Screen Scale</span></p></body></html>", None))
+        self.screenResolution.setItemText(0, QCoreApplication.translate("MainWindow", u"1920 x 1080", None))
+        self.screenResolution.setItemText(1, QCoreApplication.translate("MainWindow", u"1920 x 1200", None))
+
+        self.screenResolution.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Your computer's screen resolution", None))
+        self.screenScale.setItemText(0, QCoreApplication.translate("MainWindow", u"100%", None))
+        self.screenScale.setItemText(1, QCoreApplication.translate("MainWindow", u"125%", None))
+
+        self.screenScale.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Your computer screen's scale (%)", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Uppercuts as soon as you press ctrl", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Weapon Toolbar Number</span></p></body></html>", None))
         self.MotifHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
@@ -2134,10 +2168,6 @@ class Ui_MainWindow(object):
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
     # retranslateUi
 
-
-
-
-
         print('importing macros')
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
         from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast
@@ -2178,15 +2208,15 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.BellMovestackToggle, 0, 1, 1, 2)
 
         #!MANTRAS
-        self.mantraVariantToggle = CustomToggle(self.mantrasPage)
-        self.gridLayout_6.addWidget(self.mantraVariantToggle, 3, 1, 1, 1)
-        self.mantraTechRollToggle = CustomToggle(self.mantrasPage)
-        self.gridLayout_6.addWidget(self.mantraTechRollToggle, 9,1,1,2)
-        self.mantraTechSlidetoggle = CustomToggle(self.mantrasPage)
-        self.gridLayout_6.addWidget(self.mantraTechSlidetoggle, 6,1,1,2)
-
         self.RitualCastToggle = CustomToggle(self.mantrasPage)
         self.gridLayout_6.addWidget(self.RitualCastToggle, 0,1,1,1)
+        self.mantraVariantToggle = CustomToggle(self.mantrasPage)
+        self.gridLayout_6.addWidget(self.mantraVariantToggle, 5, 1, 1, 1)
+        self.mantraTechRollToggle = CustomToggle(self.mantrasPage)
+        self.gridLayout_6.addWidget(self.mantraTechRollToggle, 11,1,1,2)
+        self.mantraTechSlidetoggle = CustomToggle(self.mantrasPage)
+        self.gridLayout_6.addWidget(self.mantraTechSlidetoggle, 8,1,1,2)
+
 
 
         # label 9 = mantra roll label 7 = mantra slide
@@ -2352,7 +2382,7 @@ class Ui_MainWindow(object):
                         templatepath = os.path.dirname(os.path.abspath(__file__))
                         templatepath = os.path.join(templatepath, 'assets/letter_templates')
                         print(templatepath)
-                        addMacro('Ritual Cast', self.RitualCastToggle, autoritualcast.RitualCastListener, ping_ms=self.plainTextEdit_10.toPlainText(), filepath=templatepath)
+                        addMacro('Ritual Cast', self.RitualCastToggle, autoritualcast.RitualCastListener, ping_ms=self.plainTextEdit_10.toPlainText(), basepath=templatepath, scale=self.screenScale.currentIndex(), resolution=self.screenResolution.currentIndex())
                         addMacro('Charisma Autofill', self.CharismaAutofillToggle, autocharisma.autoCharismaListener)
                         addMacro('Auto Fortitude', self.AutoFortitudeToggle, autofortitude.AutoFortitudeListener, keybind=self.BoulderTrainingHotkey.toPlainText())
                         addMacro('Auto Willpower', self.AutoWillpowerToggle, autowillpower.AutoWillpowerListener, keybind=self.WillpowerTrainingHotkey.toPlainText())
@@ -2473,12 +2503,18 @@ class Ui_MainWindow(object):
                 if self.BellMovestackToggle._is_checked == 2:
                         currentData['BellMovestackToggle'] = True
                         currentData['MovestackChoice'] = self.MovestackChoice.currentIndex()
-                elif self.BellMovestackToggle._is_checked == 0:
+                else:
                        currentData['BellMovestackToggle'] = False
 
                 #!mantras
+                if self.RitualCastToggle._is_checked == 2:
+                       currentData['RitualCastToggle'] = True
+                       currentData['ritualCastPing'] = self.plainTextEdit_10.toPlainText()
+                       currentData['screenResolution'] = self.screenResolution.currentIndex()
+                       currentData['screenScale'] = self.screenScale.currentIndex()
+                else:
+                       currentData['RitualCastToggle'] = False
 
-                saveMacro(currentData, 'RitualCastToggle', params=['ritualCastMantraKeys'], elements=['plainTextEdit_10'])
                 saveMacro(currentData, 'mantraVariantToggle', params=['AutoMantraVariantsKeysArea'], elements=['AutoMantraVariantsKeysArea'])
                 saveMacro(currentData, 'mantraTechSlidetoggle', params=['mantraTechSlidetoggleKeysArea'], elements=['plainTextEdit_2'])
                 saveMacro(currentData, 'mantraTechRollToggle', params=['mantraTechRollToggleKeysArea'], elements=['plainTextEdit_3'])
@@ -2555,7 +2591,13 @@ class Ui_MainWindow(object):
                 elif not savedData['BellMovestackToggle']:
                        self.BellMovestackToggle.setChecked(False)
 
-                loadMacro(savedData, 'RitualCastToggle', ['plainTextEdit_10'], ['ritualCastMantraKeys'])
+                if savedData['RitualCastToggle']:
+                       self.RitualCastToggle.setChecked(True)
+                       self.screenScale.setCurrentIndex(int(savedData['screenScale']))
+                       self.screenResolution.setCurrentIndex(int(savedData['screenResolution']))
+                       self.plainTextEdit_10.setPlainText(str(savedData['ritualCastPing']))
+                else:
+                       self.RitualCastToggle.setChecked(False)
                 loadMacro(savedData, 'mantraVariantToggle', ['AutoMantraVariantsKeysArea'], ['AutoMantraVariantsKeysArea'])
                 loadMacro(savedData, 'mantraTechRollToggle', ['plainTextEdit_3'], ['mantraTechRollToggleKeysArea'])
                 loadMacro(savedData, 'mantraTechSlidetoggle', ['plainTextEdit_2'], ['mantraTechSlidetoggleKeysArea'])
