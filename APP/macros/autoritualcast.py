@@ -14,20 +14,40 @@ STABILITY_DURATION = 0.15  # Time (seconds) the letters must stay the same to be
 MAX_SCAN_DURATION = 1.0    # Hard limit for scanning before forcing execution
 DEFAULT_PING = 100
 
-COLUMN_REGIONS = [
+#1080 x 1920, 125% 
+COLUMNS_SMALL_125 = [
     [{"left": 835, "top": 250, "width": 50, "height": 50}, {"left": 835, "top": 300, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 250, "width": 50, "height": 50}, {"left": 935, "top": 300, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 250, "width": 50, "height": 50}, {"left": 1035, "top": 300, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 250, "width": 50, "height": 50}, {"left": 1135, "top": 300, "width": 50, "height": 50}]  # Column 4
 ]
 
+COLUMNS_LARGE_125 = [
+    [{"left": 835, "top": 262, "width": 50, "height": 50}, {"left": 835, "top": 312, "width": 50, "height": 50}], # Column 1
+    [{"left": 935, "top": 262, "width": 50, "height": 50}, {"left": 935, "top": 312, "width": 50, "height": 50}], # Column 2
+    [{"left": 1035, "top": 262, "width": 50, "height": 50}, {"left": 1035, "top": 312, "width": 50, "height": 50}], # Column 3
+    [{"left": 1135, "top": 262, "width": 50, "height": 50}, {"left": 1135, "top": 312, "width": 50, "height": 50}]  # Column 4
+]
+
+COLUMNS_SMALL_100 = [
+    [{"left": 858, "top": 217, "width": 50, "height": 50}, {"left": 858, "top": 257, "width": 50, "height": 50}], # Column 1
+    [{"left": 938, "top": 217, "width": 50, "height": 50}, {"left": 938, "top": 257, "width": 50, "height": 50}], # Column 2
+    [{"left": 1018, "top": 217, "width": 50, "height": 50}, {"left": 1018, "top": 257, "width": 50, "height": 50}], # Column 3
+    [{"left": 1098, "top": 217, "width": 50, "height": 50}, {"left": 1098, "top": 257, "width": 50, "height": 50}]  # Column 4
+]
+
+COLUMNS_LARGE_100 = [
+    [{"left": 858, "top": 229, "width": 50, "height": 50}, {"left": 858, "top": 269, "width": 50, "height": 50}], # Column 1
+    [{"left": 938, "top": 229, "width": 50, "height": 50}, {"left": 938, "top": 269, "width": 50, "height": 50}], # Column 2
+    [{"left": 1018, "top": 229, "width": 50, "height": 50}, {"left": 1018, "top": 269, "width": 50, "height": 50}], # Column 3
+    [{"left": 1098, "top": 229, "width": 50, "height": 50}, {"left": 1098, "top": 269, "width": 50, "height": 50}]  # Column 4
+]
 class RitualCastListener:  
     def __init__(self):
         self.running = False
         self.thread = None
         self.templates = {}
-        self.flat_regions = [r for col in COLUMN_REGIONS for r in col]
-        self.current_images = [None] * len(self.flat_regions)
+
 
     def load_templates(self, filepath):
         if not os.path.isdir(filepath):
@@ -197,7 +217,25 @@ class RitualCastListener:
                     print(f"Error: {e}")
                     time.sleep(0.5)
 
-    def run(self, filepath, ping_ms):
+    def run(self, basepath, ping_ms, resolution, scale):
+        
+        if resolution == 0:
+            filepath = os.path.join(basepath, '100')
+            if scale == 0:
+                column_regions = COLUMNS_SMALL_100
+            else: #scale == 1
+                column_regions = COLUMNS_SMALL_125
+            
+        else: # (resolution == 1)
+            filepath = os.path.join(basepath, '100')
+            if scale == 0: 
+                column_regions = COLUMNS_LARGE_100
+            else: #scale == 1
+                column_regions = COLUMNS_LARGE_125
+            
+        
+        self.flat_regions = [r for col in column_regions for r in col]
+        self.current_images = [None] * len(self.flat_regions)
         if ping_ms is None or not str(ping_ms).isdigit():
             ping_ms = DEFAULT_PING
             

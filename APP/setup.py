@@ -9,6 +9,10 @@ def Setup():
     presetRenameContentPath = os.path.join(dataPath, 'presetRenamecontent.txt')
     presetRenameNumPath = os.path.join(dataPath, 'presetRenameNum.txt')
     SettingsPath = os.path.join(dataPath, 'Settings.json')
+    if not os.path.isdir(dataLocation):
+        os.mkdir(dataLocation)
+    if not os.path.isdir(os.path.join(dataLocation, 'Swinestyle')):
+        os.mkdir(os.path.join(dataLocation, 'Swinestyle'))
     if not os.path.isdir(dataPath):
         os.mkdir(dataPath)
     if not os.path.isfile(SettingsPath):

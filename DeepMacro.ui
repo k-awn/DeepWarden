@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
-    <height>686</height>
+    <width>688</width>
+    <height>688</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,98 +57,6 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="saveButton">
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-    QPushButton {
-        border: none;
-        background-color: transparent;
-        padding: 2px;
-    }
-    QPushButton:hover {
-        background-color: rgba(128, 128, 128, 50);
-    }
-    QPushButton:pressed {
-        background-color: rgba(128, 128, 128, 100);
-    }</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ASSETS/assets.qrc">
-           <normaloff>:/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="flat">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="bellButton">
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-    QPushButton {
-        border: none;
-        background-color: transparent;
-        padding: 2px;
-    }
-    QPushButton:hover {
-        background-color: rgba(128, 128, 128, 50);
-    }
-    QPushButton:pressed {
-        background-color: rgba(128, 128, 128, 100);
-    }</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ASSETS/assets.qrc">
-           <normaloff>:/icons/bell.png</normaloff>:/icons/bell.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="flat">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
        <item row="3" column="0">
         <widget class="QPushButton" name="weaponsButton">
          <property name="minimumSize">
@@ -241,6 +149,111 @@
          </property>
         </widget>
        </item>
+       <item row="9" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="bellButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+    QPushButton {
+        border: none;
+        background-color: transparent;
+        padding: 2px;
+    }
+    QPushButton:hover {
+        background-color: rgba(128, 128, 128, 50);
+    }
+    QPushButton:pressed {
+        background-color: rgba(128, 128, 128, 100);
+    }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ASSETS/assets.qrc">
+           <normaloff>:/icons/bell.png</normaloff>:/icons/bell.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="saveButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+    QPushButton {
+        border: none;
+        background-color: transparent;
+        padding: 2px;
+    }
+    QPushButton:hover {
+        background-color: rgba(128, 128, 128, 50);
+    }
+    QPushButton:pressed {
+        background-color: rgba(128, 128, 128, 100);
+    }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ASSETS/assets.qrc">
+           <normaloff>:/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
        <item row="5" column="0">
         <widget class="QPushButton" name="miscButton">
          <property name="minimumSize">
@@ -275,6 +288,52 @@
          <property name="icon">
           <iconset resource="ASSETS/assets.qrc">
            <normaloff>:/icons/circle-ellipsis.png</normaloff>:/icons/circle-ellipsis.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="settingsButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+    QPushButton {
+        border: none;
+        background-color: transparent;
+        padding: 2px;
+    }
+    QPushButton:hover {
+        background-color: rgba(128, 128, 128, 50);
+    }
+    QPushButton:pressed {
+        background-color: rgba(128, 128, 128, 100);
+    }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ASSETS/assets.qrc">
+           <normaloff>:/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -333,20 +392,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="8" column="0">
+       <item row="7" column="0">
         <widget class="QPushButton" name="playButton">
          <property name="minimumSize">
           <size>
@@ -386,104 +432,6 @@
            <width>30</width>
            <height>30</height>
           </size>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QPushButton" name="movementButton">
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="sizeIncrement">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-    QPushButton {
-        border: none;
-        background-color: transparent;
-        padding: 2px;
-    }
-    QPushButton:hover {
-        background-color: rgba(128, 128, 128, 50);
-    }
-    QPushButton:pressed {
-        background-color: rgba(128, 128, 128, 100);
-    }</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ASSETS/assets.qrc">
-           <normaloff>:/icons/sprint_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/icons/sprint_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="flat">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0">
-        <widget class="QPushButton" name="settingsButton">
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-    QPushButton {
-        border: none;
-        background-color: transparent;
-        padding: 2px;
-    }
-    QPushButton:hover {
-        background-color: rgba(128, 128, 128, 50);
-    }
-    QPushButton:pressed {
-        background-color: rgba(128, 128, 128, 100);
-    }</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ASSETS/assets.qrc">
-           <normaloff>:/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="flat">
-          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -701,23 +649,33 @@
          </widget>
          <widget class="QWidget" name="mantrasPage">
           <layout class="QGridLayout" name="gridLayout_6">
-           <item row="15" column="0" colspan="2">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
+           <item row="6" column="0" colspan="2">
+            <widget class="QLabel" name="AutoMantraVariantsDescriptor">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
              </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
              </property>
-            </spacer>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="AutoMantraVariants">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Mantra Variants &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>Performs the special variant of a mantra activated by pressing F during windup</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="2">
+            <widget class="QLabel" name="label_47">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Performs a roll when using a mantra</string>
              </property>
             </widget>
            </item>
@@ -736,76 +694,45 @@
               <string/>
              </property>
              <property name="placeholderText">
-              <string>Numbers or letters separated by commas, like 1,2,e,3,z</string>
+              <string>Approximate ping, default is 100 (Shift + F3 to see ping)</string>
              </property>
             </widget>
            </item>
-           <item row="8" column="0" colspan="2">
-            <widget class="QLabel" name="label_46">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
+           <item row="5" column="0">
+            <widget class="QLabel" name="AutoMantraVariants">
              <property name="text">
-              <string>Performs a slide when using a mantra while running</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Mantra Variants &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Ping&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0" colspan="2">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="7" column="0">
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Mantra Slide Tech&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="AutoRitualCast">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Ritual Casts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="0">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mantra Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0" colspan="2">
-            <widget class="QLabel" name="label_47">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>Performs a roll when using a mantra</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
             <widget class="QLabel" name="AutoMantraVariantsKeysLabel">
              <property name="text">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mantra Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="10" column="0">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Mantra Roll Tech&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="1">
+           <item row="13" column="1">
             <widget class="QPlainTextEdit" name="plainTextEdit_3">
              <property name="minimumSize">
               <size>
@@ -827,14 +754,14 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_21">
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_8">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Ritual Cast Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mantra Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="9" column="1">
+           <item row="10" column="1">
             <widget class="QPlainTextEdit" name="plainTextEdit_2">
              <property name="minimumSize">
               <size>
@@ -856,7 +783,14 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Screen Resolution&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
             <widget class="QPlainTextEdit" name="AutoMantraVariantsKeysArea">
              <property name="minimumSize">
               <size>
@@ -878,15 +812,8 @@
              </property>
             </widget>
            </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mantra Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QLabel" name="AutoMantraVariantsDescriptor">
+           <item row="9" column="0" colspan="2">
+            <widget class="QLabel" name="label_46">
              <property name="font">
               <font>
                <pointsize>11</pointsize>
@@ -896,14 +823,28 @@
               <string notr="true">color:grey;</string>
              </property>
              <property name="text">
-              <string>Performs the special variant of a mantra activated by pressing F during windup</string>
+              <string>Performs a slide when using a mantra while running</string>
              </property>
             </widget>
            </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_22">
+           <item row="0" column="0">
+            <widget class="QLabel" name="AutoRitualCast">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Ritual Cast Notes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Ritual Casts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Mantra Slide Tech&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Mantra Keys&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -918,36 +859,196 @@
               <string notr="true">color:grey;</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically activates all ritual casts that don't have purple keys&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically activates all ritual casts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Mantra Roll Tech&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_44">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Screen Scale&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
            <item row="3" column="1">
-            <widget class="QPlainTextEdit" name="plainTextEdit_11">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
+            <widget class="QComboBox" name="screenResolution">
              <property name="placeholderText">
-              <string>e.x. c,z,x,x|x,x,x|z,z,z|z,z,z ( , is next note and | is next mantra)</string>
+              <string>Your computer's screen resolution</string>
              </property>
+             <item>
+              <property name="text">
+               <string>1920 x 1080</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1920 x 1200</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QComboBox" name="screenScale">
+             <property name="placeholderText">
+              <string>Your computer screen's scale (%)</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>100%</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>125%</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
          </widget>
          <widget class="QWidget" name="weaponsPage">
           <layout class="QGridLayout" name="gridLayout_10">
+           <item row="11" column="0" colspan="2">
+            <widget class="QLabel" name="label_24">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Uppercuts as soon as you press ctrl</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="1" colspan="2">
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Weapon Toolbar Number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="MotifHotkeyLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0" colspan="2">
+            <widget class="QLabel" name="label_36">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Same as auto uppercut but doesn't trigger when you're running</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="MotifToolbarNumberLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Motif Toolbar Number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey</string>
+             </property>
+             <property name="text">
+              <string>Automatically spams any key when M1 is held (default `). The key MUST be binded to basic attack (you can have two keybinds at a time)</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QLabel" name="label_12">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Quickly swaps your weapon's motif (the critical attack of your weapon) for you.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Feint&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="HoldM1Label">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Faster Hold M1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="MotifSwapLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Motif Swap&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0" colspan="2">
             <widget class="QLabel" name="label_11">
              <property name="font">
@@ -966,71 +1067,21 @@
              </property>
             </widget>
            </item>
-           <item row="10" column="0" colspan="2">
-            <widget class="QLabel" name="label_24">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_23">
              <property name="text">
-              <string>Uppercuts as soon as you press ctrl</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Uppercut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="13" column="0">
-            <spacer name="verticalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QLabel" name="label_12">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="AerialAirDashLabel">
              <property name="text">
-              <string>Quickly swaps your weapon's motif (the critical attack of your weapon) for you.</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Aerial M1 Dash&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="3" column="0" colspan="2">
-            <widget class="QLabel" name="label_2">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey</string>
-             </property>
-             <property name="text">
-              <string>Bind your key to ` which is the key right below esc at the top left of the keyboard. Disable Deepwoken's Hold M1 before using, disabling input buffering is also recommended</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
+           <item row="7" column="1">
             <widget class="QPlainTextEdit" name="MotifHotkeyArea">
              <property name="minimumSize">
               <size>
@@ -1052,63 +1103,7 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="MotifHotkeyLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
            <item row="8" column="1">
-            <widget class="QPlainTextEdit" name="plainTextEdit_7">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="placeholderText">
-              <string>The toolbar number of the weapon</string>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="1" colspan="2">
-            <spacer name="verticalSpacer_13">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Weapon Toolbar Number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="MotifToolbarNumberLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Motif Toolbar Number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
             <widget class="QPlainTextEdit" name="MotifToolbarNumberArea">
              <property name="minimumSize">
               <size>
@@ -1130,119 +1125,8 @@
              </property>
             </widget>
            </item>
-           <item row="12" column="0" colspan="2">
-            <widget class="QLabel" name="label_36">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>Same as auto uppercut but doesn't trigger when you're running</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_23">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Uppercut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0">
-            <widget class="QLabel" name="label_35">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Dynamic Uppercuts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="MotifSwapLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Auto Motif Swap&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="AerialAirDashLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Aerial M1 Dash&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="HoldM1Label">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Faster Hold M1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="progressionPage">
-          <layout class="QGridLayout" name="gridLayout_12">
-           <item row="3" column="0" colspan="2">
-            <widget class="QLabel" name="label_27">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>Make sure Ankle Weights are equipped before starting</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="label_26">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0">
-            <spacer name="verticalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="6" column="0" colspan="2">
-            <widget class="QLabel" name="label_28">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>Make sure Boulder is equipped before starting</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_25">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QPlainTextEdit" name="BoulderTrainingHotkey">
+           <item row="9" column="1">
+            <widget class="QPlainTextEdit" name="plainTextEdit_7">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -1259,11 +1143,87 @@
               <string notr="true"/>
              </property>
              <property name="placeholderText">
-              <string>Hotkey to start/stop training fortitude(boulder)</string>
+              <string>The toolbar number of the weapon</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_35">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Dynamic Uppercuts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Feints for you when you press F&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
            <item row="4" column="1">
+            <widget class="QPlainTextEdit" name="HoldM1Key">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>The key you want to be spammed when m1 is held</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="progressionPage">
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="CharismaAutofillLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Charisma Autofill&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="4">
+            <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Type out part of the charisma line and it will finish it for you</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
             <widget class="QPlainTextEdit" name="AnkleWeightsTrainingHotkey">
              <property name="minimumSize">
               <size>
@@ -1285,8 +1245,79 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLabel" name="label_13">
+           <item row="2" column="0" colspan="2">
+            <widget class="QLabel" name="AnkleWeightsLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Agility Auto-train&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QPlainTextEdit" name="BoulderTrainingHotkey">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="placeholderText">
+              <string>Hotkey to start/stop training fortitude(boulder)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="3">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="15" column="3">
+            <widget class="QPlainTextEdit" name="WillpowerTrainingHotkey">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="placeholderText">
+              <string>Hotkey to start/stop training willpower</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="4">
+            <widget class="QLabel" name="label_27">
              <property name="font">
               <font>
                <pointsize>11</pointsize>
@@ -1296,28 +1327,58 @@
               <string notr="true">color:grey;</string>
              </property>
              <property name="text">
-              <string>Type out part of the charisma line and it will finish it for you</string>
+              <string>Make sure the Ankle Weights tool is equipped before starting</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="CharismaAutofillLabel">
+           <item row="15" column="0">
+            <widget class="QLabel" name="label_30">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Charisma Autofill&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Hotkey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="AnkleWeightsLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Agility Auto-train&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
+           <item row="5" column="0" colspan="3">
             <widget class="QLabel" name="BoulderTrainingLabel">
              <property name="text">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Boulder Auto-train&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="WillpowerTrainingLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Prayer Auto-train&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="4">
+            <widget class="QLabel" name="label_28">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Make sure the Boulder tool is held out before starting and you are near a campfire</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0" colspan="4">
+            <widget class="QLabel" name="label_38">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:grey;</string>
+             </property>
+             <property name="text">
+              <string>Make sure the Prayer Beads tool is held out before starting</string>
              </property>
             </widget>
            </item>
@@ -1666,7 +1727,7 @@
          </widget>
          <widget class="QWidget" name="movementPage">
           <layout class="QGridLayout" name="gridLayout_11">
-           <item row="3" column="0">
+           <item row="0" column="0">
             <spacer name="verticalSpacer_8">
              <property name="orientation">
               <enum>Qt::Orientation::Vertical</enum>
@@ -1678,48 +1739,6 @@
               </size>
              </property>
             </spacer>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLabel" name="label_39">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>disconnects your wifi mid leap in order to ascend like the lorax (might cause issues w restores)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_38">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Strong/Flame leap keybind&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_30">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Strongest Leap&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QPlainTextEdit" name="plainTextEdit_16">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-            </widget>
            </item>
           </layout>
          </widget>
@@ -1812,7 +1831,7 @@ color:white;
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>566</width>
+                   <width>392</width>
                    <height>572</height>
                   </rect>
                  </property>
@@ -4005,10 +4024,10 @@ color:white;
          </widget>
          <widget class="QWidget" name="settingsPage">
           <layout class="QGridLayout" name="gridLayout_7">
-           <item row="0" column="0">
-            <widget class="QLabel" name="toggleNotifsLabel">
+           <item row="2" column="0">
+            <widget class="QLabel" name="themeLabel">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Toggle Notifications&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Theme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -4026,29 +4045,14 @@ color:white;
              </item>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="toggleNotifsLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Toggle Notifications&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
            <item row="4" column="0">
-            <widget class="QLabel" name="KeyInfoScreenLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Disable Key Info Screen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="2">
-            <widget class="QLabel" name="label_45">
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color:grey;</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changes the theme of the application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
             <spacer name="verticalSpacer_4">
              <property name="orientation">
               <enum>Qt::Orientation::Vertical</enum>
@@ -4060,13 +4064,6 @@ color:white;
               </size>
              </property>
             </spacer>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="themeLabel">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Theme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
            </item>
            <item row="1" column="0" colspan="2">
             <widget class="QLabel" name="label_41">
@@ -4086,8 +4083,8 @@ color:white;
              </property>
             </widget>
            </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QLabel" name="label_19">
+           <item row="3" column="0" colspan="2">
+            <widget class="QLabel" name="label_45">
              <property name="font">
               <font>
                <pointsize>11</pointsize>
@@ -4097,10 +4094,7 @@ color:white;
               <string notr="true">color:grey;</string>
              </property>
              <property name="text">
-              <string>Disables the startup window that shows information about your key, instead immediately going to the macro screen</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changes the theme of the application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
