@@ -132,9 +132,9 @@ class MainWindow(QMainWindow):
         
         # Set the window icon
         self.dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
-        abspath = os.path.abspath(__file__)
         self.settings_path = os.path.join(self.dataLocation, 'data/Settings.json')
-        icon_path = os.path.join(abspath, 'assets/logo.ico')
+        dirpath = os.path.dirname(__file__)
+        icon_path = os.path.join(dirpath, 'assets/logo.ico')
         self.setWindowIcon(QIcon(icon_path))
 
         # Windows taskbar icon
@@ -225,9 +225,9 @@ class MainWindow(QMainWindow):
 
 def main():
     dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
-    abspath = os.path.abspath(__file__)
+    dirpath = os.path.dirname(__file__)
 
-    icopath = os.path.join(abspath, 'logo.ico')
+    icopath = os.path.join(dirpath, 'assets', 'logo.ico')
 
     app = QApplication(sys.argv)
     app.setApplicationName('SwineStyle')
