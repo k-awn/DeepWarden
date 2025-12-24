@@ -139,7 +139,7 @@ class MainWindow(QMainWindow):
 
         # Windows taskbar icon
         if os.name == 'nt':
-            myappid = 'mycompany.myapp.1.0'
+            myappid = 'swinestyle.swinestyle.2.0'
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
         with open(self.settings_path) as f:
