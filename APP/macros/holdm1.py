@@ -68,8 +68,10 @@ class M1Listener:
                 print("\nStopping...")
                 break
 
-    def run(self, key='`'):
+    def run(self, key):
         print('checking')
+        if len(key) != 1:
+            key = '`'
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
