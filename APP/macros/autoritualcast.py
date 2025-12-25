@@ -220,17 +220,20 @@ class RitualCastListener:
     def run(self, basepath, ping_ms, resolution, scale):
         
         if resolution == 0:
-            filepath = os.path.join(basepath, '100')
             if scale == 0:
+                filepath = os.path.join(basepath, '100')
                 column_regions = COLUMNS_SMALL_100
             else: #scale == 1
+                filepath = os.path.join(basepath, '125')
                 column_regions = COLUMNS_SMALL_125
             
         else: # (resolution == 1)
-            filepath = os.path.join(basepath, '100')
             if scale == 0: 
+                filepath = os.path.join(basepath, '100')
                 column_regions = COLUMNS_LARGE_100
             else: #scale == 1
+                filepath = os.path.join(basepath, '125')
+
                 column_regions = COLUMNS_LARGE_125
             
         
