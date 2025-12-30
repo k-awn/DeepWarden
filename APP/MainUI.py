@@ -17,6 +17,28 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QStackedWidget, QWidget)
 
 
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'DeepMacroQHTSFY.ui'
+##
+## Created by: Qt User Interface Compiler version 6.10.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QStackedWidget, QWidget)
+import assets_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -39,30 +61,6 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.gridLayout_3.setContentsMargins(0, 5, 0, 0)
-        self.weaponsButton = QPushButton(self.menuBar)
-        self.weaponsButton.setObjectName(u"weaponsButton")
-        self.weaponsButton.setMinimumSize(QSize(50, 50))
-        self.weaponsButton.setMaximumSize(QSize(50, 50))
-        self.weaponsButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon = QIcon()
-        icon.addFile(u":/icons/swords_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.weaponsButton.setIcon(icon)
-        self.weaponsButton.setIconSize(QSize(30, 30))
-        self.weaponsButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.weaponsButton, 3, 0, 1, 1)
-
         self.progressionButton = QPushButton(self.menuBar)
         self.progressionButton.setObjectName(u"progressionButton")
         self.progressionButton.setMinimumSize(QSize(50, 50))
@@ -79,17 +77,37 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/exercise_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48(2).png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.progressionButton.setIcon(icon1)
+        icon = QIcon()
+        icon.addFile(u":/icons/exercise_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48(2).png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.progressionButton.setIcon(icon)
         self.progressionButton.setIconSize(QSize(30, 30))
         self.progressionButton.setFlat(True)
 
-        self.gridLayout_3.addWidget(self.progressionButton, 4, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.progressionButton, 5, 0, 1, 1)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.saveButton = QPushButton(self.menuBar)
+        self.saveButton.setObjectName(u"saveButton")
+        self.saveButton.setMinimumSize(QSize(50, 50))
+        self.saveButton.setMaximumSize(QSize(50, 50))
+        self.saveButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.saveButton.setIcon(icon1)
+        self.saveButton.setIconSize(QSize(30, 30))
+        self.saveButton.setFlat(True)
 
-        self.gridLayout_3.addItem(self.verticalSpacer, 9, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.saveButton, 0, 0, 1, 1)
 
         self.bellButton = QPushButton(self.menuBar)
         self.bellButton.setObjectName(u"bellButton")
@@ -115,11 +133,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.bellButton, 1, 0, 1, 1)
 
-        self.saveButton = QPushButton(self.menuBar)
-        self.saveButton.setObjectName(u"saveButton")
-        self.saveButton.setMinimumSize(QSize(50, 50))
-        self.saveButton.setMaximumSize(QSize(50, 50))
-        self.saveButton.setStyleSheet(u"\n"
+        self.playButton = QPushButton(self.menuBar)
+        self.playButton.setObjectName(u"playButton")
+        self.playButton.setMinimumSize(QSize(50, 50))
+        self.playButton.setMaximumSize(QSize(50, 50))
+        self.playButton.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -132,60 +150,11 @@ class Ui_MainWindow(object):
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.saveButton.setIcon(icon3)
-        self.saveButton.setIconSize(QSize(30, 30))
-        self.saveButton.setFlat(True)
+        icon3.addFile(u":/icons/play_arrow_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.playButton.setIcon(icon3)
+        self.playButton.setIconSize(QSize(30, 30))
 
-        self.gridLayout_3.addWidget(self.saveButton, 0, 0, 1, 1)
-
-        self.miscButton = QPushButton(self.menuBar)
-        self.miscButton.setObjectName(u"miscButton")
-        self.miscButton.setMinimumSize(QSize(50, 50))
-        self.miscButton.setMaximumSize(QSize(50, 50))
-        self.miscButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/circle-ellipsis.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.miscButton.setIcon(icon4)
-        self.miscButton.setIconSize(QSize(30, 30))
-        self.miscButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.miscButton, 5, 0, 1, 1)
-
-        self.settingsButton = QPushButton(self.menuBar)
-        self.settingsButton.setObjectName(u"settingsButton")
-        self.settingsButton.setMinimumSize(QSize(50, 50))
-        self.settingsButton.setMaximumSize(QSize(50, 50))
-        self.settingsButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.settingsButton.setIcon(icon5)
-        self.settingsButton.setIconSize(QSize(30, 30))
-        self.settingsButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.settingsButton, 8, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.playButton, 8, 0, 1, 1)
 
         self.mantrasButton = QPushButton(self.menuBar)
         self.mantrasButton.setObjectName(u"mantrasButton")
@@ -203,19 +172,71 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/wand-sparkles.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.mantrasButton.setIcon(icon6)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/wand-sparkles.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.mantrasButton.setIcon(icon4)
         self.mantrasButton.setIconSize(QSize(30, 30))
         self.mantrasButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.mantrasButton, 2, 0, 1, 1)
 
-        self.playButton = QPushButton(self.menuBar)
-        self.playButton.setObjectName(u"playButton")
-        self.playButton.setMinimumSize(QSize(50, 50))
-        self.playButton.setMaximumSize(QSize(50, 50))
-        self.playButton.setStyleSheet(u"\n"
+        self.miscButton = QPushButton(self.menuBar)
+        self.miscButton.setObjectName(u"miscButton")
+        self.miscButton.setMinimumSize(QSize(50, 50))
+        self.miscButton.setMaximumSize(QSize(50, 50))
+        self.miscButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/circle-ellipsis.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.miscButton.setIcon(icon5)
+        self.miscButton.setIconSize(QSize(30, 30))
+        self.miscButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.miscButton, 6, 0, 1, 1)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_3.addItem(self.verticalSpacer, 10, 0, 1, 1)
+
+        self.settingsButton = QPushButton(self.menuBar)
+        self.settingsButton.setObjectName(u"settingsButton")
+        self.settingsButton.setMinimumSize(QSize(50, 50))
+        self.settingsButton.setMaximumSize(QSize(50, 50))
+        self.settingsButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/settings_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.settingsButton.setIcon(icon6)
+        self.settingsButton.setIconSize(QSize(30, 30))
+        self.settingsButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.settingsButton, 9, 0, 1, 1)
+
+        self.weaponsButton = QPushButton(self.menuBar)
+        self.weaponsButton.setObjectName(u"weaponsButton")
+        self.weaponsButton.setMinimumSize(QSize(50, 50))
+        self.weaponsButton.setMaximumSize(QSize(50, 50))
+        self.weaponsButton.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -228,11 +249,35 @@ class Ui_MainWindow(object):
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
         icon7 = QIcon()
-        icon7.addFile(u":/icons/play_arrow_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.playButton.setIcon(icon7)
-        self.playButton.setIconSize(QSize(30, 30))
+        icon7.addFile(u":/icons/swords_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.weaponsButton.setIcon(icon7)
+        self.weaponsButton.setIconSize(QSize(30, 30))
+        self.weaponsButton.setFlat(True)
 
-        self.gridLayout_3.addWidget(self.playButton, 7, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.weaponsButton, 3, 0, 1, 1)
+
+        self.movementButton = QPushButton(self.menuBar)
+        self.movementButton.setObjectName(u"movementButton")
+        self.movementButton.setMinimumSize(QSize(50, 50))
+        self.movementButton.setMaximumSize(QSize(50, 50))
+        self.movementButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/sprint_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.movementButton.setIcon(icon8)
+        self.movementButton.setIconSize(QSize(30, 30))
+
+        self.gridLayout_3.addWidget(self.movementButton, 4, 0, 1, 1)
 
 
         self.gridLayout.addWidget(self.menuBar, 1, 0, 1, 1)
@@ -270,9 +315,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon8 = QIcon()
-        icon8.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.menuButton.setIcon(icon8)
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.menuButton.setIcon(icon9)
         self.menuButton.setIconSize(QSize(50, 50))
         self.menuButton.setFlat(True)
 
@@ -868,9 +913,31 @@ class Ui_MainWindow(object):
         self.movementPage.setObjectName(u"movementPage")
         self.gridLayout_11 = QGridLayout(self.movementPage)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.AutoUncrouchLabel = QLabel(self.movementPage)
+        self.AutoUncrouchLabel.setObjectName(u"AutoUncrouchLabel")
+
+        self.gridLayout_11.addWidget(self.AutoUncrouchLabel, 2, 0, 1, 1)
+
+        self.label_52 = QLabel(self.movementPage)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_11.addWidget(self.label_52, 1, 0, 1, 1)
+
         self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout_11.addItem(self.verticalSpacer_8, 0, 0, 1, 1)
+        self.gridLayout_11.addItem(self.verticalSpacer_8, 4, 0, 1, 1)
+
+        self.AutoTacetLabel = QLabel(self.movementPage)
+        self.AutoTacetLabel.setObjectName(u"AutoTacetLabel")
+
+        self.gridLayout_11.addWidget(self.AutoTacetLabel, 0, 0, 1, 1)
+
+        self.label_54 = QLabel(self.movementPage)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_11.addWidget(self.label_54, 3, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.movementPage)
         self.savePage = QWidget()
@@ -934,9 +1001,9 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/editName_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset10EditName.setIcon(icon9)
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/editName_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset10EditName.setIcon(icon10)
         self.Preset10EditName.setIconSize(QSize(30, 30))
         self.Preset10EditName.setFlat(True)
 
@@ -959,9 +1026,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/save_24dp_2E6F40_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset9Save.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/save_24dp_2E6F40_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset9Save.setIcon(icon11)
         self.Preset9Save.setIconSize(QSize(30, 30))
         self.Preset9Save.setFlat(True)
 
@@ -984,9 +1051,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/cloud_upload_24dp_705CCC_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset7Load.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/cloud_upload_24dp_705CCC_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset7Load.setIcon(icon12)
         self.Preset7Load.setIconSize(QSize(30, 30))
         self.Preset7Load.setFlat(True)
 
@@ -1079,7 +1146,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset3EditName.setIcon(icon9)
+        self.Preset3EditName.setIcon(icon10)
         self.Preset3EditName.setIconSize(QSize(30, 30))
         self.Preset3EditName.setFlat(True)
 
@@ -1127,7 +1194,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset5EditName.setIcon(icon9)
+        self.Preset5EditName.setIcon(icon10)
         self.Preset5EditName.setIconSize(QSize(30, 30))
         self.Preset5EditName.setFlat(True)
 
@@ -1150,7 +1217,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset9Load.setIcon(icon11)
+        self.Preset9Load.setIcon(icon12)
         self.Preset9Load.setIconSize(QSize(30, 30))
         self.Preset9Load.setFlat(True)
 
@@ -1173,7 +1240,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Load.setIcon(icon11)
+        self.Preset6Load.setIcon(icon12)
         self.Preset6Load.setIconSize(QSize(30, 30))
         self.Preset6Load.setFlat(True)
 
@@ -1217,7 +1284,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Save.setIcon(icon10)
+        self.Preset6Save.setIcon(icon11)
         self.Preset6Save.setIconSize(QSize(30, 30))
         self.Preset6Save.setFlat(True)
 
@@ -1240,7 +1307,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset7Save.setIcon(icon10)
+        self.Preset7Save.setIcon(icon11)
         self.Preset7Save.setIconSize(QSize(30, 30))
         self.Preset7Save.setFlat(True)
 
@@ -1265,7 +1332,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset6EditName.setIcon(icon9)
+        self.Preset6EditName.setIcon(icon10)
         self.Preset6EditName.setIconSize(QSize(30, 30))
         self.Preset6EditName.setFlat(True)
 
@@ -1290,7 +1357,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset7EditName.setIcon(icon9)
+        self.Preset7EditName.setIcon(icon10)
         self.Preset7EditName.setIconSize(QSize(30, 30))
         self.Preset7EditName.setFlat(True)
 
@@ -1313,7 +1380,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Save.setIcon(icon10)
+        self.Preset2Save.setIcon(icon11)
         self.Preset2Save.setIconSize(QSize(30, 30))
         self.Preset2Save.setFlat(True)
 
@@ -1336,7 +1403,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset4Load.setIcon(icon11)
+        self.Preset4Load.setIcon(icon12)
         self.Preset4Load.setIconSize(QSize(30, 30))
         self.Preset4Load.setFlat(True)
 
@@ -1359,7 +1426,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Load.setIcon(icon11)
+        self.Preset3Load.setIcon(icon12)
         self.Preset3Load.setIconSize(QSize(30, 30))
         self.Preset3Load.setFlat(True)
 
@@ -1384,7 +1451,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset1EditName.setIcon(icon9)
+        self.Preset1EditName.setIcon(icon10)
         self.Preset1EditName.setIconSize(QSize(30, 30))
         self.Preset1EditName.setFlat(True)
 
@@ -1409,7 +1476,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset2EditName.setIcon(icon9)
+        self.Preset2EditName.setIcon(icon10)
         self.Preset2EditName.setIconSize(QSize(30, 30))
         self.Preset2EditName.setFlat(True)
 
@@ -1434,7 +1501,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset9EditName.setIcon(icon9)
+        self.Preset9EditName.setIcon(icon10)
         self.Preset9EditName.setIconSize(QSize(30, 30))
         self.Preset9EditName.setFlat(True)
 
@@ -1457,7 +1524,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Load.setIcon(icon11)
+        self.Preset2Load.setIcon(icon12)
         self.Preset2Load.setIconSize(QSize(30, 30))
         self.Preset2Load.setFlat(True)
 
@@ -1501,7 +1568,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Load.setIcon(icon11)
+        self.Preset10Load.setIcon(icon12)
         self.Preset10Load.setIconSize(QSize(30, 30))
         self.Preset10Load.setFlat(True)
 
@@ -1524,7 +1591,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset4Save.setIcon(icon10)
+        self.Preset4Save.setIcon(icon11)
         self.Preset4Save.setIconSize(QSize(30, 30))
         self.Preset4Save.setFlat(True)
 
@@ -1549,7 +1616,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset8EditName.setIcon(icon9)
+        self.Preset8EditName.setIcon(icon10)
         self.Preset8EditName.setIconSize(QSize(30, 30))
         self.Preset8EditName.setFlat(True)
 
@@ -1572,7 +1639,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Load.setIcon(icon11)
+        self.Preset8Load.setIcon(icon12)
         self.Preset8Load.setIconSize(QSize(30, 30))
         self.Preset8Load.setFlat(True)
 
@@ -1595,7 +1662,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Save.setIcon(icon10)
+        self.Preset1Save.setIcon(icon11)
         self.Preset1Save.setIconSize(QSize(30, 30))
         self.Preset1Save.setFlat(True)
 
@@ -1660,7 +1727,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Save.setIcon(icon10)
+        self.Preset10Save.setIcon(icon11)
         self.Preset10Save.setIconSize(QSize(30, 30))
         self.Preset10Save.setFlat(True)
 
@@ -1683,7 +1750,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Load.setIcon(icon11)
+        self.Preset5Load.setIcon(icon12)
         self.Preset5Load.setIconSize(QSize(30, 30))
         self.Preset5Load.setFlat(True)
 
@@ -1706,7 +1773,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Save.setIcon(icon10)
+        self.Preset8Save.setIcon(icon11)
         self.Preset8Save.setIconSize(QSize(30, 30))
         self.Preset8Save.setFlat(True)
 
@@ -1729,7 +1796,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Save.setIcon(icon10)
+        self.Preset5Save.setIcon(icon11)
         self.Preset5Save.setIconSize(QSize(30, 30))
         self.Preset5Save.setFlat(True)
 
@@ -1754,7 +1821,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset4EditName.setIcon(icon9)
+        self.Preset4EditName.setIcon(icon10)
         self.Preset4EditName.setIconSize(QSize(30, 30))
         self.Preset4EditName.setFlat(True)
 
@@ -1777,7 +1844,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Load.setIcon(icon11)
+        self.Preset1Load.setIcon(icon12)
         self.Preset1Load.setIconSize(QSize(30, 30))
         self.Preset1Load.setFlat(True)
 
@@ -1821,7 +1888,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Save.setIcon(icon10)
+        self.Preset3Save.setIcon(icon11)
         self.Preset3Save.setIconSize(QSize(30, 30))
         self.Preset3Save.setFlat(True)
 
@@ -1992,7 +2059,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2000,14 +2067,15 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.weaponsButton.setText("")
         self.progressionButton.setText("")
-        self.bellButton.setText("")
         self.saveButton.setText("")
+        self.bellButton.setText("")
+        self.playButton.setText("")
+        self.mantrasButton.setText("")
         self.miscButton.setText("")
         self.settingsButton.setText("")
-        self.mantrasButton.setText("")
-        self.playButton.setText("")
+        self.weaponsButton.setText("")
+        self.movementButton.setText("")
         self.menuButton.setText("")
         self.pageName.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Save</span></p></body></html>", None))
         self.MovestackChoice.setItemText(0, QCoreApplication.translate("MainWindow", u"Roll", None))
@@ -2103,6 +2171,10 @@ class Ui_MainWindow(object):
         self.MbAllLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mb All </span></p></body></html>", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
         self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.AutoUncrouchLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Auto Uncrouch</span></p></body></html>", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Automatically enables tacet", None))
+        self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
         self.savePage.setStyleSheet(QCoreApplication.translate("MainWindow", u"QLineEdit\n"
 "{\n"
 "color:grey;\n"
@@ -2168,6 +2240,10 @@ class Ui_MainWindow(object):
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
     # retranslateUi
 
+
+
+
+
         print('importing macros')
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
         from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast
@@ -2181,7 +2257,7 @@ class Ui_MainWindow(object):
         self.weaponsButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
         self.progressionButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
         self.miscButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
-        #self.movementButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
+        self.movementButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
         self.saveButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(6))
         self.playButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
         self.settingsButton.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(8))
