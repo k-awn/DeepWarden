@@ -16,30 +16,6 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
 
-
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'DeepMacroQHTSFY.ui'
-##
-## Created by: Qt User Interface Compiler version 6.10.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QStackedWidget, QWidget)
-import assets_rc
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -913,10 +889,30 @@ class Ui_MainWindow(object):
         self.movementPage.setObjectName(u"movementPage")
         self.gridLayout_11 = QGridLayout(self.movementPage)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_11.addItem(self.verticalSpacer_8, 7, 0, 1, 1)
+
+        self.AutoTacetLabel = QLabel(self.movementPage)
+        self.AutoTacetLabel.setObjectName(u"AutoTacetLabel")
+
+        self.gridLayout_11.addWidget(self.AutoTacetLabel, 0, 0, 1, 1)
+
+        self.label_51 = QLabel(self.movementPage)
+        self.label_51.setObjectName(u"label_51")
+
+        self.gridLayout_11.addWidget(self.label_51, 2, 0, 1, 1)
+
+        self.label_54 = QLabel(self.movementPage)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_11.addWidget(self.label_54, 6, 0, 1, 1)
+
         self.AutoUncrouchLabel = QLabel(self.movementPage)
         self.AutoUncrouchLabel.setObjectName(u"AutoUncrouchLabel")
 
-        self.gridLayout_11.addWidget(self.AutoUncrouchLabel, 2, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.AutoUncrouchLabel, 5, 0, 1, 1)
 
         self.label_52 = QLabel(self.movementPage)
         self.label_52.setObjectName(u"label_52")
@@ -924,20 +920,19 @@ class Ui_MainWindow(object):
 
         self.gridLayout_11.addWidget(self.label_52, 1, 0, 1, 1)
 
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.label_53 = QLabel(self.movementPage)
+        self.label_53.setObjectName(u"label_53")
+        self.label_53.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_11.addItem(self.verticalSpacer_8, 4, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.label_53, 4, 0, 1, 1)
 
-        self.AutoTacetLabel = QLabel(self.movementPage)
-        self.AutoTacetLabel.setObjectName(u"AutoTacetLabel")
+        self.autoTacetKeybind = QPlainTextEdit(self.movementPage)
+        self.autoTacetKeybind.setObjectName(u"autoTacetKeybind")
+        self.autoTacetKeybind.setMinimumSize(QSize(0, 30))
+        self.autoTacetKeybind.setMaximumSize(QSize(16777215, 30))
+        self.autoTacetKeybind.setStyleSheet(u"")
 
-        self.gridLayout_11.addWidget(self.AutoTacetLabel, 0, 0, 1, 1)
-
-        self.label_54 = QLabel(self.movementPage)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_11.addWidget(self.label_54, 3, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.autoTacetKeybind, 2, 1, 1, 1)
 
         self.stackedWidget.addWidget(self.movementPage)
         self.savePage = QWidget()
@@ -2171,10 +2166,13 @@ class Ui_MainWindow(object):
         self.MbAllLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mb All </span></p></body></html>", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
         self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Keybind</span></p></body></html>", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
         self.AutoUncrouchLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Auto Uncrouch</span></p></body></html>", None))
         self.label_52.setText(QCoreApplication.translate("MainWindow", u"Automatically enables tacet", None))
-        self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
-        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
+        self.label_53.setText(QCoreApplication.translate("MainWindow", u"Keybind for auto/easy tacet", None))
+        self.autoTacetKeybind.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key to be pressed to activate tacet automatically", None))
         self.savePage.setStyleSheet(QCoreApplication.translate("MainWindow", u"QLineEdit\n"
 "{\n"
 "color:grey;\n"
@@ -2244,9 +2242,11 @@ class Ui_MainWindow(object):
 
 
 
+
+
         print('importing macros')
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
-        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast
+        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast, autotacet
         from macros.bellStack import bellStackParry, bellStackDodge
         from macros.mantraTech import mantraTechRoll, mantraTechSlide
         from macros.uppercuts import autoUppercutAlways, autoUppercutDYNAMIC
@@ -2322,7 +2322,13 @@ class Ui_MainWindow(object):
         self.RunKeybindToggle = CustomToggle(self.runPage)
         self.gridLayout_14.addWidget(self.RunKeybindToggle, 2, 1, 1, 1)
 
-        
+        #! MOVEMENT
+        self.tacetToggle = CustomToggle(self.movementPage)
+        self.gridLayout_11.addWidget(self.tacetToggle, 0,1,1,2)
+
+        self.uncrouchToggle = CustomToggle(self.movementPage)
+        self.gridLayout_11.addWidget(self.uncrouchToggle, 5,1,1,2)
+
         #!MISCELLANEOUS
         self.MbAllToggle = CustomToggle(self.miscPage)
         self.gridLayout_8.addWidget(self.MbAllToggle, 10, 1, 1, 1)
@@ -2368,6 +2374,9 @@ class Ui_MainWindow(object):
                 self.GoldenTongueToggle,
                 self.GankPingerToggle,
                 self.ScreenshotToggle,
+
+                self.tacetToggle,
+                self.uncrouchToggle,
 
                 self.CharismaAutofillToggle,
                 self.AutoAgilityToggle,
@@ -2464,11 +2473,12 @@ class Ui_MainWindow(object):
                         addMacro('Auto Willpower', self.AutoWillpowerToggle, autowillpower.AutoWillpowerListener, keybind=self.WillpowerTrainingHotkey.toPlainText())
 
                         addMacro('Auto Agility', self.AutoAgilityToggle, autoagility.AutoAgilityListener, keybind=self.AnkleWeightsTrainingHotkey.toPlainText())
-                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), ScreenshotToggle=(self.ScreenshotToggle._is_checked == 2))
+                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), takeimage=(self.ScreenshotToggle._is_checked == 2))
                         addMacro('Auto Uppercut', self.uppercutToggle, autoUppercutAlways.UppercutListener)
                         addMacro('Dynamic Auto Uppercut', self.uppercutDynamicToggle, autoUppercutDYNAMIC.DynamicUppercutListener)
                         addMacro('Auto Feint', self.autoFeintToggle, autofeint.autoFeintListener)
-                        addMacro('Flash Map', self.FlashMapToggle, flashmap.flashMapListener)                            
+                        addMacro('Flash Map', self.FlashMapToggle, flashmap.flashMapListener)
+                        addMacro('Tacet Toggle', self.tacetToggle,  autotacet.autoTacetListener, keybind=self.autoTacetKeybind.toPlainText(), uncrouch=(self.uncrouchToggle._is_checked == 2))          
         
                 else:
                         print('start')
@@ -2591,6 +2601,7 @@ class Ui_MainWindow(object):
                 else:
                        currentData['RitualCastToggle'] = False
 
+
                 saveMacro(currentData, 'mantraVariantToggle', params=['AutoMantraVariantsKeysArea'], elements=['AutoMantraVariantsKeysArea'])
                 saveMacro(currentData, 'mantraTechSlidetoggle', params=['mantraTechSlidetoggleKeysArea'], elements=['plainTextEdit_2'])
                 saveMacro(currentData, 'mantraTechRollToggle', params=['mantraTechRollToggleKeysArea'], elements=['plainTextEdit_3'])
@@ -2616,6 +2627,10 @@ class Ui_MainWindow(object):
                 saveMacro(currentData, 'AutoFortitudeToggle', params=['BoulderTrainingHotkey'], elements=['BoulderTrainingHotkey'])
                 saveMacro(currentData, 'AutoWillpowerToggle', params=['WillpowerTrainingHotkey'], elements=['WillpowerTrainingHotkey'])
                 saveMacro(currentData, 'AutoAgilityToggle', params=['AnkleWeightsTrainingHotkey'], elements=['AnkleWeightsTrainingHotkey'])
+
+                #! movement
+                saveMacro(currentData, 'tacetToggle', elements=['autoTacetKeybind'], params=['autoTacetKeybind'])
+                saveMacro(currentData, 'uncrouchToggle')
 
                 dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
                 filename = os.path.join(dataLocation, f'data/Preset{number}Data.json')
@@ -2701,9 +2716,14 @@ class Ui_MainWindow(object):
                 loadMacro(savedData, 'AutoFortitudeToggle', ['BoulderTrainingHotkey'],['BoulderTrainingHotkey'])
                 loadMacro(savedData, 'AutoWillpowerToggle', ['WillpowerTrainingHotkey'], ['WillpowerTrainingHotkey'])
                 loadMacro(savedData, 'AutoAgilityToggle', ['AnkleWeightsTrainingHotkey'], ['AnkleWeightsTrainingHotkey'])
+
+                #! movement
+                loadMacro(savedData, 'tacetToggle', ['autoTacetKeybind'])
+                loadMacro(savedData, 'uncrouchToggle')
                 
                 #!running
                 loadMacro(savedData, 'RunKeybindToggle', ['plainTextEdit_17'], ['RunKeybindToggleKeybind'])
+
                 
 
                 
