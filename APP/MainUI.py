@@ -15,28 +15,7 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QLabel, QLineEdit, QPlainTextEdit,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
-# -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'DeepMacroGSOTor.ui'
-##
-## Created by: Qt User Interface Compiler version 6.10.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QStackedWidget, QWidget)
-import assets_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -2032,48 +2011,127 @@ class Ui_MainWindow(object):
         self.chatPage.setObjectName(u"chatPage")
         self.gridLayout_16 = QGridLayout(self.chatPage)
         self.gridLayout_16.setObjectName(u"gridLayout_16")
-        self.MbAllDropdown = QLabel(self.chatPage)
-        self.MbAllDropdown.setObjectName(u"MbAllDropdown")
+        self.MessageArea_2 = QPlainTextEdit(self.chatPage)
+        self.MessageArea_2.setObjectName(u"MessageArea_2")
+        self.MessageArea_2.setMaximumSize(QSize(16777215, 30))
+        self.MessageArea_2.setStyleSheet(u"")
 
-        self.gridLayout_16.addWidget(self.MbAllDropdown, 2, 0, 1, 1)
-
-        self.label_15 = QLabel(self.chatPage)
-        self.label_15.setObjectName(u"label_15")
-
-        self.gridLayout_16.addWidget(self.label_15, 5, 0, 1, 1)
+        self.gridLayout_16.addWidget(self.MessageArea_2, 15, 1, 1, 1)
 
         self.label_50 = QLabel(self.chatPage)
         self.label_50.setObjectName(u"label_50")
         self.label_50.setFont(font)
         self.label_50.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_16.addWidget(self.label_50, 1, 0, 1, 4)
-
-        self.label_14 = QLabel(self.chatPage)
-        self.label_14.setObjectName(u"label_14")
-
-        self.gridLayout_16.addWidget(self.label_14, 6, 0, 1, 1)
-
-        self.plainTextEdit_6 = QPlainTextEdit(self.chatPage)
-        self.plainTextEdit_6.setObjectName(u"plainTextEdit_6")
-        self.plainTextEdit_6.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_6.setStyleSheet(u"")
-
-        self.gridLayout_16.addWidget(self.plainTextEdit_6, 6, 2, 1, 1)
-
-        self.GoldenTongueHotkeyArea = QPlainTextEdit(self.chatPage)
-        self.GoldenTongueHotkeyArea.setObjectName(u"GoldenTongueHotkeyArea")
-        self.GoldenTongueHotkeyArea.setMaximumSize(QSize(16777215, 30))
-        self.GoldenTongueHotkeyArea.setStyleSheet(u"")
-
-        self.gridLayout_16.addWidget(self.GoldenTongueHotkeyArea, 5, 2, 1, 1)
+        self.gridLayout_16.addWidget(self.label_50, 1, 0, 1, 2)
 
         self.label_6 = QLabel(self.chatPage)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setFont(font)
         self.label_6.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_16.addWidget(self.label_6, 4, 0, 1, 4)
+        self.gridLayout_16.addWidget(self.label_6, 4, 0, 1, 2)
+
+        self.label_57 = QLabel(self.chatPage)
+        self.label_57.setObjectName(u"label_57")
+
+        self.gridLayout_16.addWidget(self.label_57, 11, 0, 1, 1)
+
+        self.label_60 = QLabel(self.chatPage)
+        self.label_60.setObjectName(u"label_60")
+
+        self.gridLayout_16.addWidget(self.label_60, 15, 0, 1, 1)
+
+        self.label_15 = QLabel(self.chatPage)
+        self.label_15.setObjectName(u"label_15")
+
+        self.gridLayout_16.addWidget(self.label_15, 5, 0, 1, 1)
+
+        self.MbAllLabel = QLabel(self.chatPage)
+        self.MbAllLabel.setObjectName(u"MbAllLabel")
+
+        self.gridLayout_16.addWidget(self.MbAllLabel, 0, 0, 1, 1)
+
+        self.label_58 = QLabel(self.chatPage)
+        self.label_58.setObjectName(u"label_58")
+        self.label_58.setFont(font)
+        self.label_58.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_16.addWidget(self.label_58, 13, 0, 1, 2)
+
+        self.plainTextEdit_6 = QPlainTextEdit(self.chatPage)
+        self.plainTextEdit_6.setObjectName(u"plainTextEdit_6")
+        self.plainTextEdit_6.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_6.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.plainTextEdit_6, 6, 1, 1, 1)
+
+        self.GoldenTongueLabel = QLabel(self.chatPage)
+        self.GoldenTongueLabel.setObjectName(u"GoldenTongueLabel")
+
+        self.gridLayout_16.addWidget(self.GoldenTongueLabel, 3, 0, 1, 1)
+
+        self.GoldenTongueHotkeyArea = QPlainTextEdit(self.chatPage)
+        self.GoldenTongueHotkeyArea.setObjectName(u"GoldenTongueHotkeyArea")
+        self.GoldenTongueHotkeyArea.setMaximumSize(QSize(16777215, 30))
+        self.GoldenTongueHotkeyArea.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.GoldenTongueHotkeyArea, 5, 1, 1, 1)
+
+        self.label_59 = QLabel(self.chatPage)
+        self.label_59.setObjectName(u"label_59")
+
+        self.gridLayout_16.addWidget(self.label_59, 14, 0, 1, 1)
+
+        self.label_55 = QLabel(self.chatPage)
+        self.label_55.setObjectName(u"label_55")
+        self.label_55.setFont(font)
+        self.label_55.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_16.addWidget(self.label_55, 8, 0, 1, 2)
+
+        self.MessageHotkeyArea_2 = QPlainTextEdit(self.chatPage)
+        self.MessageHotkeyArea_2.setObjectName(u"MessageHotkeyArea_2")
+        self.MessageHotkeyArea_2.setMaximumSize(QSize(16777215, 30))
+        self.MessageHotkeyArea_2.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.MessageHotkeyArea_2, 14, 1, 1, 1)
+
+        self.MessageHotkeyLabel = QLabel(self.chatPage)
+        self.MessageHotkeyLabel.setObjectName(u"MessageHotkeyLabel")
+
+        self.gridLayout_16.addWidget(self.MessageHotkeyLabel, 7, 0, 1, 1)
+
+        self.MessageHotkeyArea_1 = QPlainTextEdit(self.chatPage)
+        self.MessageHotkeyArea_1.setObjectName(u"MessageHotkeyArea_1")
+        self.MessageHotkeyArea_1.setMaximumSize(QSize(16777215, 30))
+        self.MessageHotkeyArea_1.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.MessageHotkeyArea_1, 9, 1, 1, 1)
+
+        self.label_14 = QLabel(self.chatPage)
+        self.label_14.setObjectName(u"label_14")
+
+        self.gridLayout_16.addWidget(self.label_14, 6, 0, 1, 1)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 343, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_16.addItem(self.verticalSpacer_9, 16, 1, 1, 1)
+
+        self.MbAllDropdown = QLabel(self.chatPage)
+        self.MbAllDropdown.setObjectName(u"MbAllDropdown")
+
+        self.gridLayout_16.addWidget(self.MbAllDropdown, 2, 0, 1, 1)
+
+        self.label_56 = QLabel(self.chatPage)
+        self.label_56.setObjectName(u"label_56")
+
+        self.gridLayout_16.addWidget(self.label_56, 9, 0, 1, 1)
+
+        self.MessageHotkeyLabel2 = QLabel(self.chatPage)
+        self.MessageHotkeyLabel2.setObjectName(u"MessageHotkeyLabel2")
+
+        self.gridLayout_16.addWidget(self.MessageHotkeyLabel2, 12, 0, 1, 1)
 
         self.MbAllHotkeyArea = QPlainTextEdit(self.chatPage)
         self.MbAllHotkeyArea.setObjectName(u"MbAllHotkeyArea")
@@ -2081,21 +2139,14 @@ class Ui_MainWindow(object):
         self.MbAllHotkeyArea.setMaximumSize(QSize(16777215, 30))
         self.MbAllHotkeyArea.setStyleSheet(u"")
 
-        self.gridLayout_16.addWidget(self.MbAllHotkeyArea, 2, 2, 1, 1)
+        self.gridLayout_16.addWidget(self.MbAllHotkeyArea, 2, 1, 1, 1)
 
-        self.verticalSpacer_9 = QSpacerItem(20, 343, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.MessageArea_1 = QPlainTextEdit(self.chatPage)
+        self.MessageArea_1.setObjectName(u"MessageArea_1")
+        self.MessageArea_1.setMaximumSize(QSize(16777215, 30))
+        self.MessageArea_1.setStyleSheet(u"")
 
-        self.gridLayout_16.addItem(self.verticalSpacer_9, 7, 2, 1, 1)
-
-        self.MbAllLabel = QLabel(self.chatPage)
-        self.MbAllLabel.setObjectName(u"MbAllLabel")
-
-        self.gridLayout_16.addWidget(self.MbAllLabel, 0, 0, 1, 2)
-
-        self.GoldenTongueLabel = QLabel(self.chatPage)
-        self.GoldenTongueLabel.setObjectName(u"GoldenTongueLabel")
-
-        self.gridLayout_16.addWidget(self.GoldenTongueLabel, 3, 0, 1, 2)
+        self.gridLayout_16.addWidget(self.MessageArea_1, 11, 1, 1, 1)
 
         self.stackedWidget.addWidget(self.chatPage)
 
@@ -2108,7 +2159,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(9)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2281,21 +2332,29 @@ class Ui_MainWindow(object):
         self.toggleNotifsLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Toggle Notifications</span></p></body></html>", None))
         self.label_41.setText(QCoreApplication.translate("MainWindow", u"When something togglable is used, such as \"Toggle Activate Macros\", a small popup will be activated in the bottom right of the screen", None))
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
-        self.MbAllDropdown.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.MessageArea_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Text", None))
-        self.plainTextEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
-        self.GoldenTongueHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
-        self.MbAllHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say mb all", None))
+        self.label_57.setText(QCoreApplication.translate("MainWindow", u"Text", None))
+        self.label_60.setText(QCoreApplication.translate("MainWindow", u"Text", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
         self.MbAllLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mb All </span></p></body></html>", None))
+        self.label_58.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
+        self.plainTextEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
         self.GoldenTongueLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Golden Tongue</span></p></body></html>", None))
+        self.GoldenTongueHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
+        self.label_59.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.label_55.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
+        self.MessageHotkeyArea_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
+        self.MessageHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Message Hotkey 1</span></p></body></html>", None))
+        self.MessageHotkeyArea_1.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Text", None))
+        self.MbAllDropdown.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.label_56.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.MessageHotkeyLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Message Hotkey 2</span></p></body></html>", None))
+        self.MbAllHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say mb all", None))
+        self.MessageArea_1.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
     # retranslateUi
-
-
-
-
 
 
 
@@ -2397,9 +2456,14 @@ class Ui_MainWindow(object):
 
         #! CHAT
         self.MbAllToggle = CustomToggle(self.miscPage)
-        self.gridLayout_16.addWidget(self.MbAllToggle, 0, 2, 1, 1)
+        self.gridLayout_16.addWidget(self.MbAllToggle, 0, 1, 1, 1)
         self.GoldenTongueToggle = CustomToggle(self.miscPage)
-        self.gridLayout_16.addWidget(self.GoldenTongueToggle, 3, 2, 1, 1)
+        self.gridLayout_16.addWidget(self.GoldenTongueToggle, 3, 1, 1, 1)
+        self.MessageToggle_1 = CustomToggle(self.miscPage)
+        self.gridLayout_16.addWidget(self.MessageToggle_1, 7, 1, 1, 1)
+        self.MessageToggle_2 = CustomToggle(self.miscPage)
+        self.gridLayout_16.addWidget(self.MessageToggle_2, 12, 1, 1, 1)
+
 
         
         #!PROGRESSION
@@ -2431,10 +2495,14 @@ class Ui_MainWindow(object):
                 self.uppercutDynamicToggle,
                 self.autoFeintToggle,
 
-                self.MbAllToggle,
-                self.GoldenTongueToggle,
+
                 self.GankPingerToggle,
                 self.ScreenshotToggle,
+
+                self.MbAllToggle,
+                self.GoldenTongueToggle,
+                self.MessageToggle_1,
+                self.MessageToggle_2,
 
                 self.tacetToggle,
                 self.uncrouchToggle,
@@ -2539,7 +2607,10 @@ class Ui_MainWindow(object):
                         addMacro('Dynamic Auto Uppercut', self.uppercutDynamicToggle, autoUppercutDYNAMIC.DynamicUppercutListener)
                         addMacro('Auto Feint', self.autoFeintToggle, autofeint.autoFeintListener)
                         addMacro('Flash Map', self.FlashMapToggle, flashmap.flashMapListener)
-                        addMacro('Tacet Toggle', self.tacetToggle,  autotacet.autoTacetListener, keybind=self.autoTacetKeybind.toPlainText(), uncrouch=(self.uncrouchToggle._is_checked == 2))          
+                        addMacro('Tacet Toggle', self.tacetToggle,  autotacet.autoTacetListener, keybind=self.autoTacetKeybind.toPlainText(), uncrouch=(self.uncrouchToggle._is_checked == 2))        
+
+                        addMacro('Message Hotkey', self.MessageToggle_1, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_1.toPlainText(), content=self.MessageArea_1.toPlainText())  
+                        addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText())  
         
                 else:
                         print('start')
@@ -2677,10 +2748,12 @@ class Ui_MainWindow(object):
                 saveMacro(currentData, 'autoFeintToggle')
 
                 #! misc
-
-                saveMacro(currentData, 'MbAllToggle', params=['MbAllHotkeyArea'], elements=['MbAllHotkeyArea'])
-                saveMacro(currentData, 'GoldenTongueToggle', params=['GoldenTongueHotkeyArea', 'GoldenTongueTextArea'], elements=['GoldenTongueHotkeyArea', 'plainTextEdit_6'])
                 saveMacro(currentData, 'GankPingerToggle', params=['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url', 'ScreenshotToggle'], elements=['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14'])
+
+                #! chatting
+
+                saveMacro(currentData, 'MessageToggle_1', params=['MessageHotkeyArea_1', 'MessageArea_1'], elements=['MessageHotkeyArea_1', 'MessageArea_1'])
+                saveMacro(currentData, 'MessageToggle_2', params=['MessageHotkeyArea_2', 'MessageArea_2'], elements=['MessageHotkeyArea_2', 'MessageArea_2'])
 
                 #! progresssion
 
