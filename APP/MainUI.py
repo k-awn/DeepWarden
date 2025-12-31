@@ -15,6 +15,28 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QLabel, QLineEdit, QPlainTextEdit,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'DeepMacroGSOTor.ui'
+##
+## Created by: Qt User Interface Compiler version 6.10.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QStackedWidget, QWidget)
+import assets_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -255,6 +277,29 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.movementButton, 4, 0, 1, 1)
 
+        self.chatButton = QPushButton(self.menuBar)
+        self.chatButton.setObjectName(u"chatButton")
+        self.chatButton.setMinimumSize(QSize(50, 50))
+        self.chatButton.setMaximumSize(QSize(50, 50))
+        self.chatButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/sms_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.chatButton.setIcon(icon9)
+        self.chatButton.setIconSize(QSize(30, 30))
+
+        self.gridLayout_3.addWidget(self.chatButton, 7, 0, 1, 1)
+
 
         self.gridLayout.addWidget(self.menuBar, 1, 0, 1, 1)
 
@@ -291,9 +336,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.menuButton.setIcon(icon9)
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.menuButton.setIcon(icon10)
         self.menuButton.setIconSize(QSize(50, 50))
         self.menuButton.setFlat(True)
 
@@ -719,17 +764,49 @@ class Ui_MainWindow(object):
         self.miscPage.setObjectName(u"miscPage")
         self.gridLayout_8 = QGridLayout(self.miscPage)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
-        self.plainTextEdit_14 = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
-        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_14.setStyleSheet(u"")
+        self.label_33 = QLabel(self.miscPage)
+        self.label_33.setObjectName(u"label_33")
 
-        self.gridLayout_8.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
+        self.gridLayout_8.addWidget(self.label_33, 6, 0, 1, 1)
 
-        self.DiscordGankPingLabel = QLabel(self.miscPage)
-        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
+        self.label_32 = QLabel(self.miscPage)
+        self.label_32.setObjectName(u"label_32")
 
-        self.gridLayout_8.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
+        self.gridLayout_8.addWidget(self.label_32, 5, 0, 1, 1)
+
+        self.label = QLabel(self.miscPage)
+        self.label.setObjectName(u"label")
+        self.label.setFont(font)
+        self.label.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_8.addWidget(self.label, 11, 0, 1, 2)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_8.addItem(self.verticalSpacer_5, 12, 0, 1, 1)
+
+        self.label_48 = QLabel(self.miscPage)
+        self.label_48.setObjectName(u"label_48")
+        self.label_48.setFont(font)
+        self.label_48.setStyleSheet(u"color:grey;")
+        self.label_48.setWordWrap(True)
+
+        self.gridLayout_8.addWidget(self.label_48, 1, 0, 1, 2)
+
+        self.label_29 = QLabel(self.miscPage)
+        self.label_29.setObjectName(u"label_29")
+
+        self.gridLayout_8.addWidget(self.label_29, 4, 0, 1, 1)
+
+        self.DiscordGankPingSettings = QLabel(self.miscPage)
+        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
+
+        self.gridLayout_8.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
+
+        self.label_34 = QLabel(self.miscPage)
+        self.label_34.setObjectName(u"label_34")
+
+        self.gridLayout_8.addWidget(self.label_34, 2, 0, 1, 1)
 
         self.plainTextEdit = QPlainTextEdit(self.miscPage)
         self.plainTextEdit.setObjectName(u"plainTextEdit")
@@ -739,18 +816,30 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addWidget(self.plainTextEdit, 3, 1, 1, 1)
 
-        self.MbAllHotkeyArea = QPlainTextEdit(self.miscPage)
-        self.MbAllHotkeyArea.setObjectName(u"MbAllHotkeyArea")
-        self.MbAllHotkeyArea.setMinimumSize(QSize(0, 30))
-        self.MbAllHotkeyArea.setMaximumSize(QSize(16777215, 30))
-        self.MbAllHotkeyArea.setStyleSheet(u"")
+        self.FlashmapLabel = QLabel(self.miscPage)
+        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
+        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
 
-        self.gridLayout_8.addWidget(self.MbAllHotkeyArea, 12, 1, 1, 1)
+        self.gridLayout_8.addWidget(self.FlashmapLabel, 10, 0, 1, 1)
 
-        self.GoldenTongueLabel = QLabel(self.miscPage)
-        self.GoldenTongueLabel.setObjectName(u"GoldenTongueLabel")
+        self.plainTextEdit_14 = QPlainTextEdit(self.miscPage)
+        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
+        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_14.setStyleSheet(u"")
 
-        self.gridLayout_8.addWidget(self.GoldenTongueLabel, 15, 0, 1, 2)
+        self.gridLayout_8.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
+
+        self.label_31 = QLabel(self.miscPage)
+        self.label_31.setObjectName(u"label_31")
+
+        self.gridLayout_8.addWidget(self.label_31, 7, 0, 1, 1)
+
+        self.plainTextEdit_13 = QPlainTextEdit(self.miscPage)
+        self.plainTextEdit_13.setObjectName(u"plainTextEdit_13")
+        self.plainTextEdit_13.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_13.setStyleSheet(u"")
+
+        self.gridLayout_8.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
 
         self.plainTextEdit_15 = QPlainTextEdit(self.miscPage)
         self.plainTextEdit_15.setObjectName(u"plainTextEdit_15")
@@ -760,42 +849,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addWidget(self.plainTextEdit_15, 2, 1, 1, 1)
 
-        self.GoldenTongueHotkeyArea = QPlainTextEdit(self.miscPage)
-        self.GoldenTongueHotkeyArea.setObjectName(u"GoldenTongueHotkeyArea")
-        self.GoldenTongueHotkeyArea.setMaximumSize(QSize(16777215, 30))
-        self.GoldenTongueHotkeyArea.setStyleSheet(u"")
+        self.DiscordGankPingLabel = QLabel(self.miscPage)
+        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
 
-        self.gridLayout_8.addWidget(self.GoldenTongueHotkeyArea, 17, 1, 1, 1)
-
-        self.label_6 = QLabel(self.miscPage)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font)
-        self.label_6.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_8.addWidget(self.label_6, 16, 0, 1, 2)
-
-        self.label_49 = QLabel(self.miscPage)
-        self.label_49.setObjectName(u"label_49")
-        self.label_49.setFont(font)
-        self.label_49.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_8.addWidget(self.label_49, 8, 0, 1, 2)
-
-        self.label_14 = QLabel(self.miscPage)
-        self.label_14.setObjectName(u"label_14")
-
-        self.gridLayout_8.addWidget(self.label_14, 18, 0, 1, 1)
-
-        self.label_50 = QLabel(self.miscPage)
-        self.label_50.setObjectName(u"label_50")
-        self.label_50.setFont(font)
-        self.label_50.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_8.addWidget(self.label_50, 11, 0, 1, 2)
-
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_8.addItem(self.verticalSpacer_5, 19, 0, 1, 1)
+        self.gridLayout_8.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
 
         self.plainTextEdit_12 = QPlainTextEdit(self.miscPage)
         self.plainTextEdit_12.setObjectName(u"plainTextEdit_12")
@@ -804,85 +861,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addWidget(self.plainTextEdit_12, 4, 1, 1, 1)
 
-        self.plainTextEdit_13 = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit_13.setObjectName(u"plainTextEdit_13")
-        self.plainTextEdit_13.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_13.setStyleSheet(u"")
+        self.label_49 = QLabel(self.miscPage)
+        self.label_49.setObjectName(u"label_49")
+        self.label_49.setFont(font)
+        self.label_49.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_8.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
-
-        self.label_29 = QLabel(self.miscPage)
-        self.label_29.setObjectName(u"label_29")
-
-        self.gridLayout_8.addWidget(self.label_29, 4, 0, 1, 1)
-
-        self.label = QLabel(self.miscPage)
-        self.label.setObjectName(u"label")
-        self.label.setFont(font)
-        self.label.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_8.addWidget(self.label, 14, 0, 1, 2)
-
-        self.DiscordGankPingSettings = QLabel(self.miscPage)
-        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
-
-        self.gridLayout_8.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
-
-        self.plainTextEdit_6 = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit_6.setObjectName(u"plainTextEdit_6")
-        self.plainTextEdit_6.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_6.setStyleSheet(u"")
-
-        self.gridLayout_8.addWidget(self.plainTextEdit_6, 18, 1, 1, 1)
-
-        self.label_31 = QLabel(self.miscPage)
-        self.label_31.setObjectName(u"label_31")
-
-        self.gridLayout_8.addWidget(self.label_31, 7, 0, 1, 1)
-
-        self.label_32 = QLabel(self.miscPage)
-        self.label_32.setObjectName(u"label_32")
-
-        self.gridLayout_8.addWidget(self.label_32, 5, 0, 1, 1)
-
-        self.MbAllDropdown = QLabel(self.miscPage)
-        self.MbAllDropdown.setObjectName(u"MbAllDropdown")
-
-        self.gridLayout_8.addWidget(self.MbAllDropdown, 12, 0, 1, 1)
-
-        self.label_34 = QLabel(self.miscPage)
-        self.label_34.setObjectName(u"label_34")
-
-        self.gridLayout_8.addWidget(self.label_34, 2, 0, 1, 1)
-
-        self.FlashmapLabel = QLabel(self.miscPage)
-        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
-        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
-
-        self.gridLayout_8.addWidget(self.FlashmapLabel, 13, 0, 1, 1)
-
-        self.label_15 = QLabel(self.miscPage)
-        self.label_15.setObjectName(u"label_15")
-
-        self.gridLayout_8.addWidget(self.label_15, 17, 0, 1, 1)
-
-        self.MbAllLabel = QLabel(self.miscPage)
-        self.MbAllLabel.setObjectName(u"MbAllLabel")
-
-        self.gridLayout_8.addWidget(self.MbAllLabel, 10, 0, 1, 1)
-
-        self.label_33 = QLabel(self.miscPage)
-        self.label_33.setObjectName(u"label_33")
-
-        self.gridLayout_8.addWidget(self.label_33, 6, 0, 1, 1)
-
-        self.label_48 = QLabel(self.miscPage)
-        self.label_48.setObjectName(u"label_48")
-        self.label_48.setFont(font)
-        self.label_48.setStyleSheet(u"color:grey;")
-        self.label_48.setWordWrap(True)
-
-        self.gridLayout_8.addWidget(self.label_48, 1, 0, 1, 2)
+        self.gridLayout_8.addWidget(self.label_49, 8, 0, 1, 2)
 
         self.stackedWidget.addWidget(self.miscPage)
         self.movementPage = QWidget()
@@ -974,7 +958,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 572))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
@@ -996,9 +980,9 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/editName_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset10EditName.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/editName_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset10EditName.setIcon(icon11)
         self.Preset10EditName.setIconSize(QSize(30, 30))
         self.Preset10EditName.setFlat(True)
 
@@ -1021,9 +1005,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/save_24dp_2E6F40_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset9Save.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/save_24dp_2E6F40_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset9Save.setIcon(icon12)
         self.Preset9Save.setIconSize(QSize(30, 30))
         self.Preset9Save.setFlat(True)
 
@@ -1046,9 +1030,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/cloud_upload_24dp_705CCC_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset7Load.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/cloud_upload_24dp_705CCC_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset7Load.setIcon(icon13)
         self.Preset7Load.setIconSize(QSize(30, 30))
         self.Preset7Load.setFlat(True)
 
@@ -1141,7 +1125,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset3EditName.setIcon(icon10)
+        self.Preset3EditName.setIcon(icon11)
         self.Preset3EditName.setIconSize(QSize(30, 30))
         self.Preset3EditName.setFlat(True)
 
@@ -1189,7 +1173,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset5EditName.setIcon(icon10)
+        self.Preset5EditName.setIcon(icon11)
         self.Preset5EditName.setIconSize(QSize(30, 30))
         self.Preset5EditName.setFlat(True)
 
@@ -1212,7 +1196,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset9Load.setIcon(icon12)
+        self.Preset9Load.setIcon(icon13)
         self.Preset9Load.setIconSize(QSize(30, 30))
         self.Preset9Load.setFlat(True)
 
@@ -1235,7 +1219,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Load.setIcon(icon12)
+        self.Preset6Load.setIcon(icon13)
         self.Preset6Load.setIconSize(QSize(30, 30))
         self.Preset6Load.setFlat(True)
 
@@ -1279,7 +1263,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Save.setIcon(icon11)
+        self.Preset6Save.setIcon(icon12)
         self.Preset6Save.setIconSize(QSize(30, 30))
         self.Preset6Save.setFlat(True)
 
@@ -1302,7 +1286,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset7Save.setIcon(icon11)
+        self.Preset7Save.setIcon(icon12)
         self.Preset7Save.setIconSize(QSize(30, 30))
         self.Preset7Save.setFlat(True)
 
@@ -1327,7 +1311,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset6EditName.setIcon(icon10)
+        self.Preset6EditName.setIcon(icon11)
         self.Preset6EditName.setIconSize(QSize(30, 30))
         self.Preset6EditName.setFlat(True)
 
@@ -1352,7 +1336,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset7EditName.setIcon(icon10)
+        self.Preset7EditName.setIcon(icon11)
         self.Preset7EditName.setIconSize(QSize(30, 30))
         self.Preset7EditName.setFlat(True)
 
@@ -1375,7 +1359,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Save.setIcon(icon11)
+        self.Preset2Save.setIcon(icon12)
         self.Preset2Save.setIconSize(QSize(30, 30))
         self.Preset2Save.setFlat(True)
 
@@ -1398,7 +1382,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset4Load.setIcon(icon12)
+        self.Preset4Load.setIcon(icon13)
         self.Preset4Load.setIconSize(QSize(30, 30))
         self.Preset4Load.setFlat(True)
 
@@ -1421,7 +1405,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Load.setIcon(icon12)
+        self.Preset3Load.setIcon(icon13)
         self.Preset3Load.setIconSize(QSize(30, 30))
         self.Preset3Load.setFlat(True)
 
@@ -1446,7 +1430,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset1EditName.setIcon(icon10)
+        self.Preset1EditName.setIcon(icon11)
         self.Preset1EditName.setIconSize(QSize(30, 30))
         self.Preset1EditName.setFlat(True)
 
@@ -1471,7 +1455,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset2EditName.setIcon(icon10)
+        self.Preset2EditName.setIcon(icon11)
         self.Preset2EditName.setIconSize(QSize(30, 30))
         self.Preset2EditName.setFlat(True)
 
@@ -1496,7 +1480,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset9EditName.setIcon(icon10)
+        self.Preset9EditName.setIcon(icon11)
         self.Preset9EditName.setIconSize(QSize(30, 30))
         self.Preset9EditName.setFlat(True)
 
@@ -1519,7 +1503,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Load.setIcon(icon12)
+        self.Preset2Load.setIcon(icon13)
         self.Preset2Load.setIconSize(QSize(30, 30))
         self.Preset2Load.setFlat(True)
 
@@ -1563,7 +1547,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Load.setIcon(icon12)
+        self.Preset10Load.setIcon(icon13)
         self.Preset10Load.setIconSize(QSize(30, 30))
         self.Preset10Load.setFlat(True)
 
@@ -1586,7 +1570,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset4Save.setIcon(icon11)
+        self.Preset4Save.setIcon(icon12)
         self.Preset4Save.setIconSize(QSize(30, 30))
         self.Preset4Save.setFlat(True)
 
@@ -1611,7 +1595,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset8EditName.setIcon(icon10)
+        self.Preset8EditName.setIcon(icon11)
         self.Preset8EditName.setIconSize(QSize(30, 30))
         self.Preset8EditName.setFlat(True)
 
@@ -1634,7 +1618,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Load.setIcon(icon12)
+        self.Preset8Load.setIcon(icon13)
         self.Preset8Load.setIconSize(QSize(30, 30))
         self.Preset8Load.setFlat(True)
 
@@ -1657,7 +1641,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Save.setIcon(icon11)
+        self.Preset1Save.setIcon(icon12)
         self.Preset1Save.setIconSize(QSize(30, 30))
         self.Preset1Save.setFlat(True)
 
@@ -1722,7 +1706,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Save.setIcon(icon11)
+        self.Preset10Save.setIcon(icon12)
         self.Preset10Save.setIconSize(QSize(30, 30))
         self.Preset10Save.setFlat(True)
 
@@ -1745,7 +1729,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Load.setIcon(icon12)
+        self.Preset5Load.setIcon(icon13)
         self.Preset5Load.setIconSize(QSize(30, 30))
         self.Preset5Load.setFlat(True)
 
@@ -1768,7 +1752,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Save.setIcon(icon11)
+        self.Preset8Save.setIcon(icon12)
         self.Preset8Save.setIconSize(QSize(30, 30))
         self.Preset8Save.setFlat(True)
 
@@ -1791,7 +1775,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Save.setIcon(icon11)
+        self.Preset5Save.setIcon(icon12)
         self.Preset5Save.setIconSize(QSize(30, 30))
         self.Preset5Save.setFlat(True)
 
@@ -1816,7 +1800,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset4EditName.setIcon(icon10)
+        self.Preset4EditName.setIcon(icon11)
         self.Preset4EditName.setIconSize(QSize(30, 30))
         self.Preset4EditName.setFlat(True)
 
@@ -1839,7 +1823,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Load.setIcon(icon12)
+        self.Preset1Load.setIcon(icon13)
         self.Preset1Load.setIconSize(QSize(30, 30))
         self.Preset1Load.setFlat(True)
 
@@ -1883,7 +1867,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Save.setIcon(icon11)
+        self.Preset3Save.setIcon(icon12)
         self.Preset3Save.setIconSize(QSize(30, 30))
         self.Preset3Save.setFlat(True)
 
@@ -2044,6 +2028,76 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addWidget(self.label_45, 3, 0, 1, 2)
 
         self.stackedWidget.addWidget(self.settingsPage)
+        self.chatPage = QWidget()
+        self.chatPage.setObjectName(u"chatPage")
+        self.gridLayout_16 = QGridLayout(self.chatPage)
+        self.gridLayout_16.setObjectName(u"gridLayout_16")
+        self.MbAllDropdown = QLabel(self.chatPage)
+        self.MbAllDropdown.setObjectName(u"MbAllDropdown")
+
+        self.gridLayout_16.addWidget(self.MbAllDropdown, 2, 0, 1, 1)
+
+        self.label_15 = QLabel(self.chatPage)
+        self.label_15.setObjectName(u"label_15")
+
+        self.gridLayout_16.addWidget(self.label_15, 5, 0, 1, 1)
+
+        self.label_50 = QLabel(self.chatPage)
+        self.label_50.setObjectName(u"label_50")
+        self.label_50.setFont(font)
+        self.label_50.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_16.addWidget(self.label_50, 1, 0, 1, 4)
+
+        self.label_14 = QLabel(self.chatPage)
+        self.label_14.setObjectName(u"label_14")
+
+        self.gridLayout_16.addWidget(self.label_14, 6, 0, 1, 1)
+
+        self.plainTextEdit_6 = QPlainTextEdit(self.chatPage)
+        self.plainTextEdit_6.setObjectName(u"plainTextEdit_6")
+        self.plainTextEdit_6.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_6.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.plainTextEdit_6, 6, 2, 1, 1)
+
+        self.GoldenTongueHotkeyArea = QPlainTextEdit(self.chatPage)
+        self.GoldenTongueHotkeyArea.setObjectName(u"GoldenTongueHotkeyArea")
+        self.GoldenTongueHotkeyArea.setMaximumSize(QSize(16777215, 30))
+        self.GoldenTongueHotkeyArea.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.GoldenTongueHotkeyArea, 5, 2, 1, 1)
+
+        self.label_6 = QLabel(self.chatPage)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_16.addWidget(self.label_6, 4, 0, 1, 4)
+
+        self.MbAllHotkeyArea = QPlainTextEdit(self.chatPage)
+        self.MbAllHotkeyArea.setObjectName(u"MbAllHotkeyArea")
+        self.MbAllHotkeyArea.setMinimumSize(QSize(0, 30))
+        self.MbAllHotkeyArea.setMaximumSize(QSize(16777215, 30))
+        self.MbAllHotkeyArea.setStyleSheet(u"")
+
+        self.gridLayout_16.addWidget(self.MbAllHotkeyArea, 2, 2, 1, 1)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 343, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_16.addItem(self.verticalSpacer_9, 7, 2, 1, 1)
+
+        self.MbAllLabel = QLabel(self.chatPage)
+        self.MbAllLabel.setObjectName(u"MbAllLabel")
+
+        self.gridLayout_16.addWidget(self.MbAllLabel, 0, 0, 1, 2)
+
+        self.GoldenTongueLabel = QLabel(self.chatPage)
+        self.GoldenTongueLabel.setObjectName(u"GoldenTongueLabel")
+
+        self.gridLayout_16.addWidget(self.GoldenTongueLabel, 3, 0, 1, 2)
+
+        self.stackedWidget.addWidget(self.chatPage)
 
         self.gridLayout_4.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -2054,7 +2108,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(9)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2071,6 +2125,7 @@ class Ui_MainWindow(object):
         self.settingsButton.setText("")
         self.weaponsButton.setText("")
         self.movementButton.setText("")
+        self.chatButton.setText("")
         self.menuButton.setText("")
         self.pageName.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Save</span></p></body></html>", None))
         self.MovestackChoice.setItemText(0, QCoreApplication.translate("MainWindow", u"Roll", None))
@@ -2139,33 +2194,23 @@ class Ui_MainWindow(object):
         self.WillpowerTrainingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Prayer Auto-train</span></p></body></html>", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Make sure the Boulder tool is held out before starting and you are near a campfire", None))
         self.label_38.setText(QCoreApplication.translate("MainWindow", u"Make sure the Prayer Beads tool is held out before starting", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Username</span></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
+        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
+        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
+        self.FlashmapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Flash Map</span></p></body></html>", None))
         self.plainTextEdit_14.setPlainText("")
         self.plainTextEdit_14.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
-        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
-        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
-        self.MbAllHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say mb all", None))
-        self.GoldenTongueLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Golden Tongue</span></p></body></html>", None))
-        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
-        self.GoldenTongueHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
-        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Text", None))
-        self.label_50.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
-        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
-        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
-        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
-        self.plainTextEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Take Screenshot</span></p></body></html>", None))
-        self.label_32.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Username</span></p></body></html>", None))
-        self.MbAllDropdown.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
-        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.FlashmapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Flash Map</span></p></body></html>", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
-        self.MbAllLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mb All </span></p></body></html>", None))
-        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
-        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
+        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
+        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
+        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
         self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
         self.label_51.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Keybind</span></p></body></html>", None))
         self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
@@ -2236,6 +2281,16 @@ class Ui_MainWindow(object):
         self.toggleNotifsLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Toggle Notifications</span></p></body></html>", None))
         self.label_41.setText(QCoreApplication.translate("MainWindow", u"When something togglable is used, such as \"Toggle Activate Macros\", a small popup will be activated in the bottom right of the screen", None))
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
+        self.MbAllDropdown.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
+        self.label_50.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Text", None))
+        self.plainTextEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Thing you want to say (can be a sentence)", None))
+        self.GoldenTongueHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say your thing", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
+        self.MbAllHotkeyArea.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to say mb all", None))
+        self.MbAllLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mb All </span></p></body></html>", None))
+        self.GoldenTongueLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Golden Tongue</span></p></body></html>", None))
     # retranslateUi
 
 
@@ -2261,6 +2316,8 @@ class Ui_MainWindow(object):
         self.saveButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(6))
         self.playButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
         self.settingsButton.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(8))
+        self.chatButton.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(9))
+        
         def changeBarVis():
             if self.menuBar.isVisible():
                 self.menuBar.hide()
@@ -2329,18 +2386,22 @@ class Ui_MainWindow(object):
         self.uncrouchToggle = CustomToggle(self.movementPage)
         self.gridLayout_11.addWidget(self.uncrouchToggle, 5,1,1,2)
 
-        #!MISCELLANEOUS
-        self.MbAllToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.MbAllToggle, 10, 1, 1, 1)
-        self.GoldenTongueToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.GoldenTongueToggle, 15, 1, 1, 2)
+        #! MISCELLANEOUS
+
         self.GankPingerToggle = CustomToggle(self.miscPage)
         self.gridLayout_8.addWidget(self.GankPingerToggle, 0,1,1,1)
         self.ScreenshotToggle = CustomToggle(self.miscPage)
         self.gridLayout_8.addWidget(self.ScreenshotToggle, 7,1,1,1)
         self.FlashMapToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.FlashMapToggle, 13,1,1,2)
+        self.gridLayout_8.addWidget(self.FlashMapToggle, 10,1,1,2)
 
+        #! CHAT
+        self.MbAllToggle = CustomToggle(self.miscPage)
+        self.gridLayout_16.addWidget(self.MbAllToggle, 0, 2, 1, 1)
+        self.GoldenTongueToggle = CustomToggle(self.miscPage)
+        self.gridLayout_16.addWidget(self.GoldenTongueToggle, 3, 2, 1, 1)
+
+        
         #!PROGRESSION
         self.CharismaAutofillToggle = CustomToggle(self.miscPage)
         self.gridLayout_12.addWidget(self.CharismaAutofillToggle, 0,3,1,1)
