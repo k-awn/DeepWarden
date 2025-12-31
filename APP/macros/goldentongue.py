@@ -17,7 +17,7 @@ class GoldenTongueListener:
                 time.sleep(0.05)
                 keyboard.press_and_release('enter')  
         # Register the key press handler
-        self.hotkey = keyboard.on_press(on_key, suppress=True)
+        self.hotkey = keyboard.on_press(on_key)
 
     def run(self,keybind, content):
         print('checking')
