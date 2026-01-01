@@ -142,12 +142,7 @@ class MainWindow(QMainWindow):
             myappid = 'swinestyle.swinestyle.2.0'
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
-        with open(self.settings_path) as f:
-            settings = json.load(f)
-            if settings['theme'] == 'dark':
-                self.ui.themeComboBox.setCurrentIndex(0)
-            elif settings['theme'] == 'navy':
-                self.ui.themeComboBox.setCurrentIndex(1)
+
         
         # Theme handling
         def themeChanged():
@@ -181,7 +176,13 @@ class MainWindow(QMainWindow):
             self.update()
 
         self.ui.themeComboBox.currentIndexChanged.connect(themeChanged)
-
+        
+        with open(self.settings_path) as f:
+            settings = json.load(f)
+            if settings['theme'] == 'dark':
+                self.ui.themeComboBox.setCurrentIndex(0)
+            elif settings['theme'] == 'navy':
+                self.ui.themeComboBox.setCurrentIndex(1)
 
         # Modify all QPlainTextEdit widgets
         for widget in self.findChildren(QPlainTextEdit):
@@ -237,6 +238,7 @@ def main():
     try:
         with open(settings_path) as f:
             settings = json.load(f)
+    
         if 'theme' in settings:
             if settings['theme'] == 'dark':
                 set_dark_theme(app)  
