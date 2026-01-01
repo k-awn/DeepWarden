@@ -7,7 +7,7 @@ class GoldenTongueListener:
         self.thread = None
         self.hotkey = None
 
-    def stack(self, keybind, content):
+    def stack(self, keybind, content, autosprint):
         def on_key(event):
             if event.name in keybind:
                 time.sleep(0.05)
@@ -16,16 +16,20 @@ class GoldenTongueListener:
                 keyboard.write(content)
                 time.sleep(0.05)
                 keyboard.press_and_release('enter')  
+                if autosprint:
+                    keyboard.press_and_release('w')
+                    time.sleep(0.05)
+                    keyboard.press('w')
         # Register the key press handler
         self.hotkey = keyboard.on_press(on_key)
 
-    def run(self,keybind, content):
+    def run(self,keybind, content, autosprint):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.stack(keybind=keybind, content=content)  # Just call stack directly
+            self.stack(keybind=keybind, content=content, autosprint=autosprint)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
