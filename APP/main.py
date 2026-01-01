@@ -128,7 +128,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         enable_dark_title_bar(self)
-        self.setWindowTitle('SwineStyle')
+        self.setWindowTitle('DeepWarden')
         
         # Set the window icon
         self.dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
@@ -139,7 +139,7 @@ class MainWindow(QMainWindow):
 
         # Windows taskbar icon
         if os.name == 'nt':
-            myappid = 'swinestyle.swinestyle.2.0'
+            myappid = 'deepwarden.deepwarden.2.0'
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
 
@@ -231,7 +231,7 @@ def main():
     icopath = os.path.join(dirpath, 'assets', 'logo.ico')
 
     app = QApplication(sys.argv)
-    app.setApplicationName('SwineStyle')
+    app.setApplicationName('DeepWarden')
     app.setWindowIcon(QIcon(icopath))
     settings_path = os.path.join(dataLocation, 'data/Settings.json')
     
