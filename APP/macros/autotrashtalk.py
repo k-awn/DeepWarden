@@ -2,19 +2,18 @@ import keyboard
 import time
 import os
 from random import randint
-global trashtalks
-with open(os.path.join(os.path.dirname(__file__), 'trashtalks.txt')) as f:
-    trashtalks = f.read().split('\n')
+
 class TrashTalkListener:  
     def __init__(self):
         self.running = False
         self.thread = None
         self.hotkey = None
 
-    def stack(self, keybind):
+    def stack(self, keybind, txtpath):
         def on_key(event):
             if event.name in keybind:
-                
+                with open(txtpath) as f:
+                    trashtalks = f.read().split('\n')
                 chosenMessage = trashtalks[randint(0, len(trashtalks)-1)]
                 
                 time.sleep(0.05)
@@ -26,13 +25,13 @@ class TrashTalkListener:
         # Register the key press handler
         self.hotkey = keyboard.on_press(on_key)
 
-    def run(self,keybind):
+    def run(self,keybind, txtpath):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.stack(keybind=keybind)  # Just call stack directly
+            self.stack(keybind=keybind, txtpath=txtpath)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 

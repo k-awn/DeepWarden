@@ -22,6 +22,7 @@ def Setup():
                 'theme': 'dark',
                 'notifs': 'True',
                 'show-intro': 'True',
+                'autoSprint': 'False'
             }
             json.dump(baseSettings, f)
         f.close()

@@ -16,6 +16,29 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
 
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'DeepMacropcqLWU.ui'
+##
+## Created by: Qt User Interface Compiler version 6.10.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QStackedWidget, QWidget)
+import assets_rc
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -936,7 +959,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 572))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
@@ -1969,11 +1992,6 @@ class Ui_MainWindow(object):
         self.settingsPage.setObjectName(u"settingsPage")
         self.gridLayout_7 = QGridLayout(self.settingsPage)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.themeLabel = QLabel(self.settingsPage)
-        self.themeLabel.setObjectName(u"themeLabel")
-
-        self.gridLayout_7.addWidget(self.themeLabel, 2, 0, 1, 1)
-
         self.themeComboBox = QComboBox(self.settingsPage)
         self.themeComboBox.addItem("")
         self.themeComboBox.addItem("")
@@ -1981,14 +1999,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.themeComboBox, 2, 1, 1, 1)
 
-        self.toggleNotifsLabel = QLabel(self.settingsPage)
-        self.toggleNotifsLabel.setObjectName(u"toggleNotifsLabel")
+        self.themeLabel = QLabel(self.settingsPage)
+        self.themeLabel.setObjectName(u"themeLabel")
 
-        self.gridLayout_7.addWidget(self.toggleNotifsLabel, 0, 0, 1, 1)
-
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_7.addItem(self.verticalSpacer_4, 4, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.themeLabel, 2, 0, 1, 1)
 
         self.label_41 = QLabel(self.settingsPage)
         self.label_41.setObjectName(u"label_41")
@@ -2004,6 +2018,27 @@ class Ui_MainWindow(object):
         self.label_45.setStyleSheet(u"color:grey;")
 
         self.gridLayout_7.addWidget(self.label_45, 3, 0, 1, 2)
+
+        self.toggleNotifsLabel = QLabel(self.settingsPage)
+        self.toggleNotifsLabel.setObjectName(u"toggleNotifsLabel")
+
+        self.gridLayout_7.addWidget(self.toggleNotifsLabel, 0, 0, 1, 1)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_7.addItem(self.verticalSpacer_4, 6, 0, 1, 1)
+
+        self.autoSprintLabel = QLabel(self.settingsPage)
+        self.autoSprintLabel.setObjectName(u"autoSprintLabel")
+
+        self.gridLayout_7.addWidget(self.autoSprintLabel, 4, 0, 1, 1)
+
+        self.label_64 = QLabel(self.settingsPage)
+        self.label_64.setObjectName(u"label_64")
+        self.label_64.setStyleSheet(u"color:grey;")
+        self.label_64.setWordWrap(True)
+
+        self.gridLayout_7.addWidget(self.label_64, 5, 0, 1, 2)
 
         self.stackedWidget.addWidget(self.settingsPage)
         self.chatPage = QWidget()
@@ -2181,7 +2216,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(9)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2347,13 +2382,15 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Activate Macros</span></p></body></html>", None))
         self.label_42.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Activate Macros Hotkey</span></p></body></html>", None))
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Keybind to toggle the macros </span></p></body></html>", None))
-        self.themeLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Theme</span></p></body></html>", None))
         self.themeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Dark", None))
         self.themeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Navy Blue", None))
 
-        self.toggleNotifsLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Toggle Notifications</span></p></body></html>", None))
+        self.themeLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Theme</span></p></body></html>", None))
         self.label_41.setText(QCoreApplication.translate("MainWindow", u"When something togglable is used, such as \"Toggle Activate Macros\", a small popup will be activated in the bottom right of the screen", None))
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Changes the theme of the application</p></body></html>", None))
+        self.toggleNotifsLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Toggle Notifications</span></p></body></html>", None))
+        self.autoSprintLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Sprint</span></p></body></html>", None))
+        self.label_64.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt;\">Automatically starts sprinting after either Golden Tongue or Custom Chat Hotkey is used</span></p></body></html>", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and types whatever you want when you press a hotkey", None))
         self.MessageHotkeyLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Message Hotkey 2</span></p></body></html>", None))
         self.TrashTalkLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Trash Talk Hotkey</span></p></body></html>", None))
@@ -2381,8 +2418,6 @@ class Ui_MainWindow(object):
         self.TrashTalkHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to trash talk", None))
         self.label_63.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
     # retranslateUi
-
-
 
 
         print('importing macros')
@@ -2507,9 +2542,11 @@ class Ui_MainWindow(object):
         self.AutoWillpowerToggle = CustomToggle(self.miscPage)
         self.gridLayout_12.addWidget(self.AutoWillpowerToggle, 13,3,1,1)
 
-        #!SETTINGS
+        #! SETTINGS
         self.toggleNotifsToggle = CustomToggle(self.settingsPage)
         self.gridLayout_7.addWidget(self.toggleNotifsToggle, 0,1,1,1)
+        self.autoSprintToggle = CustomToggle(self.settingsPage)
+        self.gridLayout_7.addWidget(self.autoSprintToggle, 4, 1, 1, 1)
 
         self.toggles = [
                 self.BellMovestackToggle,
@@ -2554,6 +2591,10 @@ class Ui_MainWindow(object):
                         self.toggleNotifsToggle.setChecked(True)
                 elif not currentInfo['notifs']:
                        self.toggleNotifsToggle.setChecked(False)
+                if 'autoSprint' not in currentInfo or not currentInfo['autoSprint']:
+                        self.autoSprintToggle.setChecked(False)
+                else:
+                       self.autoSprintToggle.setChecked(True)
 
 
 
@@ -2588,6 +2629,28 @@ class Ui_MainWindow(object):
                         with open(settingsPath, 'w') as f:
                                json.dump(currentSettings, f)
         self.toggleNotifsToggle.toggled.connect(toggleNotifs)
+
+        def toggleAutoSprint():
+                if self.autoSprintToggle._is_checked == 2: 
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        settingsPath = os.path.join(dataLocation, 'data/Settings.json')
+                        with open(settingsPath) as f:
+                                currentSettings = json.load(f)
+                        f.close()
+                        currentSettings['autoSprint'] = True
+                        with open(settingsPath, 'w') as f:
+                               json.dump(currentSettings, f)
+                if self.autoSprintToggle._is_checked == 0:
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        settingsPath = os.path.join(dataLocation, 'data/Settings.json')
+                        with open(settingsPath) as f:
+                                currentSettings = json.load(f)
+                        f.close()
+                        currentSettings['autoSprint'] = False
+                        with open(settingsPath, 'w') as f:
+                               json.dump(currentSettings, f)
+        self.autoSprintToggle.toggled.connect(toggleAutoSprint)
+
                                                       
 
 
@@ -2611,6 +2674,10 @@ class Ui_MainWindow(object):
                         thread.start()
                 if self.RunToggle._is_checked == 2:  # is checked
                         self.threads = []       
+                        dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation) 
+                        settingsPath = os.path.join(dataLocation, 'data/Settings.json')
+                        with open(settingsPath) as f:
+                                currentSettings = json.load(f)
                         addMacro('Air Dash M1 Movestack', self.AirDashToggle, threadedkeyb.AirListener)
                         addMacro('Faster Hold M1', self.HoldM1Toggle, holdm1.M1Listener, key=self.HoldM1Key.toPlainText())
                         if self.BellMovestackToggle._is_checked == 2:
@@ -2621,14 +2688,13 @@ class Ui_MainWindow(object):
                         addMacro('Mantra Roll Tech', self.mantraTechRollToggle, mantraTechRoll.MantraRollTechListener, keybinds=self.plainTextEdit_3.toPlainText())
                         addMacro('Mantra Slide Tech', self.mantraTechSlidetoggle, mantraTechSlide.MantraSlideTechListener, keybinds=self.plainTextEdit_2.toPlainText())
                         addMacro('Mb All', self.MbAllToggle, mball.MbAllListener, keybind=self.MbAllHotkeyArea.toPlainText())
-                        addMacro('Golden Tongue', self.GoldenTongueToggle, goldentongue.GoldenTongueListener, keybind=self.GoldenTongueHotkeyArea.toPlainText(), content=self.plainTextEdit_6.toPlainText())
+                        addMacro('Golden Tongue', self.GoldenTongueToggle, goldentongue.GoldenTongueListener, keybind=self.GoldenTongueHotkeyArea.toPlainText(), content=self.plainTextEdit_6.toPlainText(), autosprint=currentSettings['autoSprint'])
 
                         addMacro('Mantra Variants', self.mantraVariantToggle, autovariants.MantraVariantListener, keybinds=self.AutoMantraVariantsKeysArea.toPlainText())
                         #To test:
                         addMacro('Motif Swap', self.MotifSwapToggle, motifswap.MotifSwapListener, keybind=self.MotifHotkeyArea.toPlainText(), motifnum=self.MotifToolbarNumberArea.toPlainText(), weaponnum=self.plainTextEdit_7.toPlainText())
-                        templatepath = os.path.dirname(os.path.abspath(__file__))
-                        templatepath = os.path.join(templatepath, 'assets/letter_templates')
-                        print(templatepath)
+                        filepath = os.path.dirname(os.path.abspath(__file__))
+                        templatepath = os.path.join(filepath, 'assets/letter_templates')
                         addMacro('Ritual Cast', self.RitualCastToggle, autoritualcast.RitualCastListener, ping_ms=self.plainTextEdit_10.toPlainText(), basepath=templatepath, scale=self.screenScale.currentIndex(), resolution=self.screenResolution.currentIndex())
                         addMacro('Charisma Autofill', self.CharismaAutofillToggle, autocharisma.autoCharismaListener)
                         addMacro('Auto Fortitude', self.AutoFortitudeToggle, autofortitude.AutoFortitudeListener, keybind=self.BoulderTrainingHotkey.toPlainText())
@@ -2643,8 +2709,9 @@ class Ui_MainWindow(object):
                         addMacro('Tacet Toggle', self.tacetToggle,  autotacet.autoTacetListener, keybind=self.autoTacetKeybind.toPlainText(), uncrouch=(self.uncrouchToggle._is_checked == 2))        
 
                         addMacro('Message Hotkey', self.MessageToggle_1, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_1.toPlainText(), content=self.MessageArea_1.toPlainText())  
-                        addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText())  
-                        addMacro('Trash Talk', self.TrashTalkToggle, autotrashtalk.TrashTalkListener, keybind=self.TrashTalkHotkey.toPlainText())
+                        addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText()) 
+                        txtpath = os.path.join(filepath, 'assets', 'trashtalks.txt') 
+                        addMacro('Trash Talk', self.TrashTalkToggle, autotrashtalk.TrashTalkListener, keybind=self.TrashTalkHotkey.toPlainText(), txtpath=txtpath)
         
                 else:
                         print('start')
