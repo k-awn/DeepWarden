@@ -2708,8 +2708,8 @@ class Ui_MainWindow(object):
                         addMacro('Flash Map', self.FlashMapToggle, flashmap.flashMapListener)
                         addMacro('Tacet Toggle', self.tacetToggle,  autotacet.autoTacetListener, keybind=self.autoTacetKeybind.toPlainText(), uncrouch=(self.uncrouchToggle._is_checked == 2))        
 
-                        addMacro('Message Hotkey', self.MessageToggle_1, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_1.toPlainText(), content=self.MessageArea_1.toPlainText())  
-                        addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText()) 
+                        addMacro('Message Hotkey', self.MessageToggle_1, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_1.toPlainText(), content=self.MessageArea_1.toPlainText(), autosprint=currentSettings['autoSprint'])  
+                        addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText(), autosprint=currentSettings['autoSprint']) 
                         txtpath = os.path.join(filepath, 'assets', 'trashtalks.txt') 
                         addMacro('Trash Talk', self.TrashTalkToggle, autotrashtalk.TrashTalkListener, keybind=self.TrashTalkHotkey.toPlainText(), txtpath=txtpath)
         
