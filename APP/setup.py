@@ -4,15 +4,15 @@ from PySide6.QtCore import QStandardPaths
 #! add file.close to all of te other thingies
 def Setup():
     dataLocation = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
-    dataPath = os.path.join(dataLocation, 'Swinestyle', 'data')
+    dataPath = os.path.join(dataLocation, 'DeepWarden', 'data')
     presetNamesPath = os.path.join(dataPath, 'PresetNames.json')
     presetRenameContentPath = os.path.join(dataPath, 'presetRenamecontent.txt')
     presetRenameNumPath = os.path.join(dataPath, 'presetRenameNum.txt')
     SettingsPath = os.path.join(dataPath, 'Settings.json')
     if not os.path.isdir(dataLocation):
         os.mkdir(dataLocation)
-    if not os.path.isdir(os.path.join(dataLocation, 'Swinestyle')):
-        os.mkdir(os.path.join(dataLocation, 'Swinestyle'))
+    if not os.path.isdir(os.path.join(dataLocation, 'DeepWarden')):
+        os.mkdir(os.path.join(dataLocation, 'DeepWarden'))
     if not os.path.isdir(dataPath):
         os.mkdir(dataPath)
     if not os.path.isfile(SettingsPath):
