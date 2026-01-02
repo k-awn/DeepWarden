@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>priority_high_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png</file>
     <file>exercise_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48(2).png</file>
     <file>fitness_center_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png</file>
     <file>exercise_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48(1).png</file>
