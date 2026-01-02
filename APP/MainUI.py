@@ -16,29 +16,6 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
 
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'DeepMacropcqLWU.ui'
-##
-## Created by: Qt User Interface Compiler version 6.10.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QStackedWidget, QWidget)
-import assets_rc
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -765,151 +742,274 @@ class Ui_MainWindow(object):
         self.miscPage.setObjectName(u"miscPage")
         self.gridLayout_8 = QGridLayout(self.miscPage)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
-        self.label_33 = QLabel(self.miscPage)
-        self.label_33.setObjectName(u"label_33")
+        self.scrollArea_2 = QScrollArea(self.miscPage)
+        self.scrollArea_2.setObjectName(u"scrollArea_2")
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 566, 853))
+        self.scrollAreaWidgetContents_2.setMaximumSize(QSize(16777215, 16777212))
+        self.gridLayout_17 = QGridLayout(self.scrollAreaWidgetContents_2)
+        self.gridLayout_17.setObjectName(u"gridLayout_17")
+        self.plainTextEdit_12 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_12.setObjectName(u"plainTextEdit_12")
+        self.plainTextEdit_12.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_12.setStyleSheet(u"")
 
-        self.gridLayout_8.addWidget(self.label_33, 6, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.plainTextEdit_12, 4, 1, 1, 1)
 
-        self.label_32 = QLabel(self.miscPage)
+        self.autoLogHotkey = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.autoLogHotkey.setObjectName(u"autoLogHotkey")
+        self.autoLogHotkey.setMinimumSize(QSize(30, 30))
+        self.autoLogHotkey.setMaximumSize(QSize(1677215, 30))
+
+        self.gridLayout_17.addWidget(self.autoLogHotkey, 14, 1, 1, 1)
+
+        self.label_32 = QLabel(self.scrollAreaWidgetContents_2)
         self.label_32.setObjectName(u"label_32")
 
-        self.gridLayout_8.addWidget(self.label_32, 5, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.label_32, 5, 0, 1, 1)
 
-        self.label = QLabel(self.miscPage)
-        self.label.setObjectName(u"label")
-        self.label.setFont(font)
-        self.label.setStyleSheet(u"color:grey;")
+        self.label_69 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_69.setObjectName(u"label_69")
 
-        self.gridLayout_8.addWidget(self.label, 11, 0, 1, 2)
+        self.gridLayout_17.addWidget(self.label_69, 21, 0, 1, 1)
 
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.autoLogLabel = QLabel(self.scrollAreaWidgetContents_2)
+        self.autoLogLabel.setObjectName(u"autoLogLabel")
 
-        self.gridLayout_8.addItem(self.verticalSpacer_5, 12, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.autoLogLabel, 12, 0, 1, 1)
 
-        self.label_48 = QLabel(self.miscPage)
-        self.label_48.setObjectName(u"label_48")
-        self.label_48.setFont(font)
-        self.label_48.setStyleSheet(u"color:grey;")
-        self.label_48.setWordWrap(True)
-
-        self.gridLayout_8.addWidget(self.label_48, 1, 0, 1, 2)
-
-        self.label_29 = QLabel(self.miscPage)
-        self.label_29.setObjectName(u"label_29")
-
-        self.gridLayout_8.addWidget(self.label_29, 4, 0, 1, 1)
-
-        self.DiscordGankPingSettings = QLabel(self.miscPage)
-        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
-
-        self.gridLayout_8.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
-
-        self.label_34 = QLabel(self.miscPage)
-        self.label_34.setObjectName(u"label_34")
-
-        self.gridLayout_8.addWidget(self.label_34, 2, 0, 1, 1)
-
-        self.plainTextEdit = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
-        self.plainTextEdit.setMinimumSize(QSize(0, 30))
-        self.plainTextEdit.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit.setStyleSheet(u"")
-
-        self.gridLayout_8.addWidget(self.plainTextEdit, 3, 1, 1, 1)
-
-        self.FlashmapLabel = QLabel(self.miscPage)
-        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
-        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
-
-        self.gridLayout_8.addWidget(self.FlashmapLabel, 10, 0, 1, 1)
-
-        self.plainTextEdit_14 = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
-        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_14.setStyleSheet(u"")
-
-        self.gridLayout_8.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
-
-        self.label_31 = QLabel(self.miscPage)
-        self.label_31.setObjectName(u"label_31")
-
-        self.gridLayout_8.addWidget(self.label_31, 7, 0, 1, 1)
-
-        self.plainTextEdit_13 = QPlainTextEdit(self.miscPage)
+        self.plainTextEdit_13 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
         self.plainTextEdit_13.setObjectName(u"plainTextEdit_13")
         self.plainTextEdit_13.setMaximumSize(QSize(16777215, 30))
         self.plainTextEdit_13.setStyleSheet(u"")
 
-        self.gridLayout_8.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
 
-        self.plainTextEdit_15 = QPlainTextEdit(self.miscPage)
+        self.AutoEatHotkey = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatHotkey.setObjectName(u"AutoEatHotkey")
+        self.AutoEatHotkey.setMinimumSize(QSize(0, 30))
+        self.AutoEatHotkey.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatHotkey, 19, 1, 1, 1)
+
+        self.label_34 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_34.setObjectName(u"label_34")
+
+        self.gridLayout_17.addWidget(self.label_34, 2, 0, 1, 1)
+
+        self.DiscordGankPingSettings = QLabel(self.scrollAreaWidgetContents_2)
+        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
+
+        self.gridLayout_17.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
+
+        self.label = QLabel(self.scrollAreaWidgetContents_2)
+        self.label.setObjectName(u"label")
+        self.label.setFont(font)
+        self.label.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_17.addWidget(self.label, 11, 0, 1, 2)
+
+        self.DiscordGankPingLabel = QLabel(self.scrollAreaWidgetContents_2)
+        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
+
+        self.gridLayout_17.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
+
+        self.plainTextEdit_15 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
         self.plainTextEdit_15.setObjectName(u"plainTextEdit_15")
         self.plainTextEdit_15.setMinimumSize(QSize(0, 30))
         self.plainTextEdit_15.setMaximumSize(QSize(16777215, 30))
         self.plainTextEdit_15.setStyleSheet(u"")
 
-        self.gridLayout_8.addWidget(self.plainTextEdit_15, 2, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.plainTextEdit_15, 2, 1, 1, 1)
 
-        self.DiscordGankPingLabel = QLabel(self.miscPage)
-        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
+        self.autoLogCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.autoLogCoords.setObjectName(u"autoLogCoords")
+        self.autoLogCoords.setMaximumSize(QSize(16777215, 30))
 
-        self.gridLayout_8.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.autoLogCoords, 15, 1, 1, 1)
 
-        self.plainTextEdit_12 = QPlainTextEdit(self.miscPage)
-        self.plainTextEdit_12.setObjectName(u"plainTextEdit_12")
-        self.plainTextEdit_12.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_12.setStyleSheet(u"")
+        self.label_66 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_66.setObjectName(u"label_66")
 
-        self.gridLayout_8.addWidget(self.plainTextEdit_12, 4, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.label_66, 14, 0, 1, 1)
 
-        self.label_49 = QLabel(self.miscPage)
+        self.FlashmapLabel = QLabel(self.scrollAreaWidgetContents_2)
+        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
+        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
+
+        self.gridLayout_17.addWidget(self.FlashmapLabel, 10, 0, 1, 1)
+
+        self.AutoEatBoxCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatBoxCoords.setObjectName(u"AutoEatBoxCoords")
+        self.AutoEatBoxCoords.setMinimumSize(QSize(0, 30))
+        self.AutoEatBoxCoords.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatBoxCoords, 21, 1, 1, 1)
+
+        self.label_29 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_29.setObjectName(u"label_29")
+
+        self.gridLayout_17.addWidget(self.label_29, 4, 0, 1, 1)
+
+        self.AutoEatFoodName = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodName.setObjectName(u"AutoEatFoodName")
+        self.AutoEatFoodName.setMinimumSize(QSize(0, 30))
+        self.AutoEatFoodName.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodName, 20, 1, 1, 1)
+
+        self.label_53 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_53.setObjectName(u"label_53")
+
+        self.gridLayout_17.addWidget(self.label_53, 15, 0, 1, 1)
+
+        self.plainTextEdit = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit.setObjectName(u"plainTextEdit")
+        self.plainTextEdit.setMinimumSize(QSize(0, 30))
+        self.plainTextEdit.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit.setStyleSheet(u"")
+
+        self.gridLayout_17.addWidget(self.plainTextEdit, 3, 1, 1, 1)
+
+        self.label_49 = QLabel(self.scrollAreaWidgetContents_2)
         self.label_49.setObjectName(u"label_49")
         self.label_49.setFont(font)
         self.label_49.setStyleSheet(u"color:grey;")
 
-        self.gridLayout_8.addWidget(self.label_49, 8, 0, 1, 2)
+        self.gridLayout_17.addWidget(self.label_49, 8, 0, 1, 2)
+
+        self.label_65 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_65.setObjectName(u"label_65")
+        self.label_65.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_17.addWidget(self.label_65, 13, 0, 1, 2)
+
+        self.AutoEatFoodCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodCoordsButton.setObjectName(u"AutoEatFoodCoordsButton")
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodCoordsButton, 24, 0, 1, 2)
+
+        self.AutoEatBoxCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
+        self.AutoEatBoxCoordsButton.setObjectName(u"AutoEatBoxCoordsButton")
+
+        self.gridLayout_17.addWidget(self.AutoEatBoxCoordsButton, 22, 0, 1, 2)
+
+        self.label_71 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_71.setObjectName(u"label_71")
+
+        self.gridLayout_17.addWidget(self.label_71, 19, 0, 1, 1)
+
+        self.AutoEatFoodCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodCoords.setObjectName(u"AutoEatFoodCoords")
+        self.AutoEatFoodCoords.setMinimumSize(QSize(0, 30))
+        self.AutoEatFoodCoords.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodCoords, 23, 1, 1, 1)
+
+        self.plainTextEdit_14 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
+        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_14.setStyleSheet(u"")
+
+        self.gridLayout_17.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
+
+        self.autoLogCoordButton = QPushButton(self.scrollAreaWidgetContents_2)
+        self.autoLogCoordButton.setObjectName(u"autoLogCoordButton")
+
+        self.gridLayout_17.addWidget(self.autoLogCoordButton, 16, 0, 1, 2)
+
+        self.label_61 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_61.setObjectName(u"label_61")
+
+        self.gridLayout_17.addWidget(self.label_61, 17, 0, 1, 1)
+
+        self.label_68 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_68.setObjectName(u"label_68")
+
+        self.gridLayout_17.addWidget(self.label_68, 20, 0, 1, 1)
+
+        self.label_70 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_70.setObjectName(u"label_70")
+
+        self.gridLayout_17.addWidget(self.label_70, 23, 0, 1, 1)
+
+        self.label_67 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_67.setObjectName(u"label_67")
+        self.label_67.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_17.addWidget(self.label_67, 18, 0, 1, 2)
+
+        self.label_31 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_31.setObjectName(u"label_31")
+
+        self.gridLayout_17.addWidget(self.label_31, 7, 0, 1, 1)
+
+        self.label_33 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_33.setObjectName(u"label_33")
+
+        self.gridLayout_17.addWidget(self.label_33, 6, 0, 1, 1)
+
+        self.label_48 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_48.setObjectName(u"label_48")
+        self.label_48.setFont(font)
+        self.label_48.setStyleSheet(u"color:grey;")
+        self.label_48.setWordWrap(True)
+
+        self.gridLayout_17.addWidget(self.label_48, 1, 0, 1, 2)
+
+        self.label_72 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_72.setObjectName(u"label_72")
+
+        self.gridLayout_17.addWidget(self.label_72, 9, 0, 1, 1)
+
+        self.monitorToScreenshot = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.monitorToScreenshot.setObjectName(u"monitorToScreenshot")
+        self.monitorToScreenshot.setMinimumSize(QSize(0, 30))
+        self.monitorToScreenshot.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.monitorToScreenshot, 9, 1, 1, 1)
+
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.gridLayout_8.addWidget(self.scrollArea_2, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.miscPage)
         self.movementPage = QWidget()
         self.movementPage.setObjectName(u"movementPage")
         self.gridLayout_11 = QGridLayout(self.movementPage)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_11.addItem(self.verticalSpacer_8, 7, 0, 1, 1)
-
-        self.AutoTacetLabel = QLabel(self.movementPage)
-        self.AutoTacetLabel.setObjectName(u"AutoTacetLabel")
-
-        self.gridLayout_11.addWidget(self.AutoTacetLabel, 0, 0, 1, 1)
-
-        self.label_51 = QLabel(self.movementPage)
-        self.label_51.setObjectName(u"label_51")
-
-        self.gridLayout_11.addWidget(self.label_51, 2, 0, 1, 1)
-
-        self.label_54 = QLabel(self.movementPage)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_11.addWidget(self.label_54, 6, 0, 1, 1)
-
-        self.AutoUncrouchLabel = QLabel(self.movementPage)
-        self.AutoUncrouchLabel.setObjectName(u"AutoUncrouchLabel")
-
-        self.gridLayout_11.addWidget(self.AutoUncrouchLabel, 5, 0, 1, 1)
-
         self.label_52 = QLabel(self.movementPage)
         self.label_52.setObjectName(u"label_52")
         self.label_52.setStyleSheet(u"color:grey;")
 
         self.gridLayout_11.addWidget(self.label_52, 1, 0, 1, 1)
 
-        self.label_53 = QLabel(self.movementPage)
-        self.label_53.setObjectName(u"label_53")
-        self.label_53.setStyleSheet(u"color:grey;")
+        self.AutoTacetLabel = QLabel(self.movementPage)
+        self.AutoTacetLabel.setObjectName(u"AutoTacetLabel")
 
-        self.gridLayout_11.addWidget(self.label_53, 4, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.AutoTacetLabel, 0, 0, 1, 1)
+
+        self.label_54 = QLabel(self.movementPage)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_11.addWidget(self.label_54, 5, 0, 1, 1)
+
+        self.AutoUncrouchLabel = QLabel(self.movementPage)
+        self.AutoUncrouchLabel.setObjectName(u"AutoUncrouchLabel")
+
+        self.gridLayout_11.addWidget(self.AutoUncrouchLabel, 4, 0, 1, 1)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_11.addItem(self.verticalSpacer_8, 6, 0, 1, 1)
+
+        self.label_51 = QLabel(self.movementPage)
+        self.label_51.setObjectName(u"label_51")
+
+        self.gridLayout_11.addWidget(self.label_51, 2, 0, 1, 1)
 
         self.autoTacetKeybind = QPlainTextEdit(self.movementPage)
         self.autoTacetKeybind.setObjectName(u"autoTacetKeybind")
@@ -959,7 +1059,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 562, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
@@ -2216,7 +2316,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2302,29 +2402,50 @@ class Ui_MainWindow(object):
         self.WillpowerTrainingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Prayer Auto-train</span></p></body></html>", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Make sure the Boulder tool is held out before starting and you are near a campfire", None))
         self.label_38.setText(QCoreApplication.translate("MainWindow", u"Make sure the Prayer Beads tool is held out before starting", None))
-        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
+        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
+        self.autoLogHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to log", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Username</span></p></body></html>", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
-        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
-        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
+        self.label_69.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Search Box Coordinates</span></p></body></html>", None))
+        self.autoLogLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Log</span></p></body></html>", None))
+        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
+        self.AutoEatHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to start eating food ", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
+        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
+        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
+        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
+        self.autoLogCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"X coordinate + space + Y coordinate", None))
+        self.label_66.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt;\">Hotkey</span></p></body></html>", None))
         self.FlashmapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Flash Map</span></p></body></html>", None))
+        self.AutoEatBoxCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where you search for items (X + space + Y)", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
+        self.AutoEatFoodName.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Full name of the food you want to eat", None))
+        self.label_53.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Log Button Coordinates</span></p></body></html>", None))
+        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt;\">Automatically logs/leaves from the server when a button is pressed</span></p></body></html>", None))
+        self.AutoEatFoodCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the search box to fill in the above field automatically", None))
+        self.AutoEatBoxCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the search box to fill in the above field automatically", None))
+        self.label_71.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
+        self.AutoEatFoodCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where the food appears after you search it up (X + space + Y)", None))
         self.plainTextEdit_14.setPlainText("")
         self.plainTextEdit_14.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
+        self.autoLogCoordButton.setText(QCoreApplication.translate("MainWindow", u"Click me and then click the log button to fill in the above field automatically", None))
+        self.label_61.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Eat</span></p></body></html>", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Name</span></p></body></html>", None))
+        self.label_70.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Coordinates</span></p></body></html>", None))
+        self.label_67.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt;\">Automatically opens up your inventory and eats a food</span></p></body></html>", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Take Screenshot</span></p></body></html>", None))
-        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
-        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
-        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
-        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
-        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
-        self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
-        self.label_51.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Keybind</span></p></body></html>", None))
-        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
-        self.AutoUncrouchLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">Auto Uncrouch</span></p></body></html>", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.label_72.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Monitor to Screenshot</span></p></body></html>", None))
+        self.monitorToScreenshot.setPlainText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.monitorToScreenshot.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Monitor number you want to screenshot", None))
         self.label_52.setText(QCoreApplication.translate("MainWindow", u"Automatically enables tacet", None))
-        self.label_53.setText(QCoreApplication.translate("MainWindow", u"Keybind for auto/easy tacet", None))
+        self.AutoTacetLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Tacet</span></p></body></html>", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Leaves crouch automatically afterwards", None))
+        self.AutoUncrouchLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt;\">Auto Uncrouch</span></p></body></html>", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Keybind</span></p></body></html>", None))
         self.autoTacetKeybind.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key to be pressed to activate tacet automatically", None))
         self.savePage.setStyleSheet(QCoreApplication.translate("MainWindow", u"QLineEdit\n"
 "{\n"
@@ -2419,13 +2540,13 @@ class Ui_MainWindow(object):
         self.label_63.setText(QCoreApplication.translate("MainWindow", u"Hotkey", None))
     # retranslateUi
 
-
         print('importing macros')
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
-        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast, autotacet, autotrashtalk
+        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast, autotacet, autotrashtalk, autolog, autoeat
         from macros.bellStack import bellStackParry, bellStackDodge
         from macros.mantraTech import mantraTechRoll, mantraTechSlide
         from macros.uppercuts import autoUppercutAlways, autoUppercutDYNAMIC
+        from functions.getpixels import get_pos
         print('macros imported')
         # talents, bells, mantras, weapons, movement, progression, misc, settings
         self.bellButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
@@ -2438,13 +2559,20 @@ class Ui_MainWindow(object):
         self.playButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
         self.settingsButton.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(8))
         self.chatButton.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(9))
-        
         def changeBarVis():
             if self.menuBar.isVisible():
                 self.menuBar.hide()
             elif self.menuBar.isHidden():
                 self.menuBar.show()
         self.menuButton.clicked.connect(changeBarVis)
+
+        def set_pos(element):
+               coords = get_pos()
+               element.setPlainText(str(coords[0]) + ' ' + str(coords[1]))
+        self.autoLogCoordButton.clicked.connect(lambda: set_pos(self.autoLogCoords))
+        self.AutoEatBoxCoordsButton.clicked.connect(lambda: set_pos(self.AutoEatBoxCoords))
+        self.AutoEatFoodCoordsButton.clicked.connect(lambda: set_pos(self.AutoEatFoodCoords))
+
 
         self.bellButton.clicked.connect(lambda: self.pageName.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Bells</span></p></body></html>", None)))
         self.mantrasButton.clicked.connect(lambda: self.pageName.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Mantras</span></p></body></html>", None)))
@@ -2510,11 +2638,15 @@ class Ui_MainWindow(object):
         #! MISCELLANEOUS
 
         self.GankPingerToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.GankPingerToggle, 0,1,1,1)
+        self.scrollAreaWidgetContents_2.layout().addWidget(self.GankPingerToggle, 0,1,1,1)
         self.ScreenshotToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.ScreenshotToggle, 7,1,1,1)
+        self.scrollAreaWidgetContents_2.layout().addWidget(self.ScreenshotToggle, 7,1,1,1)
         self.FlashMapToggle = CustomToggle(self.miscPage)
-        self.gridLayout_8.addWidget(self.FlashMapToggle, 10,1,1,2)
+        self.scrollAreaWidgetContents_2.layout().addWidget(self.FlashMapToggle, 10,1,1,2)
+        self.AutoLogToggle = CustomToggle(self.miscPage)
+        self.scrollAreaWidgetContents_2.layout().addWidget(self.AutoLogToggle, 12,1,1,2)
+        self.AutoEatToggle = CustomToggle(self.miscPage)
+        self.scrollAreaWidgetContents_2.layout().addWidget(self.AutoEatToggle, 17, 1, 1, 2)
 
         #! CHAT
         self.MbAllToggle = CustomToggle(self.miscPage)
@@ -2566,6 +2698,8 @@ class Ui_MainWindow(object):
 
                 self.GankPingerToggle,
                 self.ScreenshotToggle,
+                self.AutoLogToggle,
+                self.AutoEatToggle,
 
                 self.MbAllToggle,
                 self.GoldenTongueToggle,
@@ -2701,7 +2835,7 @@ class Ui_MainWindow(object):
                         addMacro('Auto Willpower', self.AutoWillpowerToggle, autowillpower.AutoWillpowerListener, keybind=self.WillpowerTrainingHotkey.toPlainText())
 
                         addMacro('Auto Agility', self.AutoAgilityToggle, autoagility.AutoAgilityListener, keybind=self.AnkleWeightsTrainingHotkey.toPlainText())
-                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), takeimage=(self.ScreenshotToggle._is_checked == 2))
+                        addMacro('Gank Pinger', self.GankPingerToggle, gankpinger.GankPingListener, hotkey=self.plainTextEdit_15.toPlainText(),  webhook_url=self.plainTextEdit.toPlainText(), message=self.plainTextEdit_12.toPlainText(), username=self.plainTextEdit_13.toPlainText(), avatar_url=self.plainTextEdit_14.toPlainText(), takeimage=(self.ScreenshotToggle._is_checked == 2), monitornumber=self.monitorToScreenshot.toPlainText())
                         addMacro('Auto Uppercut', self.uppercutToggle, autoUppercutAlways.UppercutListener)
                         addMacro('Dynamic Auto Uppercut', self.uppercutDynamicToggle, autoUppercutDYNAMIC.DynamicUppercutListener)
                         addMacro('Auto Feint', self.autoFeintToggle, autofeint.autoFeintListener)
@@ -2712,7 +2846,9 @@ class Ui_MainWindow(object):
                         addMacro('Message Hotkey', self.MessageToggle_2, goldentongue.GoldenTongueListener, keybind=self.MessageHotkeyArea_2.toPlainText(), content=self.MessageArea_2.toPlainText(), autosprint=currentSettings['autoSprint']) 
                         txtpath = os.path.join(filepath, 'assets', 'trashtalks.txt') 
                         addMacro('Trash Talk', self.TrashTalkToggle, autotrashtalk.TrashTalkListener, keybind=self.TrashTalkHotkey.toPlainText(), txtpath=txtpath)
-        
+                        addMacro('Auto Log', self.AutoLogToggle, autolog.AutoLogListener, keybind=self.autoLogHotkey.toPlainText(), coordinates=self.autoLogCoords.toPlainText())
+                        addMacro('Auto Eat', self.AutoEatToggle, autoeat.AutoEatListener, keybind=self.AutoEatHotkey.toPlainText(), foodname=self.AutoEatFoodName.toPlainText(), boxcoordinates=self.AutoEatBoxCoords.toPlainText(), foodcoordinates=self.AutoEatFoodCoords.toPlainText())
+
                 else:
                         print('start')
                         try:
@@ -2850,7 +2986,9 @@ class Ui_MainWindow(object):
 
                 #! misc
                 saveMacro(currentData, 'FlashMapToggle')
-                saveMacro(currentData, 'GankPingerToggle', params=['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url', 'ScreenshotToggle'], elements=['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14'])
+                saveMacro(currentData, 'GankPingerToggle', params=['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url', 'ScreenshotToggle', 'monitorToScreenshot'], elements=['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14', 'monitorToScreenshot'])
+                saveMacro(currentData, 'AutoLogToggle', params=['autoLogHotkey', 'autoLogCoords'], elements=['autoLogHotkey', 'autoLogCoords'])
+                saveMacro(currentData, 'AutoEatToggle', params=['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'], elements=['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'])
 
                 #! chatting
 
@@ -2861,6 +2999,7 @@ class Ui_MainWindow(object):
                 saveMacro(currentData, 'GoldenTongueToggle', params=['GoldenTongueHotkeyArea', 'GoldenTongueTextArea'], elements=['GoldenTongueHotkeyArea', 'plainTextEdit_6'])
 
                 saveMacro(currentData, 'TrashTalkToggle', params=['TrashTalkHotkey'], elements=['TrashTalkHotkey'])
+
 
 
                 #! progresssion
@@ -2946,11 +3085,12 @@ class Ui_MainWindow(object):
 
                 #!misc
 
-                if loadMacro(savedData, 'GankPingerToggle', ['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14'], ['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url']):
+                if loadMacro(savedData, 'GankPingerToggle', ['plainTextEdit_15', 'plainTextEdit', 'plainTextEdit_12', 'plainTextEdit_13', 'plainTextEdit_14', 'monitorToScreenshot'], ['GankPingerHotkey', 'webhook_url', 'message', 'username', 'avatar_url', 'monitorToScreenshot']):
                         loadMacro(savedData, 'ScreenshotToggle')
 
                 loadMacro(savedData, 'FlashMapToggle')
-
+                loadMacro(savedData, 'AutoLogToggle', ['autoLogHotkey', 'autoLogCoords'], ['autoLogHotkey', 'autoLogCoords'])
+                loadMacro(savedData, 'AutoEatToggle', ['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'], ['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'])
                 
                        
                 #!progression
@@ -2961,7 +3101,7 @@ class Ui_MainWindow(object):
                 loadMacro(savedData, 'AutoAgilityToggle', ['AnkleWeightsTrainingHotkey'], ['AnkleWeightsTrainingHotkey'])
 
                 #! movement
-                loadMacro(savedData, 'tacetToggle', ['autoTacetKeybind'])
+                loadMacro(savedData, 'tacetToggle', ['autoTacetKeybind'], ['autoTacetKeybind'])
                 loadMacro(savedData, 'uncrouchToggle')
 
                 #! chatting
@@ -2969,6 +3109,7 @@ class Ui_MainWindow(object):
                 loadMacro(savedData, 'GoldenTongueToggle', ['GoldenTongueHotkeyArea', 'plainTextEdit_6'], ['GoldenTongueHotkeyArea', 'GoldenTongueTextArea'])
 
                 loadMacro(savedData, 'TrashTalkToggle', ['TrashTalkHotkey'], ['TrashTalkHotkey'])
+
                 
                 #!running
                 loadMacro(savedData, 'RunKeybindToggle', ['plainTextEdit_17'], ['RunKeybindToggleKeybind'])

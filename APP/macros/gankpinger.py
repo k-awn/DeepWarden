@@ -11,7 +11,7 @@ class GankPingListener:
         self.running = False
         self.thread = None
 
-    def stack(self, webhook_url, message, takeimage, username, avatar_url, hotkey):
+    def stack(self, webhook_url, message, takeimage, username, avatar_url, hotkey, monitornumber):
         def send_discord_message(webhook_url, message, takeimage=False, username=None, avatar_url=None):
             """
             Send a Discord webhook message with optional image, username, and avatar_url
@@ -42,7 +42,9 @@ class GankPingListener:
                     sspath = os.path.join(dataLocation, 'screenshot.png')
                     
                     try:
-                        mss.mss().shot(output=sspath)
+                        monitor = mss.mss().monitors[int(monitornumber)]
+                        screenshot = mss.mss().grab(monitor)
+                        mss.tools.to_png(screenshot.rgb, screenshot.size, output=sspath)
                         if os.path.exists(sspath):
                             with open(sspath, 'rb') as screenshot:
                                 files['file'] = ('screenshot.png', screenshot.read(), 'image/png')
@@ -80,13 +82,13 @@ class GankPingListener:
                         pass
         keyboard.add_hotkey(hotkey, lambda:send_discord_message(webhook_url=webhook_url, message=message, username=username if username else None, avatar_url=avatar_url if avatar_url else None, takeimage=takeimage), suppress=True)
 
-    def run(self, webhook_url, message, username, avatar_url, takeimage, hotkey):
+    def run(self, webhook_url, message, username, avatar_url, takeimage, hotkey, monitornumber):
         print('checking')
         """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.stack(webhook_url=webhook_url, hotkey=hotkey, message=message, username=username, avatar_url=avatar_url, takeimage=takeimage)  # Just call stack directly
+            self.stack(webhook_url=webhook_url, hotkey=hotkey, message=message, username=username, avatar_url=avatar_url, takeimage=takeimage, monitornumber=monitornumber)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
