@@ -1,6 +1,7 @@
 import keyboard
 import time
-import win32api, win32con
+import win32api
+import win32con
 import pydirectinput
 class AutoLogListener:  
     def __init__(self):

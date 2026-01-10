@@ -1,6 +1,8 @@
 import keyboard
 import time
-import pyautogui, win32api, win32con
+import win32api
+import win32con
+
 
 class DynamicUppercutListener:  
     def __init__(self):
