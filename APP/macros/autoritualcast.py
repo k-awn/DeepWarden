@@ -151,7 +151,8 @@ class RitualCastListener:
         start_scan_time = time.time()
         
         while True:
-            if not self.running: return
+            if not self.running:
+                return
 
             # execute after max duration reached
             if (time.time() - start_scan_time) > MAX_SCAN_DURATION:
