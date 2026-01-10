@@ -1,5 +1,15 @@
 <RCC>
   <qresource prefix="icons">
+    <file>chat.png</file>
+    <file>combat.png</file>
+    <file>mantras.png</file>
+    <file>miscellaneous.png</file>
+    <file>play.png</file>
+    <file>progression.png</file>
+    <file>settings.png</file>
+    <file>silentheart.png</file>
+    <file>weapons.png</file>
+    <file>diversity_2_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png</file>
     <file>priority_high_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png</file>
     <file>exercise_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48(2).png</file>
     <file>fitness_center_1000dp_FFFFF0_FILL0_wght400_GRAD0_opsz48.png</file>

@@ -10,6 +10,7 @@ class GankPingListener:
     def __init__(self):
         self.running = False
         self.thread = None
+        self.hotkey = None
 
     def stack(self, webhook_url, message, takeimage, username, avatar_url, hotkey, monitornumber):
         def send_discord_message(webhook_url, message, takeimage=False, username=None, avatar_url=None):
@@ -80,7 +81,7 @@ class GankPingListener:
                         os.remove(sspath)
                     except Exception:
                         pass
-        keyboard.add_hotkey(hotkey, lambda:send_discord_message(webhook_url=webhook_url, message=message, username=username if username else None, avatar_url=avatar_url if avatar_url else None, takeimage=takeimage), suppress=True)
+        self.hotkey = keyboard.on_press_key(hotkey, lambda e:send_discord_message(webhook_url=webhook_url, message=message, username=username if username else None, avatar_url=avatar_url if avatar_url else None, takeimage=takeimage))
 
     def run(self, webhook_url, message, username, avatar_url, takeimage, hotkey, monitornumber):
         print('checking')
@@ -95,7 +96,7 @@ class GankPingListener:
     def stop(self):
         """Stop the macro thread"""
         self.running = False
-        keyboard.unhook_all()  # Remove all hotkeys when stopping
+        keyboard.unhook(self.hotkey)  # Remove all hotkeys when stopping
         if self.thread and self.thread.is_alive():
             self.thread.join(timeout=1.0)
             if self.thread.is_alive():

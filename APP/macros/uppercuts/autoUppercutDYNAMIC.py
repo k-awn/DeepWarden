@@ -1,6 +1,6 @@
 import keyboard
 import time
-import pyautogui
+import pyautogui, win32api, win32con
 
 class DynamicUppercutListener:  
     def __init__(self):
@@ -42,9 +42,18 @@ class DynamicUppercutListener:
             self.check_running_state(event)
         elif event.name == 'ctrl':
             if not self.is_player_running:
-                pyautogui.click()
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0,0,0,0)  
+                time.sleep(0.01)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0,0,0,0)  
+                if self.toRoll:
+                    time.sleep(0.03)
+                    keyboard.press_and_release('q')
 
-    def stack(self):
+
+
+
+    def stack(self, toRoll):
+        self.toRoll = toRoll
         self.remove_hooks()
         
         try:
@@ -63,12 +72,12 @@ class DynamicUppercutListener:
                 print(f"Warning: Failed to unhook keyboard listener: {e}")
         self.hooks.clear()
 
-    def run(self):
+    def run(self, toRoll):
         print('checking')
         if not self.thread or not self.thread.is_alive():
             print('starting!!')
             self.running = True
-            self.stack()
+            self.stack(toRoll=toRoll)
             while self.running:
                 time.sleep(0.1)
 
