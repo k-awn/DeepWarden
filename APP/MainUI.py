@@ -17,13 +17,15 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QStackedWidget, QWidget)
 from pynput import keyboard as pynput_keyboard
 
+
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.WindowModality.NonModal)
-        MainWindow.resize(688, 750)
-        MainWindow.setMinimumSize(QSize(0, 750))
+        MainWindow.resize(750, 800)
+        MainWindow.setMinimumSize(QSize(750, 800))
         MainWindow.setMaximumSize(QSize(16777215, 16777215))
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
@@ -59,7 +61,7 @@ class Ui_MainWindow(object):
         icon = QIcon()
         icon.addFile(u":/icons/progression.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.progressionButton.setIcon(icon)
-        self.progressionButton.setIconSize(QSize(30, 30))
+        self.progressionButton.setIconSize(QSize(35, 35))
         self.progressionButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.progressionButton, 4, 0, 1, 1)
@@ -83,7 +85,7 @@ class Ui_MainWindow(object):
         icon1 = QIcon()
         icon1.addFile(u":/icons/chat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.chatButton.setIcon(icon1)
-        self.chatButton.setIconSize(QSize(30, 30))
+        self.chatButton.setIconSize(QSize(35, 35))
 
         self.gridLayout_3.addWidget(self.chatButton, 8, 0, 1, 1)
 
@@ -106,7 +108,7 @@ class Ui_MainWindow(object):
         icon2 = QIcon()
         icon2.addFile(u":/icons/combat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.combatButton.setIcon(icon2)
-        self.combatButton.setIconSize(QSize(30, 30))
+        self.combatButton.setIconSize(QSize(35, 35))
 
         self.gridLayout_3.addWidget(self.combatButton, 7, 0, 1, 1)
 
@@ -177,7 +179,7 @@ class Ui_MainWindow(object):
         icon5 = QIcon()
         icon5.addFile(u":/icons/play.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.playButton.setIcon(icon5)
-        self.playButton.setIconSize(QSize(30, 30))
+        self.playButton.setIconSize(QSize(35, 35))
 
         self.gridLayout_3.addWidget(self.playButton, 10, 0, 1, 1)
 
@@ -204,7 +206,7 @@ class Ui_MainWindow(object):
         icon6 = QIcon()
         icon6.addFile(u":/icons/settings.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.settingsButton.setIcon(icon6)
-        self.settingsButton.setIconSize(QSize(30, 30))
+        self.settingsButton.setIconSize(QSize(35, 35))
         self.settingsButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.settingsButton, 11, 0, 1, 1)
@@ -228,7 +230,7 @@ class Ui_MainWindow(object):
         icon7 = QIcon()
         icon7.addFile(u":/icons/mantras.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.mantrasButton.setIcon(icon7)
-        self.mantrasButton.setIconSize(QSize(30, 30))
+        self.mantrasButton.setIconSize(QSize(35, 35))
         self.mantrasButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.mantrasButton, 2, 0, 1, 1)
@@ -252,7 +254,7 @@ class Ui_MainWindow(object):
         icon8 = QIcon()
         icon8.addFile(u":/icons/weapons.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.weaponsButton.setIcon(icon8)
-        self.weaponsButton.setIconSize(QSize(30, 30))
+        self.weaponsButton.setIconSize(QSize(35, 35))
         self.weaponsButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.weaponsButton, 3, 0, 1, 1)
@@ -276,7 +278,7 @@ class Ui_MainWindow(object):
         icon9 = QIcon()
         icon9.addFile(u":/icons/silentheart.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.silentheartButton.setIcon(icon9)
-        self.silentheartButton.setIconSize(QSize(30, 30))
+        self.silentheartButton.setIconSize(QSize(35, 35))
 
         self.gridLayout_3.addWidget(self.silentheartButton, 9, 0, 1, 1)
 
@@ -299,7 +301,7 @@ class Ui_MainWindow(object):
         icon10 = QIcon()
         icon10.addFile(u":/icons/miscellaneous.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.miscButton.setIcon(icon10)
-        self.miscButton.setIconSize(QSize(30, 30))
+        self.miscButton.setIconSize(QSize(35, 35))
         self.miscButton.setFlat(True)
 
         self.gridLayout_3.addWidget(self.miscButton, 5, 0, 1, 1)
@@ -540,7 +542,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, -398, 615, 1038))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 628, 1038))
         self.gridLayout_19 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.MotifHotkeyLabel = QLabel(self.scrollAreaWidgetContents_3)
@@ -3611,6 +3613,8 @@ class Ui_MainWindow(object):
         self.FlowStateKeybind_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Flow state keybind", None))
         self.label_138.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Flow state</span></p></body></html>", None))
     # retranslateUi
+
+
 
 
 
