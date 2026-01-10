@@ -1,6 +1,5 @@
 import keyboard
 import time
-from pynput.mouse import Controller, Button
 import win32api, win32con
 import pydirectinput
 class AutoLogListener:  
@@ -10,31 +9,23 @@ class AutoLogListener:
         self.hotkey = None
 
     def stack(self, keybind, x_coordinate,y_coordinate):
-        def is_mouse_swapped(self):
+        def is_mouse_swapped():
             return win32api.GetSystemMetrics(23) != 0
         
         def on_key(event):
-            mouse = Controller()
             if event.name in keybind:
                 pydirectinput.moveTo(x_coordinate, y_coordinate)
                 pydirectinput.move(None,5)
-                time.sleep(0.01)
                 pydirectinput.move(None,-5)
-                time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
                 pydirectinput.keyDown('shift')
-                time.sleep(0.01)
                 pydirectinput.keyUp('shift')
-                time.sleep(0.01)
                 pydirectinput.moveTo(x_coordinate, y_coordinate)
                 pydirectinput.move(None,5)
-                time.sleep(0.01)
                 pydirectinput.move(None,-5)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
 
                 
