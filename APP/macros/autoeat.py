@@ -17,7 +17,7 @@ class AutoEatListener:
         foodcoordinates_x = int(foodcoordinates[0])
         foodcoordinates_y = int(foodcoordinates[1])
 
-        def is_mouse_swapped(self):
+        def is_mouse_swapped():
             return win32api.GetSystemMetrics(23) != 0
         
         def on_key(event):
@@ -30,9 +30,9 @@ class AutoEatListener:
                 #time.sleep(0.01)
                 pydirectinput.move(None,-5)
                 
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
                 #time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
                 keyboard.write(foodname, delay=0)
                 #time.sleep(0.01)
@@ -41,9 +41,9 @@ class AutoEatListener:
                 #time.sleep(0.01)
                 pydirectinput.move(None, -5)
                 
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
                 #time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
                 screen_width = win32api.GetSystemMetrics(0)
                 screen_height = win32api.GetSystemMetrics(1)
@@ -52,9 +52,9 @@ class AutoEatListener:
                 pydirectinput.move(None, 5)
                 pydirectinput.move(None, -5)
                 #time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
                 #time.sleep(0.01)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
 
 
