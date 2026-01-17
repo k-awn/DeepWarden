@@ -25,6 +25,8 @@ class rollCritListener:
                 self.thread = threading.Thread(target=self.stack)
                 self.thread.daemon = True
                 self.thread.start()
+            while self.running:
+                time.sleep(0.1)
                 
 
     def stop(self):
