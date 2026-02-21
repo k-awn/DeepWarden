@@ -15,9 +15,6 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
     QLabel, QLineEdit, QPlainTextEdit,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
-from pynput import keyboard as pynput_keyboard
-
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -41,7 +38,7 @@ class Ui_MainWindow(object):
         self.gridLayout_3 = QGridLayout(self.menuBar)
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.gridLayout_3.setContentsMargins(0, 5, 0, 0)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.progressionButton = QPushButton(self.menuBar)
         self.progressionButton.setObjectName(u"progressionButton")
         self.progressionButton.setMinimumSize(QSize(50, 50))
@@ -129,7 +126,7 @@ class Ui_MainWindow(object):
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/save_24dp_FFFFF0_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon3.addFile(u":/icons/Save.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.saveButton.setIcon(icon3)
         self.saveButton.setIconSize(QSize(30, 30))
         self.saveButton.setFlat(True)
@@ -542,7 +539,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 628, 1038))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 615, 1038))
         self.gridLayout_19 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.MotifHotkeyLabel = QLabel(self.scrollAreaWidgetContents_3)
@@ -1450,119 +1447,25 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 636, 620))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
-        self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset10EditName.setObjectName(u"Preset10EditName")
-        self.Preset10EditName.setEnabled(True)
-        self.Preset10EditName.setMinimumSize(QSize(50, 50))
-        self.Preset10EditName.setMaximumSize(QSize(50, 50))
-        self.Preset10EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/editName_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset10EditName.setIcon(icon12)
-        self.Preset10EditName.setIconSize(QSize(30, 30))
-        self.Preset10EditName.setFlat(True)
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.gridLayout_15.addWidget(self.Preset10EditName, 9, 0, 1, 1)
-
-        self.Preset9Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset9Save.setObjectName(u"Preset9Save")
-        self.Preset9Save.setEnabled(True)
-        self.Preset9Save.setMinimumSize(QSize(50, 50))
-        self.Preset9Save.setMaximumSize(QSize(50, 50))
-        self.Preset9Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/save_24dp_2E6F40_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset9Save.setIcon(icon13)
-        self.Preset9Save.setIconSize(QSize(30, 30))
-        self.Preset9Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset9Save, 8, 3, 1, 1)
-
-        self.Preset7Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset7Load.setObjectName(u"Preset7Load")
-        self.Preset7Load.setEnabled(True)
-        self.Preset7Load.setMinimumSize(QSize(50, 50))
-        self.Preset7Load.setMaximumSize(QSize(50, 50))
-        self.Preset7Load.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/cloud_upload_24dp_705CCC_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset7Load.setIcon(icon14)
-        self.Preset7Load.setIconSize(QSize(30, 30))
-        self.Preset7Load.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset7Load, 6, 4, 1, 1)
-
-        self.Preset6Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset6Name.setObjectName(u"Preset6Name")
-        self.Preset6Name.setEnabled(False)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Preset6Name.sizePolicy().hasHeightForWidth())
-        self.Preset6Name.setSizePolicy(sizePolicy)
-        self.Preset6Name.setMinimumSize(QSize(200, 0))
-        self.Preset6Name.setMaximumSize(QSize(200, 16777215))
-        font1 = QFont()
-        font1.setPointSize(12)
-        self.Preset6Name.setFont(font1)
-        self.Preset6Name.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"color:grey;\n"
-"background-color:transparent;\n"
-"}\n"
-"QLineEdit:disabled{\n"
-"color:white;\n"
-"}\n"
-"")
-        self.Preset6Name.setMaxLength(20)
-
-        self.gridLayout_15.addWidget(self.Preset6Name, 5, 1, 1, 1)
+        self.gridLayout_15.addItem(self.horizontalSpacer_6, 3, 2, 1, 1)
 
         self.Preset10Name = QLineEdit(self.scrollAreaWidgetContents)
         self.Preset10Name.setObjectName(u"Preset10Name")
         self.Preset10Name.setEnabled(False)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.Preset10Name.sizePolicy().hasHeightForWidth())
         self.Preset10Name.setSizePolicy(sizePolicy)
         self.Preset10Name.setMinimumSize(QSize(200, 0))
         self.Preset10Name.setMaximumSize(QSize(200, 16777215))
+        font1 = QFont()
+        font1.setPointSize(12)
         self.Preset10Name.setFont(font1)
         self.Preset10Name.setStyleSheet(u"QLineEdit\n"
 "{\n"
@@ -1577,33 +1480,37 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset10Name, 9, 1, 1, 1)
 
-        self.Preset2Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset2Name.setObjectName(u"Preset2Name")
-        self.Preset2Name.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.Preset2Name.sizePolicy().hasHeightForWidth())
-        self.Preset2Name.setSizePolicy(sizePolicy)
-        self.Preset2Name.setMinimumSize(QSize(200, 0))
-        self.Preset2Name.setMaximumSize(QSize(200, 16777215))
-        self.Preset2Name.setFont(font1)
-        self.Preset2Name.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"color:grey;\n"
-"background-color:transparent;\n"
-"}\n"
-"QLineEdit:disabled{\n"
-"color:white;\n"
-"}\n"
-"")
-        self.Preset2Name.setMaxLength(20)
+        self.Preset7Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset7Save.setObjectName(u"Preset7Save")
+        self.Preset7Save.setEnabled(True)
+        self.Preset7Save.setMinimumSize(QSize(50, 50))
+        self.Preset7Save.setMaximumSize(QSize(50, 50))
+        self.Preset7Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/save_green.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset7Save.setIcon(icon12)
+        self.Preset7Save.setIconSize(QSize(30, 30))
+        self.Preset7Save.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset2Name, 1, 1, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset7Save, 6, 3, 1, 1)
 
-        self.Preset3EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset3EditName.setObjectName(u"Preset3EditName")
-        self.Preset3EditName.setEnabled(True)
-        self.Preset3EditName.setMinimumSize(QSize(50, 50))
-        self.Preset3EditName.setMaximumSize(QSize(50, 50))
-        self.Preset3EditName.setStyleSheet(u"QPushButton {\n"
+        self.Preset9EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset9EditName.setObjectName(u"Preset9EditName")
+        self.Preset9EditName.setEnabled(True)
+        self.Preset9EditName.setMinimumSize(QSize(50, 50))
+        self.Preset9EditName.setMaximumSize(QSize(50, 50))
+        self.Preset9EditName.setStyleSheet(u"QPushButton {\n"
 "    border: none;\n"
 "    background-color: transparent;\n"
 "    padding: 2px;\n"
@@ -1617,11 +1524,86 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset3EditName.setIcon(icon12)
-        self.Preset3EditName.setIconSize(QSize(30, 30))
-        self.Preset3EditName.setFlat(True)
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/Edit.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset9EditName.setIcon(icon13)
+        self.Preset9EditName.setIconSize(QSize(30, 30))
+        self.Preset9EditName.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset3EditName, 2, 0, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset9EditName, 8, 0, 1, 1)
+
+        self.Preset1EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset1EditName.setObjectName(u"Preset1EditName")
+        self.Preset1EditName.setEnabled(True)
+        self.Preset1EditName.setMinimumSize(QSize(50, 50))
+        self.Preset1EditName.setMaximumSize(QSize(50, 50))
+        self.Preset1EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset1EditName.setIcon(icon13)
+        self.Preset1EditName.setIconSize(QSize(30, 30))
+        self.Preset1EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset1EditName, 0, 0, 1, 1)
+
+        self.Preset5Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset5Save.setObjectName(u"Preset5Save")
+        self.Preset5Save.setEnabled(True)
+        self.Preset5Save.setMinimumSize(QSize(50, 50))
+        self.Preset5Save.setMaximumSize(QSize(50, 50))
+        self.Preset5Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset5Save.setIcon(icon12)
+        self.Preset5Save.setIconSize(QSize(30, 30))
+        self.Preset5Save.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset5Save, 4, 3, 1, 1)
+
+        self.Preset4Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset4Name.setObjectName(u"Preset4Name")
+        self.Preset4Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset4Name.sizePolicy().hasHeightForWidth())
+        self.Preset4Name.setSizePolicy(sizePolicy)
+        self.Preset4Name.setMinimumSize(QSize(200, 0))
+        self.Preset4Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset4Name.setFont(font1)
+        self.Preset4Name.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"color:grey;\n"
+"background-color:transparent;\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.Preset4Name.setMaxLength(20)
+
+        self.gridLayout_15.addWidget(self.Preset4Name, 3, 1, 1, 1)
+
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_4, 1, 2, 1, 1)
 
         self.Preset1Name = QLineEdit(self.scrollAreaWidgetContents)
         self.Preset1Name.setObjectName(u"Preset1Name")
@@ -1646,37 +1628,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset1Name, 0, 1, 1, 1)
 
-        self.Preset5EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset5EditName.setObjectName(u"Preset5EditName")
-        self.Preset5EditName.setEnabled(True)
-        self.Preset5EditName.setMinimumSize(QSize(50, 50))
-        self.Preset5EditName.setMaximumSize(QSize(50, 50))
-        self.Preset5EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset5EditName.setIcon(icon12)
-        self.Preset5EditName.setIconSize(QSize(30, 30))
-        self.Preset5EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset5EditName, 4, 0, 1, 1)
-
-        self.Preset9Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset9Load.setObjectName(u"Preset9Load")
-        self.Preset9Load.setEnabled(True)
-        self.Preset9Load.setMinimumSize(QSize(50, 50))
-        self.Preset9Load.setMaximumSize(QSize(50, 50))
-        self.Preset9Load.setStyleSheet(u"\n"
+        self.Preset3Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset3Save.setObjectName(u"Preset3Save")
+        self.Preset3Save.setEnabled(True)
+        self.Preset3Save.setMinimumSize(QSize(50, 50))
+        self.Preset3Save.setMaximumSize(QSize(50, 50))
+        self.Preset3Save.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -1688,18 +1645,18 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset9Load.setIcon(icon14)
-        self.Preset9Load.setIconSize(QSize(30, 30))
-        self.Preset9Load.setFlat(True)
+        self.Preset3Save.setIcon(icon12)
+        self.Preset3Save.setIconSize(QSize(30, 30))
+        self.Preset3Save.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset9Load, 8, 4, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset3Save, 2, 3, 1, 1)
 
-        self.Preset6Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset6Load.setObjectName(u"Preset6Load")
-        self.Preset6Load.setEnabled(True)
-        self.Preset6Load.setMinimumSize(QSize(50, 50))
-        self.Preset6Load.setMaximumSize(QSize(50, 50))
-        self.Preset6Load.setStyleSheet(u"\n"
+        self.Preset9Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset9Save.setObjectName(u"Preset9Save")
+        self.Preset9Save.setEnabled(True)
+        self.Preset9Save.setMinimumSize(QSize(50, 50))
+        self.Preset9Save.setMaximumSize(QSize(50, 50))
+        self.Preset9Save.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -1711,21 +1668,21 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Load.setIcon(icon14)
-        self.Preset6Load.setIconSize(QSize(30, 30))
-        self.Preset6Load.setFlat(True)
+        self.Preset9Save.setIcon(icon12)
+        self.Preset9Save.setIconSize(QSize(30, 30))
+        self.Preset9Save.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset6Load, 5, 4, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset9Save, 8, 3, 1, 1)
 
-        self.Preset9Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset9Name.setObjectName(u"Preset9Name")
-        self.Preset9Name.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.Preset9Name.sizePolicy().hasHeightForWidth())
-        self.Preset9Name.setSizePolicy(sizePolicy)
-        self.Preset9Name.setMinimumSize(QSize(200, 0))
-        self.Preset9Name.setMaximumSize(QSize(200, 16777215))
-        self.Preset9Name.setFont(font1)
-        self.Preset9Name.setStyleSheet(u"QLineEdit\n"
+        self.Preset3Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset3Name.setObjectName(u"Preset3Name")
+        self.Preset3Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset3Name.sizePolicy().hasHeightForWidth())
+        self.Preset3Name.setSizePolicy(sizePolicy)
+        self.Preset3Name.setMinimumSize(QSize(200, 0))
+        self.Preset3Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset3Name.setFont(font1)
+        self.Preset3Name.setStyleSheet(u"QLineEdit\n"
 "{\n"
 "color:grey;\n"
 "background-color:transparent;\n"
@@ -1734,128 +1691,34 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "}\n"
 "")
-        self.Preset9Name.setMaxLength(20)
+        self.Preset3Name.setMaxLength(20)
 
-        self.gridLayout_15.addWidget(self.Preset9Name, 8, 1, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset3Name, 2, 1, 1, 1)
 
-        self.Preset6Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset6Save.setObjectName(u"Preset6Save")
-        self.Preset6Save.setEnabled(True)
-        self.Preset6Save.setMinimumSize(QSize(50, 50))
-        self.Preset6Save.setMaximumSize(QSize(50, 50))
-        self.Preset6Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset6Save.setIcon(icon13)
-        self.Preset6Save.setIconSize(QSize(30, 30))
-        self.Preset6Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset6Save, 5, 3, 1, 1)
-
-        self.Preset7Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset7Save.setObjectName(u"Preset7Save")
-        self.Preset7Save.setEnabled(True)
-        self.Preset7Save.setMinimumSize(QSize(50, 50))
-        self.Preset7Save.setMaximumSize(QSize(50, 50))
-        self.Preset7Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset7Save.setIcon(icon13)
-        self.Preset7Save.setIconSize(QSize(30, 30))
-        self.Preset7Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset7Save, 6, 3, 1, 1)
-
-        self.Preset6EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset6EditName.setObjectName(u"Preset6EditName")
-        self.Preset6EditName.setEnabled(True)
-        self.Preset6EditName.setMinimumSize(QSize(50, 50))
-        self.Preset6EditName.setMaximumSize(QSize(50, 50))
-        self.Preset6EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
+        self.Preset7Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset7Name.setObjectName(u"Preset7Name")
+        self.Preset7Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset7Name.sizePolicy().hasHeightForWidth())
+        self.Preset7Name.setSizePolicy(sizePolicy)
+        self.Preset7Name.setMinimumSize(QSize(200, 0))
+        self.Preset7Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset7Name.setFont(font1)
+        self.Preset7Name.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"color:grey;\n"
+"background-color:transparent;\n"
 "}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
+"QLineEdit:disabled{\n"
+"color:white;\n"
 "}\n"
 "")
-        self.Preset6EditName.setIcon(icon12)
-        self.Preset6EditName.setIconSize(QSize(30, 30))
-        self.Preset6EditName.setFlat(True)
+        self.Preset7Name.setMaxLength(20)
 
-        self.gridLayout_15.addWidget(self.Preset6EditName, 5, 0, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset7Name, 6, 1, 1, 1)
 
-        self.Preset7EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset7EditName.setObjectName(u"Preset7EditName")
-        self.Preset7EditName.setEnabled(True)
-        self.Preset7EditName.setMinimumSize(QSize(50, 50))
-        self.Preset7EditName.setMaximumSize(QSize(50, 50))
-        self.Preset7EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset7EditName.setIcon(icon12)
-        self.Preset7EditName.setIconSize(QSize(30, 30))
-        self.Preset7EditName.setFlat(True)
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.gridLayout_15.addWidget(self.Preset7EditName, 6, 0, 1, 1)
-
-        self.Preset2Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset2Save.setObjectName(u"Preset2Save")
-        self.Preset2Save.setEnabled(True)
-        self.Preset2Save.setMinimumSize(QSize(50, 50))
-        self.Preset2Save.setMaximumSize(QSize(50, 50))
-        self.Preset2Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset2Save.setIcon(icon13)
-        self.Preset2Save.setIconSize(QSize(30, 30))
-        self.Preset2Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset2Save, 1, 3, 1, 1)
+        self.gridLayout_15.addItem(self.horizontalSpacer_12, 9, 2, 1, 1)
 
         self.Preset4Load = QPushButton(self.scrollAreaWidgetContents)
         self.Preset4Load.setObjectName(u"Preset4Load")
@@ -1874,132 +1737,13 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/load_blue.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.Preset4Load.setIcon(icon14)
         self.Preset4Load.setIconSize(QSize(30, 30))
         self.Preset4Load.setFlat(True)
 
         self.gridLayout_15.addWidget(self.Preset4Load, 3, 4, 1, 1)
-
-        self.Preset3Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset3Load.setObjectName(u"Preset3Load")
-        self.Preset3Load.setEnabled(True)
-        self.Preset3Load.setMinimumSize(QSize(50, 50))
-        self.Preset3Load.setMaximumSize(QSize(50, 50))
-        self.Preset3Load.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset3Load.setIcon(icon14)
-        self.Preset3Load.setIconSize(QSize(30, 30))
-        self.Preset3Load.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset3Load, 2, 4, 1, 1)
-
-        self.Preset1EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset1EditName.setObjectName(u"Preset1EditName")
-        self.Preset1EditName.setEnabled(True)
-        self.Preset1EditName.setMinimumSize(QSize(50, 50))
-        self.Preset1EditName.setMaximumSize(QSize(50, 50))
-        self.Preset1EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset1EditName.setIcon(icon12)
-        self.Preset1EditName.setIconSize(QSize(30, 30))
-        self.Preset1EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset1EditName, 0, 0, 1, 1)
-
-        self.Preset2EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset2EditName.setObjectName(u"Preset2EditName")
-        self.Preset2EditName.setEnabled(True)
-        self.Preset2EditName.setMinimumSize(QSize(50, 50))
-        self.Preset2EditName.setMaximumSize(QSize(50, 50))
-        self.Preset2EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset2EditName.setIcon(icon12)
-        self.Preset2EditName.setIconSize(QSize(30, 30))
-        self.Preset2EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset2EditName, 1, 0, 1, 1)
-
-        self.Preset9EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset9EditName.setObjectName(u"Preset9EditName")
-        self.Preset9EditName.setEnabled(True)
-        self.Preset9EditName.setMinimumSize(QSize(50, 50))
-        self.Preset9EditName.setMaximumSize(QSize(50, 50))
-        self.Preset9EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset9EditName.setIcon(icon12)
-        self.Preset9EditName.setIconSize(QSize(30, 30))
-        self.Preset9EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset9EditName, 8, 0, 1, 1)
-
-        self.Preset2Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset2Load.setObjectName(u"Preset2Load")
-        self.Preset2Load.setEnabled(True)
-        self.Preset2Load.setMinimumSize(QSize(50, 50))
-        self.Preset2Load.setMaximumSize(QSize(50, 50))
-        self.Preset2Load.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset2Load.setIcon(icon14)
-        self.Preset2Load.setIconSize(QSize(30, 30))
-        self.Preset2Load.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset2Load, 1, 4, 1, 1)
 
         self.Preset8Name = QLineEdit(self.scrollAreaWidgetContents)
         self.Preset8Name.setObjectName(u"Preset8Name")
@@ -2021,77 +1765,6 @@ class Ui_MainWindow(object):
         self.Preset8Name.setMaxLength(20)
 
         self.gridLayout_15.addWidget(self.Preset8Name, 7, 1, 1, 1)
-
-        self.Preset10Load = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset10Load.setObjectName(u"Preset10Load")
-        self.Preset10Load.setEnabled(True)
-        self.Preset10Load.setMinimumSize(QSize(50, 50))
-        self.Preset10Load.setMaximumSize(QSize(50, 50))
-        self.Preset10Load.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset10Load.setIcon(icon14)
-        self.Preset10Load.setIconSize(QSize(30, 30))
-        self.Preset10Load.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset10Load, 9, 4, 1, 1)
-
-        self.Preset4Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset4Save.setObjectName(u"Preset4Save")
-        self.Preset4Save.setEnabled(True)
-        self.Preset4Save.setMinimumSize(QSize(50, 50))
-        self.Preset4Save.setMaximumSize(QSize(50, 50))
-        self.Preset4Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset4Save.setIcon(icon13)
-        self.Preset4Save.setIconSize(QSize(30, 30))
-        self.Preset4Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset4Save, 3, 3, 1, 1)
-
-        self.Preset8EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset8EditName.setObjectName(u"Preset8EditName")
-        self.Preset8EditName.setEnabled(True)
-        self.Preset8EditName.setMinimumSize(QSize(50, 50))
-        self.Preset8EditName.setMaximumSize(QSize(50, 50))
-        self.Preset8EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset8EditName.setIcon(icon12)
-        self.Preset8EditName.setIconSize(QSize(30, 30))
-        self.Preset8EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset8EditName, 7, 0, 1, 1)
 
         self.Preset8Load = QPushButton(self.scrollAreaWidgetContents)
         self.Preset8Load.setObjectName(u"Preset8Load")
@@ -2116,12 +1789,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset8Load, 7, 4, 1, 1)
 
-        self.Preset1Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset1Save.setObjectName(u"Preset1Save")
-        self.Preset1Save.setEnabled(True)
-        self.Preset1Save.setMinimumSize(QSize(50, 50))
-        self.Preset1Save.setMaximumSize(QSize(50, 50))
-        self.Preset1Save.setStyleSheet(u"\n"
+        self.Preset4Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset4Save.setObjectName(u"Preset4Save")
+        self.Preset4Save.setEnabled(True)
+        self.Preset4Save.setMinimumSize(QSize(50, 50))
+        self.Preset4Save.setMaximumSize(QSize(50, 50))
+        self.Preset4Save.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -2133,32 +1806,86 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Save.setIcon(icon13)
-        self.Preset1Save.setIconSize(QSize(30, 30))
-        self.Preset1Save.setFlat(True)
+        self.Preset4Save.setIcon(icon12)
+        self.Preset4Save.setIconSize(QSize(30, 30))
+        self.Preset4Save.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset1Save, 0, 3, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset4Save, 3, 3, 1, 1)
 
-        self.Preset3Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset3Name.setObjectName(u"Preset3Name")
-        self.Preset3Name.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.Preset3Name.sizePolicy().hasHeightForWidth())
-        self.Preset3Name.setSizePolicy(sizePolicy)
-        self.Preset3Name.setMinimumSize(QSize(200, 0))
-        self.Preset3Name.setMaximumSize(QSize(200, 16777215))
-        self.Preset3Name.setFont(font1)
-        self.Preset3Name.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"color:grey;\n"
-"background-color:transparent;\n"
+        self.Preset7EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset7EditName.setObjectName(u"Preset7EditName")
+        self.Preset7EditName.setEnabled(True)
+        self.Preset7EditName.setMinimumSize(QSize(50, 50))
+        self.Preset7EditName.setMaximumSize(QSize(50, 50))
+        self.Preset7EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
 "}\n"
-"QLineEdit:disabled{\n"
-"color:white;\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset3Name.setMaxLength(20)
+        self.Preset7EditName.setIcon(icon13)
+        self.Preset7EditName.setIconSize(QSize(30, 30))
+        self.Preset7EditName.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset3Name, 2, 1, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset7EditName, 6, 0, 1, 1)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_5, 2, 2, 1, 1)
+
+        self.Preset3Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset3Load.setObjectName(u"Preset3Load")
+        self.Preset3Load.setEnabled(True)
+        self.Preset3Load.setMinimumSize(QSize(50, 50))
+        self.Preset3Load.setMaximumSize(QSize(50, 50))
+        self.Preset3Load.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset3Load.setIcon(icon14)
+        self.Preset3Load.setIconSize(QSize(30, 30))
+        self.Preset3Load.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset3Load, 2, 4, 1, 1)
+
+        self.Preset2Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset2Load.setObjectName(u"Preset2Load")
+        self.Preset2Load.setEnabled(True)
+        self.Preset2Load.setMinimumSize(QSize(50, 50))
+        self.Preset2Load.setMaximumSize(QSize(50, 50))
+        self.Preset2Load.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset2Load.setIcon(icon14)
+        self.Preset2Load.setIconSize(QSize(30, 30))
+        self.Preset2Load.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset2Load, 1, 4, 1, 1)
 
         self.Preset5Name = QLineEdit(self.scrollAreaWidgetContents)
         self.Preset5Name.setObjectName(u"Preset5Name")
@@ -2181,6 +1908,166 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset5Name, 4, 1, 1, 1)
 
+        self.Preset10EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset10EditName.setObjectName(u"Preset10EditName")
+        self.Preset10EditName.setEnabled(True)
+        self.Preset10EditName.setMinimumSize(QSize(50, 50))
+        self.Preset10EditName.setMaximumSize(QSize(50, 50))
+        self.Preset10EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset10EditName.setIcon(icon13)
+        self.Preset10EditName.setIconSize(QSize(30, 30))
+        self.Preset10EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset10EditName, 9, 0, 1, 1)
+
+        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_9, 6, 2, 1, 1)
+
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_7, 4, 2, 1, 1)
+
+        self.Preset7Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset7Load.setObjectName(u"Preset7Load")
+        self.Preset7Load.setEnabled(True)
+        self.Preset7Load.setMinimumSize(QSize(50, 50))
+        self.Preset7Load.setMaximumSize(QSize(50, 50))
+        self.Preset7Load.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset7Load.setIcon(icon14)
+        self.Preset7Load.setIconSize(QSize(30, 30))
+        self.Preset7Load.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset7Load, 6, 4, 1, 1)
+
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_10, 7, 2, 1, 1)
+
+        self.Preset5EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset5EditName.setObjectName(u"Preset5EditName")
+        self.Preset5EditName.setEnabled(True)
+        self.Preset5EditName.setMinimumSize(QSize(50, 50))
+        self.Preset5EditName.setMaximumSize(QSize(50, 50))
+        self.Preset5EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset5EditName.setIcon(icon13)
+        self.Preset5EditName.setIconSize(QSize(30, 30))
+        self.Preset5EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset5EditName, 4, 0, 1, 1)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_11, 8, 2, 1, 1)
+
+        self.Preset6Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset6Save.setObjectName(u"Preset6Save")
+        self.Preset6Save.setEnabled(True)
+        self.Preset6Save.setMinimumSize(QSize(50, 50))
+        self.Preset6Save.setMaximumSize(QSize(50, 50))
+        self.Preset6Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset6Save.setIcon(icon12)
+        self.Preset6Save.setIconSize(QSize(30, 30))
+        self.Preset6Save.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset6Save, 5, 3, 1, 1)
+
+        self.Preset8EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset8EditName.setObjectName(u"Preset8EditName")
+        self.Preset8EditName.setEnabled(True)
+        self.Preset8EditName.setMinimumSize(QSize(50, 50))
+        self.Preset8EditName.setMaximumSize(QSize(50, 50))
+        self.Preset8EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset8EditName.setIcon(icon13)
+        self.Preset8EditName.setIconSize(QSize(30, 30))
+        self.Preset8EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset8EditName, 7, 0, 1, 1)
+
+        self.Preset8Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset8Save.setObjectName(u"Preset8Save")
+        self.Preset8Save.setEnabled(True)
+        self.Preset8Save.setMinimumSize(QSize(50, 50))
+        self.Preset8Save.setMaximumSize(QSize(50, 50))
+        self.Preset8Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset8Save.setIcon(icon12)
+        self.Preset8Save.setIconSize(QSize(30, 30))
+        self.Preset8Save.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset8Save, 7, 3, 1, 1)
+
         self.Preset10Save = QPushButton(self.scrollAreaWidgetContents)
         self.Preset10Save.setObjectName(u"Preset10Save")
         self.Preset10Save.setEnabled(True)
@@ -2198,7 +2085,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Save.setIcon(icon13)
+        self.Preset10Save.setIcon(icon12)
         self.Preset10Save.setIconSize(QSize(30, 30))
         self.Preset10Save.setFlat(True)
 
@@ -2227,77 +2114,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset5Load, 4, 4, 1, 1)
 
-        self.Preset8Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset8Save.setObjectName(u"Preset8Save")
-        self.Preset8Save.setEnabled(True)
-        self.Preset8Save.setMinimumSize(QSize(50, 50))
-        self.Preset8Save.setMaximumSize(QSize(50, 50))
-        self.Preset8Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset8Save.setIcon(icon13)
-        self.Preset8Save.setIconSize(QSize(30, 30))
-        self.Preset8Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset8Save, 7, 3, 1, 1)
-
-        self.Preset5Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset5Save.setObjectName(u"Preset5Save")
-        self.Preset5Save.setEnabled(True)
-        self.Preset5Save.setMinimumSize(QSize(50, 50))
-        self.Preset5Save.setMaximumSize(QSize(50, 50))
-        self.Preset5Save.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        self.Preset5Save.setIcon(icon13)
-        self.Preset5Save.setIconSize(QSize(30, 30))
-        self.Preset5Save.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset5Save, 4, 3, 1, 1)
-
-        self.Preset4EditName = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset4EditName.setObjectName(u"Preset4EditName")
-        self.Preset4EditName.setEnabled(True)
-        self.Preset4EditName.setMinimumSize(QSize(50, 50))
-        self.Preset4EditName.setMaximumSize(QSize(50, 50))
-        self.Preset4EditName.setStyleSheet(u"QPushButton {\n"
-"    border: none;\n"
-"    background-color: transparent;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(128, 128, 128, 50);\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: rgba(128, 128, 128, 100);\n"
-"}\n"
-"")
-        self.Preset4EditName.setIcon(icon12)
-        self.Preset4EditName.setIconSize(QSize(30, 30))
-        self.Preset4EditName.setFlat(True)
-
-        self.gridLayout_15.addWidget(self.Preset4EditName, 3, 0, 1, 1)
-
         self.Preset1Load = QPushButton(self.scrollAreaWidgetContents)
         self.Preset1Load.setObjectName(u"Preset1Load")
         self.Preset1Load.setEnabled(True)
@@ -2321,33 +2137,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.Preset1Load, 0, 4, 1, 1)
 
-        self.Preset4Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset4Name.setObjectName(u"Preset4Name")
-        self.Preset4Name.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.Preset4Name.sizePolicy().hasHeightForWidth())
-        self.Preset4Name.setSizePolicy(sizePolicy)
-        self.Preset4Name.setMinimumSize(QSize(200, 0))
-        self.Preset4Name.setMaximumSize(QSize(200, 16777215))
-        self.Preset4Name.setFont(font1)
-        self.Preset4Name.setStyleSheet(u"QLineEdit\n"
-"{\n"
-"color:grey;\n"
-"background-color:transparent;\n"
-"}\n"
-"QLineEdit:disabled{\n"
-"color:white;\n"
-"}\n"
-"")
-        self.Preset4Name.setMaxLength(20)
-
-        self.gridLayout_15.addWidget(self.Preset4Name, 3, 1, 1, 1)
-
-        self.Preset3Save = QPushButton(self.scrollAreaWidgetContents)
-        self.Preset3Save.setObjectName(u"Preset3Save")
-        self.Preset3Save.setEnabled(True)
-        self.Preset3Save.setMinimumSize(QSize(50, 50))
-        self.Preset3Save.setMaximumSize(QSize(50, 50))
-        self.Preset3Save.setStyleSheet(u"\n"
+        self.Preset9Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset9Load.setObjectName(u"Preset9Load")
+        self.Preset9Load.setEnabled(True)
+        self.Preset9Load.setMinimumSize(QSize(50, 50))
+        self.Preset9Load.setMaximumSize(QSize(50, 50))
+        self.Preset9Load.setStyleSheet(u"\n"
 "    QPushButton {\n"
 "        border: none;\n"
 "        background-color: transparent;\n"
@@ -2359,21 +2154,21 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Save.setIcon(icon13)
-        self.Preset3Save.setIconSize(QSize(30, 30))
-        self.Preset3Save.setFlat(True)
+        self.Preset9Load.setIcon(icon14)
+        self.Preset9Load.setIconSize(QSize(30, 30))
+        self.Preset9Load.setFlat(True)
 
-        self.gridLayout_15.addWidget(self.Preset3Save, 2, 3, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset9Load, 8, 4, 1, 1)
 
-        self.Preset7Name = QLineEdit(self.scrollAreaWidgetContents)
-        self.Preset7Name.setObjectName(u"Preset7Name")
-        self.Preset7Name.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.Preset7Name.sizePolicy().hasHeightForWidth())
-        self.Preset7Name.setSizePolicy(sizePolicy)
-        self.Preset7Name.setMinimumSize(QSize(200, 0))
-        self.Preset7Name.setMaximumSize(QSize(200, 16777215))
-        self.Preset7Name.setFont(font1)
-        self.Preset7Name.setStyleSheet(u"QLineEdit\n"
+        self.Preset9Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset9Name.setObjectName(u"Preset9Name")
+        self.Preset9Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset9Name.sizePolicy().hasHeightForWidth())
+        self.Preset9Name.setSizePolicy(sizePolicy)
+        self.Preset9Name.setMinimumSize(QSize(200, 0))
+        self.Preset9Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset9Name.setFont(font1)
+        self.Preset9Name.setStyleSheet(u"QLineEdit\n"
 "{\n"
 "color:grey;\n"
 "background-color:transparent;\n"
@@ -2382,49 +2177,251 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "}\n"
 "")
-        self.Preset7Name.setMaxLength(20)
+        self.Preset9Name.setMaxLength(20)
 
-        self.gridLayout_15.addWidget(self.Preset7Name, 6, 1, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset9Name, 8, 1, 1, 1)
 
-        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.Preset4EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset4EditName.setObjectName(u"Preset4EditName")
+        self.Preset4EditName.setEnabled(True)
+        self.Preset4EditName.setMinimumSize(QSize(50, 50))
+        self.Preset4EditName.setMaximumSize(QSize(50, 50))
+        self.Preset4EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset4EditName.setIcon(icon13)
+        self.Preset4EditName.setIconSize(QSize(30, 30))
+        self.Preset4EditName.setFlat(True)
 
-        self.gridLayout_15.addItem(self.horizontalSpacer_12, 9, 2, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset4EditName, 3, 0, 1, 1)
 
-        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.Preset2Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset2Name.setObjectName(u"Preset2Name")
+        self.Preset2Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset2Name.sizePolicy().hasHeightForWidth())
+        self.Preset2Name.setSizePolicy(sizePolicy)
+        self.Preset2Name.setMinimumSize(QSize(200, 0))
+        self.Preset2Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset2Name.setFont(font1)
+        self.Preset2Name.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"color:grey;\n"
+"background-color:transparent;\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.Preset2Name.setMaxLength(20)
 
-        self.gridLayout_15.addItem(self.horizontalSpacer_11, 8, 2, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset2Name, 1, 1, 1, 1)
 
-        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.Preset1Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset1Save.setObjectName(u"Preset1Save")
+        self.Preset1Save.setEnabled(True)
+        self.Preset1Save.setMinimumSize(QSize(50, 50))
+        self.Preset1Save.setMaximumSize(QSize(50, 50))
+        self.Preset1Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset1Save.setIcon(icon12)
+        self.Preset1Save.setIconSize(QSize(30, 30))
+        self.Preset1Save.setFlat(True)
 
-        self.gridLayout_15.addItem(self.horizontalSpacer_10, 7, 2, 1, 1)
-
-        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_9, 6, 2, 1, 1)
-
-        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_8, 5, 2, 1, 1)
-
-        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_7, 4, 2, 1, 1)
-
-        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_6, 3, 2, 1, 1)
-
-        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_5, 2, 2, 1, 1)
-
-        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_15.addItem(self.horizontalSpacer_4, 1, 2, 1, 1)
+        self.gridLayout_15.addWidget(self.Preset1Save, 0, 3, 1, 1)
 
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.gridLayout_15.addItem(self.horizontalSpacer_3, 0, 2, 1, 1)
+
+        self.Preset10Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset10Load.setObjectName(u"Preset10Load")
+        self.Preset10Load.setEnabled(True)
+        self.Preset10Load.setMinimumSize(QSize(50, 50))
+        self.Preset10Load.setMaximumSize(QSize(50, 50))
+        self.Preset10Load.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset10Load.setIcon(icon14)
+        self.Preset10Load.setIconSize(QSize(30, 30))
+        self.Preset10Load.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset10Load, 9, 4, 1, 1)
+
+        self.Preset6Load = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset6Load.setObjectName(u"Preset6Load")
+        self.Preset6Load.setEnabled(True)
+        self.Preset6Load.setMinimumSize(QSize(50, 50))
+        self.Preset6Load.setMaximumSize(QSize(50, 50))
+        self.Preset6Load.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset6Load.setIcon(icon14)
+        self.Preset6Load.setIconSize(QSize(30, 30))
+        self.Preset6Load.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset6Load, 5, 4, 1, 1)
+
+        self.Preset2Save = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset2Save.setObjectName(u"Preset2Save")
+        self.Preset2Save.setEnabled(True)
+        self.Preset2Save.setMinimumSize(QSize(50, 50))
+        self.Preset2Save.setMaximumSize(QSize(50, 50))
+        self.Preset2Save.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        self.Preset2Save.setIcon(icon12)
+        self.Preset2Save.setIconSize(QSize(30, 30))
+        self.Preset2Save.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset2Save, 1, 3, 1, 1)
+
+        self.Preset6Name = QLineEdit(self.scrollAreaWidgetContents)
+        self.Preset6Name.setObjectName(u"Preset6Name")
+        self.Preset6Name.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.Preset6Name.sizePolicy().hasHeightForWidth())
+        self.Preset6Name.setSizePolicy(sizePolicy)
+        self.Preset6Name.setMinimumSize(QSize(200, 0))
+        self.Preset6Name.setMaximumSize(QSize(200, 16777215))
+        self.Preset6Name.setFont(font1)
+        self.Preset6Name.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"color:grey;\n"
+"background-color:transparent;\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.Preset6Name.setMaxLength(20)
+
+        self.gridLayout_15.addWidget(self.Preset6Name, 5, 1, 1, 1)
+
+        self.Preset3EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset3EditName.setObjectName(u"Preset3EditName")
+        self.Preset3EditName.setEnabled(True)
+        self.Preset3EditName.setMinimumSize(QSize(50, 50))
+        self.Preset3EditName.setMaximumSize(QSize(50, 50))
+        self.Preset3EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset3EditName.setIcon(icon13)
+        self.Preset3EditName.setIconSize(QSize(30, 30))
+        self.Preset3EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset3EditName, 2, 0, 1, 1)
+
+        self.Preset6EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset6EditName.setObjectName(u"Preset6EditName")
+        self.Preset6EditName.setEnabled(True)
+        self.Preset6EditName.setMinimumSize(QSize(50, 50))
+        self.Preset6EditName.setMaximumSize(QSize(50, 50))
+        self.Preset6EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset6EditName.setIcon(icon13)
+        self.Preset6EditName.setIconSize(QSize(30, 30))
+        self.Preset6EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset6EditName, 5, 0, 1, 1)
+
+        self.Preset2EditName = QPushButton(self.scrollAreaWidgetContents)
+        self.Preset2EditName.setObjectName(u"Preset2EditName")
+        self.Preset2EditName.setEnabled(True)
+        self.Preset2EditName.setMinimumSize(QSize(50, 50))
+        self.Preset2EditName.setMaximumSize(QSize(50, 50))
+        self.Preset2EditName.setStyleSheet(u"QPushButton {\n"
+"    border: none;\n"
+"    background-color: transparent;\n"
+"    padding: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(128, 128, 128, 50);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(128, 128, 128, 100);\n"
+"}\n"
+"")
+        self.Preset2EditName.setIcon(icon13)
+        self.Preset2EditName.setIconSize(QSize(30, 30))
+        self.Preset2EditName.setFlat(True)
+
+        self.gridLayout_15.addWidget(self.Preset2EditName, 1, 0, 1, 1)
+
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_15.addItem(self.horizontalSpacer_8, 5, 2, 1, 1)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
@@ -3447,46 +3444,46 @@ class Ui_MainWindow(object):
 "", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Presets</span></p></body></html>", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt;\">Note: If you load a preset and change it, it will NOT automatically save.</span></p></body></html>", None))
-        self.Preset10EditName.setText("")
-        self.Preset9Save.setText("")
-        self.Preset7Load.setText("")
-        self.Preset6Name.setText(QCoreApplication.translate("MainWindow", u"Preset 6", None))
         self.Preset10Name.setText(QCoreApplication.translate("MainWindow", u"Preset 10", None))
-        self.Preset2Name.setText(QCoreApplication.translate("MainWindow", u"Preset 2", None))
-        self.Preset3EditName.setText("")
-        self.Preset1Name.setText(QCoreApplication.translate("MainWindow", u"Preset 1", None))
-        self.Preset5EditName.setText("")
-        self.Preset9Load.setText("")
-        self.Preset6Load.setText("")
-        self.Preset9Name.setText(QCoreApplication.translate("MainWindow", u"Preset 9", None))
-        self.Preset6Save.setText("")
         self.Preset7Save.setText("")
-        self.Preset6EditName.setText("")
-        self.Preset7EditName.setText("")
-        self.Preset2Save.setText("")
-        self.Preset4Load.setText("")
-        self.Preset3Load.setText("")
-        self.Preset1EditName.setText("")
-        self.Preset2EditName.setText("")
         self.Preset9EditName.setText("")
-        self.Preset2Load.setText("")
-        self.Preset8Name.setText(QCoreApplication.translate("MainWindow", u"Preset 8", None))
-        self.Preset10Load.setText("")
-        self.Preset4Save.setText("")
-        self.Preset8EditName.setText("")
-        self.Preset8Load.setText("")
-        self.Preset1Save.setText("")
+        self.Preset1EditName.setText("")
+        self.Preset5Save.setText("")
+        self.Preset4Name.setText(QCoreApplication.translate("MainWindow", u"Preset 4", None))
+        self.Preset1Name.setText(QCoreApplication.translate("MainWindow", u"Preset 1", None))
+        self.Preset3Save.setText("")
+        self.Preset9Save.setText("")
         self.Preset3Name.setText(QCoreApplication.translate("MainWindow", u"Preset 3", None))
+        self.Preset7Name.setText(QCoreApplication.translate("MainWindow", u"Preset 7", None))
+        self.Preset4Load.setText("")
+        self.Preset8Name.setText(QCoreApplication.translate("MainWindow", u"Preset 8", None))
+        self.Preset8Load.setText("")
+        self.Preset4Save.setText("")
+        self.Preset7EditName.setText("")
+        self.Preset3Load.setText("")
+        self.Preset2Load.setText("")
         self.Preset5Name.setText(QCoreApplication.translate("MainWindow", u"Preset 5", None))
+        self.Preset10EditName.setText("")
+        self.Preset7Load.setText("")
+        self.Preset5EditName.setText("")
+        self.Preset6Save.setText("")
+        self.Preset8EditName.setText("")
+        self.Preset8Save.setText("")
         self.Preset10Save.setText("")
         self.Preset5Load.setText("")
-        self.Preset8Save.setText("")
-        self.Preset5Save.setText("")
-        self.Preset4EditName.setText("")
         self.Preset1Load.setText("")
-        self.Preset4Name.setText(QCoreApplication.translate("MainWindow", u"Preset 4", None))
-        self.Preset3Save.setText("")
-        self.Preset7Name.setText(QCoreApplication.translate("MainWindow", u"Preset 7", None))
+        self.Preset9Load.setText("")
+        self.Preset9Name.setText(QCoreApplication.translate("MainWindow", u"Preset 9", None))
+        self.Preset4EditName.setText("")
+        self.Preset2Name.setText(QCoreApplication.translate("MainWindow", u"Preset 2", None))
+        self.Preset1Save.setText("")
+        self.Preset10Load.setText("")
+        self.Preset6Load.setText("")
+        self.Preset2Save.setText("")
+        self.Preset6Name.setText(QCoreApplication.translate("MainWindow", u"Preset 6", None))
+        self.Preset3EditName.setText("")
+        self.Preset6EditName.setText("")
+        self.Preset2EditName.setText("")
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Activates / deactivates all toggled macros", None))
         self.label_43.setText(QCoreApplication.translate("MainWindow", u"Activates / deactivates macros with a keypress instead of having to click the toggle", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Activate Macros</span></p></body></html>", None))
@@ -3613,6 +3610,10 @@ class Ui_MainWindow(object):
         self.FlowStateKeybind_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Flow state keybind", None))
         self.label_138.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Flow state</span></p></body></html>", None))
     # retranslateUi
+
+
+
+
 
 
 

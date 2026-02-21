@@ -1,6 +1,5 @@
-import win32api, win32con, keyboard
+import  keyboard
 import time
-import threading
 
 
 class rollParryListener:  
@@ -10,8 +9,7 @@ class rollParryListener:
         self.hotkey = None
 
     def stack(self, keybind):
-        def is_mouse_swapped():
-            return win32api.GetSystemMetrics(23) != 0
+
 
         def rollParry(self):
             keyboard.press_and_release('f')

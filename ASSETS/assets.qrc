@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="icons">
+    <file>save_green.png</file>
+    <file>load_blue.png</file>
+    <file>Edit.png</file>
+    <file>Save.png</file>
     <file>chat.png</file>
     <file>combat.png</file>
     <file>mantras.png</file>

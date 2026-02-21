@@ -1,4 +1,4 @@
-import win32api, win32con, keyboard
+import keyboard
 import time
 import threading
 
