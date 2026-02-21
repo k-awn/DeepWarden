@@ -11,10 +11,11 @@ from pyqttoast import Toast, ToastPreset
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
     QSize, Qt, QStandardPaths)
 from PySide6.QtGui import (QFont, QIcon, QColor)
-from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
+from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout, QHBoxLayout,
     QLabel, QLineEdit, QPlainTextEdit,
     QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QStackedWidget, QWidget)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -29,283 +30,6 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.menuBar = QFrame(self.centralwidget)
-        self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setMinimumSize(QSize(50, 0))
-        self.menuBar.setMaximumSize(QSize(50, 16777215))
-        self.menuBar.setFrameShape(QFrame.Shape.StyledPanel)
-        self.menuBar.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_3 = QGridLayout(self.menuBar)
-        self.gridLayout_3.setSpacing(0)
-        self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.progressionButton = QPushButton(self.menuBar)
-        self.progressionButton.setObjectName(u"progressionButton")
-        self.progressionButton.setMinimumSize(QSize(50, 50))
-        self.progressionButton.setMaximumSize(QSize(50, 50))
-        self.progressionButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon = QIcon()
-        icon.addFile(u":/icons/progression.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.progressionButton.setIcon(icon)
-        self.progressionButton.setIconSize(QSize(35, 35))
-        self.progressionButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.progressionButton, 4, 0, 1, 1)
-
-        self.chatButton = QPushButton(self.menuBar)
-        self.chatButton.setObjectName(u"chatButton")
-        self.chatButton.setMinimumSize(QSize(50, 50))
-        self.chatButton.setMaximumSize(QSize(50, 50))
-        self.chatButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/chat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.chatButton.setIcon(icon1)
-        self.chatButton.setIconSize(QSize(35, 35))
-
-        self.gridLayout_3.addWidget(self.chatButton, 8, 0, 1, 1)
-
-        self.combatButton = QPushButton(self.menuBar)
-        self.combatButton.setObjectName(u"combatButton")
-        self.combatButton.setMinimumSize(QSize(50, 50))
-        self.combatButton.setMaximumSize(QSize(50, 50))
-        self.combatButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/combat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.combatButton.setIcon(icon2)
-        self.combatButton.setIconSize(QSize(35, 35))
-
-        self.gridLayout_3.addWidget(self.combatButton, 7, 0, 1, 1)
-
-        self.saveButton = QPushButton(self.menuBar)
-        self.saveButton.setObjectName(u"saveButton")
-        self.saveButton.setMinimumSize(QSize(50, 50))
-        self.saveButton.setMaximumSize(QSize(50, 50))
-        self.saveButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/Save.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.saveButton.setIcon(icon3)
-        self.saveButton.setIconSize(QSize(30, 30))
-        self.saveButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.saveButton, 0, 0, 1, 1)
-
-        self.bellButton = QPushButton(self.menuBar)
-        self.bellButton.setObjectName(u"bellButton")
-        self.bellButton.setMinimumSize(QSize(50, 50))
-        self.bellButton.setMaximumSize(QSize(50, 50))
-        self.bellButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/bell.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.bellButton.setIcon(icon4)
-        self.bellButton.setIconSize(QSize(30, 30))
-        self.bellButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.bellButton, 1, 0, 1, 1)
-
-        self.playButton = QPushButton(self.menuBar)
-        self.playButton.setObjectName(u"playButton")
-        self.playButton.setMinimumSize(QSize(50, 50))
-        self.playButton.setMaximumSize(QSize(50, 50))
-        self.playButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/play.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.playButton.setIcon(icon5)
-        self.playButton.setIconSize(QSize(35, 35))
-
-        self.gridLayout_3.addWidget(self.playButton, 10, 0, 1, 1)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_3.addItem(self.verticalSpacer, 12, 0, 1, 1)
-
-        self.settingsButton = QPushButton(self.menuBar)
-        self.settingsButton.setObjectName(u"settingsButton")
-        self.settingsButton.setMinimumSize(QSize(50, 50))
-        self.settingsButton.setMaximumSize(QSize(50, 50))
-        self.settingsButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/settings.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.settingsButton.setIcon(icon6)
-        self.settingsButton.setIconSize(QSize(35, 35))
-        self.settingsButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.settingsButton, 11, 0, 1, 1)
-
-        self.mantrasButton = QPushButton(self.menuBar)
-        self.mantrasButton.setObjectName(u"mantrasButton")
-        self.mantrasButton.setMinimumSize(QSize(50, 50))
-        self.mantrasButton.setMaximumSize(QSize(50, 50))
-        self.mantrasButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/mantras.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.mantrasButton.setIcon(icon7)
-        self.mantrasButton.setIconSize(QSize(35, 35))
-        self.mantrasButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.mantrasButton, 2, 0, 1, 1)
-
-        self.weaponsButton = QPushButton(self.menuBar)
-        self.weaponsButton.setObjectName(u"weaponsButton")
-        self.weaponsButton.setMinimumSize(QSize(50, 50))
-        self.weaponsButton.setMaximumSize(QSize(50, 50))
-        self.weaponsButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon8 = QIcon()
-        icon8.addFile(u":/icons/weapons.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.weaponsButton.setIcon(icon8)
-        self.weaponsButton.setIconSize(QSize(35, 35))
-        self.weaponsButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.weaponsButton, 3, 0, 1, 1)
-
-        self.silentheartButton = QPushButton(self.menuBar)
-        self.silentheartButton.setObjectName(u"silentheartButton")
-        self.silentheartButton.setMinimumSize(QSize(50, 50))
-        self.silentheartButton.setMaximumSize(QSize(50, 50))
-        self.silentheartButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/silentheart.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.silentheartButton.setIcon(icon9)
-        self.silentheartButton.setIconSize(QSize(35, 35))
-
-        self.gridLayout_3.addWidget(self.silentheartButton, 9, 0, 1, 1)
-
-        self.miscButton = QPushButton(self.menuBar)
-        self.miscButton.setObjectName(u"miscButton")
-        self.miscButton.setMinimumSize(QSize(50, 50))
-        self.miscButton.setMaximumSize(QSize(50, 50))
-        self.miscButton.setStyleSheet(u"\n"
-"    QPushButton {\n"
-"        border: none;\n"
-"        background-color: transparent;\n"
-"        padding: 2px;\n"
-"    }\n"
-"    QPushButton:hover {\n"
-"        background-color: rgba(128, 128, 128, 50);\n"
-"    }\n"
-"    QPushButton:pressed {\n"
-"        background-color: rgba(128, 128, 128, 100);\n"
-"    }")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/miscellaneous.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.miscButton.setIcon(icon10)
-        self.miscButton.setIconSize(QSize(35, 35))
-        self.miscButton.setFlat(True)
-
-        self.gridLayout_3.addWidget(self.miscButton, 5, 0, 1, 1)
-
-
-        self.gridLayout.addWidget(self.menuBar, 1, 0, 1, 1)
-
         self.titleBar = QFrame(self.centralwidget)
         self.titleBar.setObjectName(u"titleBar")
         self.titleBar.setMinimumSize(QSize(0, 50))
@@ -323,6 +47,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addItem(self.horizontalSpacer_2, 0, 1, 1, 1)
 
+        self.pageName = QLabel(self.titleBar)
+        self.pageName.setObjectName(u"pageName")
+
+        self.gridLayout_2.addWidget(self.pageName, 0, 3, 1, 1)
+
         self.menuButton = QPushButton(self.titleBar)
         self.menuButton.setObjectName(u"menuButton")
         self.menuButton.setMinimumSize(QSize(50, 50))
@@ -339,25 +68,30 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.menuButton.setIcon(icon11)
+        icon = QIcon()
+        icon.addFile(u":/icons/menu_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.menuButton.setIcon(icon)
         self.menuButton.setIconSize(QSize(50, 50))
         self.menuButton.setFlat(True)
 
         self.gridLayout_2.addWidget(self.menuButton, 0, 0, 1, 1, Qt.AlignmentFlag.AlignLeft)
 
-        self.pageName = QLabel(self.titleBar)
-        self.pageName.setObjectName(u"pageName")
-
-        self.gridLayout_2.addWidget(self.pageName, 0, 3, 1, 1)
-
 
         self.gridLayout.addWidget(self.titleBar, 0, 0, 1, 2)
 
-        self.frame = QFrame(self.centralwidget)
+        self.container = QWidget(self.centralwidget)
+        self.container.setObjectName(u"container")
+        self.container.setMinimumSize(QSize(200, 50))
+        self.container.setStyleSheet(u"")
+        self.gridLayout_24 = QGridLayout(self.container)
+        self.gridLayout_24.setObjectName(u"gridLayout_24")
+        self.gridLayout_24.setHorizontalSpacing(9)
+        self.gridLayout_24.setVerticalSpacing(3)
+        self.gridLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.frame = QFrame(self.container)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 0))
+        self.frame.setMaximumSize(QSize(16777215, 16777215))
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_4 = QGridLayout(self.frame)
@@ -375,17 +109,17 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addItem(self.verticalSpacer_2, 3, 0, 1, 1)
 
+        self.BellMovestack = QLabel(self.bellPage)
+        self.BellMovestack.setObjectName(u"BellMovestack")
+
+        self.gridLayout_5.addWidget(self.BellMovestack, 0, 0, 1, 2)
+
         self.MovestackChoice = QComboBox(self.bellPage)
         self.MovestackChoice.addItem("")
         self.MovestackChoice.addItem("")
         self.MovestackChoice.setObjectName(u"MovestackChoice")
 
         self.gridLayout_5.addWidget(self.MovestackChoice, 2, 0, 1, 1)
-
-        self.BellMovestack = QLabel(self.bellPage)
-        self.BellMovestack.setObjectName(u"BellMovestack")
-
-        self.gridLayout_5.addWidget(self.BellMovestack, 0, 0, 1, 2)
 
         self.label_40 = QLabel(self.bellPage)
         self.label_40.setObjectName(u"label_40")
@@ -539,7 +273,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 615, 1038))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, -381, 625, 1038))
         self.gridLayout_19 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.MotifHotkeyLabel = QLabel(self.scrollAreaWidgetContents_3)
@@ -774,7 +508,7 @@ class Ui_MainWindow(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 562, 1364))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, -578, 625, 1364))
         self.gridLayout_21 = QGridLayout(self.scrollAreaWidgetContents_6)
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.label_117 = QLabel(self.scrollAreaWidgetContents_6)
@@ -1112,7 +846,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 495, 1093))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, -48, 625, 705))
         self.scrollAreaWidgetContents_2.setMaximumSize(QSize(16777215, 16777212))
         self.gridLayout_17 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_17.setObjectName(u"gridLayout_17")
@@ -1121,208 +855,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_17.addWidget(self.label_32, 5, 0, 1, 1)
 
-        self.AutoEatHotkey = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoEatHotkey.setObjectName(u"AutoEatHotkey")
-        self.AutoEatHotkey.setMinimumSize(QSize(0, 30))
-        self.AutoEatHotkey.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoEatHotkey, 14, 1, 1, 1)
-
-        self.DiscordGankPingSettings = QLabel(self.scrollAreaWidgetContents_2)
-        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
-
-        self.gridLayout_17.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
-
-        self.label_29 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_29.setObjectName(u"label_29")
-
-        self.gridLayout_17.addWidget(self.label_29, 4, 0, 1, 1)
-
-        self.label_70 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_70.setObjectName(u"label_70")
-
-        self.gridLayout_17.addWidget(self.label_70, 18, 0, 1, 1)
-
-        self.AutoBankVowCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoBankVowCoords.setObjectName(u"AutoBankVowCoords")
-        self.AutoBankVowCoords.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoBankVowCoords, 29, 1, 1, 1)
-
-        self.plainTextEdit_13 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.plainTextEdit_13.setObjectName(u"plainTextEdit_13")
-        self.plainTextEdit_13.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_13.setStyleSheet(u"")
-
-        self.gridLayout_17.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
-
-        self.label_61 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_61.setObjectName(u"label_61")
-
-        self.gridLayout_17.addWidget(self.label_61, 12, 0, 1, 1)
-
-        self.label_79 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_79.setObjectName(u"label_79")
-
-        self.gridLayout_17.addWidget(self.label_79, 29, 0, 1, 1)
-
-        self.label_73 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_73.setObjectName(u"label_73")
-
-        self.gridLayout_17.addWidget(self.label_73, 20, 0, 1, 1)
-
-        self.AutoEatFoodCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoEatFoodCoords.setObjectName(u"AutoEatFoodCoords")
-        self.AutoEatFoodCoords.setMinimumSize(QSize(0, 30))
-        self.AutoEatFoodCoords.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoEatFoodCoords, 18, 1, 1, 1)
-
-        self.AutoBankBoxCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoBankBoxCoords.setObjectName(u"AutoBankBoxCoords")
-        self.AutoBankBoxCoords.setMinimumSize(QSize(0, 30))
-        self.AutoBankBoxCoords.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoBankBoxCoords, 25, 1, 1, 1)
-
-        self.AutoBankVowCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
-        self.AutoBankVowCoordsButton.setObjectName(u"AutoBankVowCoordsButton")
-
-        self.gridLayout_17.addWidget(self.AutoBankVowCoordsButton, 30, 0, 1, 2)
-
-        self.label_71 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_71.setObjectName(u"label_71")
-
-        self.gridLayout_17.addWidget(self.label_71, 14, 0, 1, 1)
-
-        self.label_67 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_67.setObjectName(u"label_67")
-        self.label_67.setStyleSheet(u"color:grey;")
-        self.label_67.setWordWrap(True)
-
-        self.gridLayout_17.addWidget(self.label_67, 13, 0, 1, 2)
-
-        self.FlashmapLabel = QLabel(self.scrollAreaWidgetContents_2)
-        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
-        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
-
-        self.gridLayout_17.addWidget(self.FlashmapLabel, 10, 0, 1, 1)
-
-        self.label_48 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_48.setObjectName(u"label_48")
-        self.label_48.setFont(font)
-        self.label_48.setStyleSheet(u"color:grey;")
-        self.label_48.setWordWrap(True)
-
-        self.gridLayout_17.addWidget(self.label_48, 1, 0, 1, 2)
-
-        self.label_78 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_78.setObjectName(u"label_78")
-
-        self.gridLayout_17.addWidget(self.label_78, 27, 0, 1, 1)
-
-        self.label_33 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_33.setObjectName(u"label_33")
-
-        self.gridLayout_17.addWidget(self.label_33, 6, 0, 1, 1)
-
-        self.label_72 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_72.setObjectName(u"label_72")
-
-        self.gridLayout_17.addWidget(self.label_72, 9, 0, 1, 1)
-
-        self.DiscordGankPingLabel = QLabel(self.scrollAreaWidgetContents_2)
-        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
-
-        self.gridLayout_17.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
-
-        self.label_49 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_49.setObjectName(u"label_49")
-        self.label_49.setFont(font)
-        self.label_49.setStyleSheet(u"color:grey;")
-
-        self.gridLayout_17.addWidget(self.label_49, 8, 0, 1, 2)
-
-        self.label_74 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_74.setObjectName(u"label_74")
-        self.label_74.setStyleSheet(u"color:grey;")
-        self.label_74.setWordWrap(True)
-
-        self.gridLayout_17.addWidget(self.label_74, 21, 0, 1, 2)
-
-        self.AutoBankItemCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
-        self.AutoBankItemCoordsButton.setObjectName(u"AutoBankItemCoordsButton")
-
-        self.gridLayout_17.addWidget(self.AutoBankItemCoordsButton, 28, 0, 1, 2)
-
-        self.label_76 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_76.setObjectName(u"label_76")
-
-        self.gridLayout_17.addWidget(self.label_76, 24, 0, 1, 1)
-
-        self.label_31 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_31.setObjectName(u"label_31")
-
-        self.gridLayout_17.addWidget(self.label_31, 7, 0, 1, 1)
-
-        self.label_75 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_75.setObjectName(u"label_75")
-
-        self.gridLayout_17.addWidget(self.label_75, 22, 0, 1, 1)
-
-        self.monitorToScreenshot = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.monitorToScreenshot.setObjectName(u"monitorToScreenshot")
-        self.monitorToScreenshot.setMinimumSize(QSize(0, 30))
-        self.monitorToScreenshot.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.monitorToScreenshot, 9, 1, 1, 1)
-
-        self.AutoEatFoodName = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoEatFoodName.setObjectName(u"AutoEatFoodName")
-        self.AutoEatFoodName.setMinimumSize(QSize(0, 30))
-        self.AutoEatFoodName.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoEatFoodName, 15, 1, 1, 1)
-
-        self.AutoEatBoxCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoEatBoxCoords.setObjectName(u"AutoEatBoxCoords")
-        self.AutoEatBoxCoords.setMinimumSize(QSize(0, 30))
-        self.AutoEatBoxCoords.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.AutoEatBoxCoords, 16, 1, 1, 1)
-
-        self.plainTextEdit_15 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.plainTextEdit_15.setObjectName(u"plainTextEdit_15")
-        self.plainTextEdit_15.setMinimumSize(QSize(0, 30))
-        self.plainTextEdit_15.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_15.setStyleSheet(u"")
-
-        self.gridLayout_17.addWidget(self.plainTextEdit_15, 2, 1, 1, 1)
-
-        self.label_34 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_34.setObjectName(u"label_34")
-
-        self.gridLayout_17.addWidget(self.label_34, 2, 0, 1, 1)
-
-        self.autoBankBoxCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
-        self.autoBankBoxCoordsButton.setObjectName(u"autoBankBoxCoordsButton")
-
-        self.gridLayout_17.addWidget(self.autoBankBoxCoordsButton, 26, 0, 1, 2)
-
-        self.label_69 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_69.setObjectName(u"label_69")
-
-        self.gridLayout_17.addWidget(self.label_69, 16, 0, 1, 1)
-
-        self.label_68 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_68.setObjectName(u"label_68")
-
-        self.gridLayout_17.addWidget(self.label_68, 15, 0, 1, 1)
-
-        self.label_77 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_77.setObjectName(u"label_77")
-
-        self.gridLayout_17.addWidget(self.label_77, 25, 0, 1, 1)
+        self.plainTextEdit_14 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
+        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_14.setStyleSheet(u"")
+
+        self.gridLayout_17.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
 
         self.plainTextEdit = QPlainTextEdit(self.scrollAreaWidgetContents_2)
         self.plainTextEdit.setObjectName(u"plainTextEdit")
@@ -1339,6 +877,120 @@ class Ui_MainWindow(object):
 
         self.gridLayout_17.addWidget(self.plainTextEdit_12, 4, 1, 1, 1)
 
+        self.label_69 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_69.setObjectName(u"label_69")
+
+        self.gridLayout_17.addWidget(self.label_69, 16, 0, 1, 1)
+
+        self.label_33 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_33.setObjectName(u"label_33")
+
+        self.gridLayout_17.addWidget(self.label_33, 6, 0, 1, 1)
+
+        self.AutoEatFoodCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodCoords.setObjectName(u"AutoEatFoodCoords")
+        self.AutoEatFoodCoords.setMinimumSize(QSize(0, 30))
+        self.AutoEatFoodCoords.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodCoords, 18, 1, 1, 1)
+
+        self.monitorToScreenshot = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.monitorToScreenshot.setObjectName(u"monitorToScreenshot")
+        self.monitorToScreenshot.setMinimumSize(QSize(0, 30))
+        self.monitorToScreenshot.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.monitorToScreenshot, 9, 1, 1, 1)
+
+        self.label_34 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_34.setObjectName(u"label_34")
+
+        self.gridLayout_17.addWidget(self.label_34, 2, 0, 1, 1)
+
+        self.label_68 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_68.setObjectName(u"label_68")
+
+        self.gridLayout_17.addWidget(self.label_68, 15, 0, 1, 1)
+
+        self.plainTextEdit_13 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_13.setObjectName(u"plainTextEdit_13")
+        self.plainTextEdit_13.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_13.setStyleSheet(u"")
+
+        self.gridLayout_17.addWidget(self.plainTextEdit_13, 5, 1, 1, 1)
+
+        self.FlashmapLabel = QLabel(self.scrollAreaWidgetContents_2)
+        self.FlashmapLabel.setObjectName(u"FlashmapLabel")
+        self.FlashmapLabel.setMinimumSize(QSize(0, 35))
+
+        self.gridLayout_17.addWidget(self.FlashmapLabel, 10, 0, 1, 1)
+
+        self.AutoEatFoodName = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodName.setObjectName(u"AutoEatFoodName")
+        self.AutoEatFoodName.setMinimumSize(QSize(0, 30))
+        self.AutoEatFoodName.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodName, 15, 1, 1, 1)
+
+        self.AutoEatFoodCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
+        self.AutoEatFoodCoordsButton.setObjectName(u"AutoEatFoodCoordsButton")
+
+        self.gridLayout_17.addWidget(self.AutoEatFoodCoordsButton, 19, 0, 1, 2)
+
+        self.label_70 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_70.setObjectName(u"label_70")
+
+        self.gridLayout_17.addWidget(self.label_70, 18, 0, 1, 1)
+
+        self.DiscordGankPingLabel = QLabel(self.scrollAreaWidgetContents_2)
+        self.DiscordGankPingLabel.setObjectName(u"DiscordGankPingLabel")
+
+        self.gridLayout_17.addWidget(self.DiscordGankPingLabel, 0, 0, 1, 1)
+
+        self.label_49 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_49.setObjectName(u"label_49")
+        self.label_49.setFont(font)
+        self.label_49.setStyleSheet(u"color:grey;")
+
+        self.gridLayout_17.addWidget(self.label_49, 8, 0, 1, 2)
+
+        self.label_61 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_61.setObjectName(u"label_61")
+
+        self.gridLayout_17.addWidget(self.label_61, 12, 0, 1, 1)
+
+        self.label_48 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_48.setObjectName(u"label_48")
+        self.label_48.setFont(font)
+        self.label_48.setStyleSheet(u"color:grey;")
+        self.label_48.setWordWrap(True)
+
+        self.gridLayout_17.addWidget(self.label_48, 1, 0, 1, 2)
+
+        self.label_72 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_72.setObjectName(u"label_72")
+
+        self.gridLayout_17.addWidget(self.label_72, 9, 0, 1, 1)
+
+        self.AutoEatBoxCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
+        self.AutoEatBoxCoordsButton.setObjectName(u"AutoEatBoxCoordsButton")
+
+        self.gridLayout_17.addWidget(self.AutoEatBoxCoordsButton, 17, 0, 1, 2)
+
+        self.plainTextEdit_15 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.plainTextEdit_15.setObjectName(u"plainTextEdit_15")
+        self.plainTextEdit_15.setMinimumSize(QSize(0, 30))
+        self.plainTextEdit_15.setMaximumSize(QSize(16777215, 30))
+        self.plainTextEdit_15.setStyleSheet(u"")
+
+        self.gridLayout_17.addWidget(self.plainTextEdit_15, 2, 1, 1, 1)
+
+        self.label_67 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_67.setObjectName(u"label_67")
+        self.label_67.setStyleSheet(u"color:grey;")
+        self.label_67.setWordWrap(True)
+
+        self.gridLayout_17.addWidget(self.label_67, 13, 0, 1, 2)
+
         self.label = QLabel(self.scrollAreaWidgetContents_2)
         self.label.setObjectName(u"label")
         self.label.setFont(font)
@@ -1346,53 +998,39 @@ class Ui_MainWindow(object):
 
         self.gridLayout_17.addWidget(self.label, 11, 0, 1, 2)
 
-        self.AutoBankItemCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoBankItemCoords.setObjectName(u"AutoBankItemCoords")
-        self.AutoBankItemCoords.setMaximumSize(QSize(16777215, 30))
+        self.DiscordGankPingSettings = QLabel(self.scrollAreaWidgetContents_2)
+        self.DiscordGankPingSettings.setObjectName(u"DiscordGankPingSettings")
 
-        self.gridLayout_17.addWidget(self.AutoBankItemCoords, 27, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.DiscordGankPingSettings, 3, 0, 1, 1)
 
-        self.AutoEatBoxCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
-        self.AutoEatBoxCoordsButton.setObjectName(u"AutoEatBoxCoordsButton")
+        self.label_31 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_31.setObjectName(u"label_31")
 
-        self.gridLayout_17.addWidget(self.AutoEatBoxCoordsButton, 17, 0, 1, 2)
+        self.gridLayout_17.addWidget(self.label_31, 7, 0, 1, 1)
 
-        self.plainTextEdit_14 = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.plainTextEdit_14.setObjectName(u"plainTextEdit_14")
-        self.plainTextEdit_14.setMaximumSize(QSize(16777215, 30))
-        self.plainTextEdit_14.setStyleSheet(u"")
+        self.label_29 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_29.setObjectName(u"label_29")
 
-        self.gridLayout_17.addWidget(self.plainTextEdit_14, 6, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.label_29, 4, 0, 1, 1)
 
-        self.AutoEatFoodCoordsButton = QPushButton(self.scrollAreaWidgetContents_2)
-        self.AutoEatFoodCoordsButton.setObjectName(u"AutoEatFoodCoordsButton")
+        self.AutoEatHotkey = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatHotkey.setObjectName(u"AutoEatHotkey")
+        self.AutoEatHotkey.setMinimumSize(QSize(0, 30))
+        self.AutoEatHotkey.setMaximumSize(QSize(16777215, 30))
 
-        self.gridLayout_17.addWidget(self.AutoEatFoodCoordsButton, 19, 0, 1, 2)
+        self.gridLayout_17.addWidget(self.AutoEatHotkey, 14, 1, 1, 1)
 
-        self.AutoBankHotkey = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoBankHotkey.setObjectName(u"AutoBankHotkey")
-        self.AutoBankHotkey.setMinimumSize(QSize(0, 20))
-        self.AutoBankHotkey.setMaximumSize(QSize(16777215, 30))
+        self.label_71 = QLabel(self.scrollAreaWidgetContents_2)
+        self.label_71.setObjectName(u"label_71")
 
-        self.gridLayout_17.addWidget(self.AutoBankHotkey, 22, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.label_71, 14, 0, 1, 1)
 
-        self.AutoBankItemName = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.AutoBankItemName.setObjectName(u"AutoBankItemName")
-        self.AutoBankItemName.setMaximumSize(QSize(16777215, 30))
+        self.AutoEatBoxCoords = QPlainTextEdit(self.scrollAreaWidgetContents_2)
+        self.AutoEatBoxCoords.setObjectName(u"AutoEatBoxCoords")
+        self.AutoEatBoxCoords.setMinimumSize(QSize(0, 30))
+        self.AutoEatBoxCoords.setMaximumSize(QSize(16777215, 30))
 
-        self.gridLayout_17.addWidget(self.AutoBankItemName, 24, 1, 1, 1)
-
-        self.label_80 = QLabel(self.scrollAreaWidgetContents_2)
-        self.label_80.setObjectName(u"label_80")
-
-        self.gridLayout_17.addWidget(self.label_80, 23, 0, 1, 1)
-
-        self.autoBankRepetitions = QPlainTextEdit(self.scrollAreaWidgetContents_2)
-        self.autoBankRepetitions.setObjectName(u"autoBankRepetitions")
-        self.autoBankRepetitions.setMinimumSize(QSize(0, 30))
-        self.autoBankRepetitions.setMaximumSize(QSize(16777215, 30))
-
-        self.gridLayout_17.addWidget(self.autoBankRepetitions, 23, 1, 1, 1)
+        self.gridLayout_17.addWidget(self.AutoEatBoxCoords, 16, 1, 1, 1)
 
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
 
@@ -1413,18 +1051,6 @@ class Ui_MainWindow(object):
         self.savePage.setEnabled(True)
         self.gridLayout_13 = QGridLayout(self.savePage)
         self.gridLayout_13.setObjectName(u"gridLayout_13")
-        self.label_3 = QLabel(self.savePage)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMaximumSize(QSize(16777215, 50))
-
-        self.gridLayout_13.addWidget(self.label_3, 0, 0, 1, 1)
-
-        self.label_17 = QLabel(self.savePage)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setWordWrap(True)
-
-        self.gridLayout_13.addWidget(self.label_17, 1, 0, 1, 1)
-
         self.frame_2 = QFrame(self.savePage)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setMinimumSize(QSize(0, 400))
@@ -1447,7 +1073,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 636, 620))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 633, 587))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
@@ -1497,9 +1123,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/save_green.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset7Save.setIcon(icon12)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/save_green.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset7Save.setIcon(icon1)
         self.Preset7Save.setIconSize(QSize(30, 30))
         self.Preset7Save.setFlat(True)
 
@@ -1524,9 +1150,9 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/Edit.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset9EditName.setIcon(icon13)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/Edit.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset9EditName.setIcon(icon2)
         self.Preset9EditName.setIconSize(QSize(30, 30))
         self.Preset9EditName.setFlat(True)
 
@@ -1551,7 +1177,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset1EditName.setIcon(icon13)
+        self.Preset1EditName.setIcon(icon2)
         self.Preset1EditName.setIconSize(QSize(30, 30))
         self.Preset1EditName.setFlat(True)
 
@@ -1574,7 +1200,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Save.setIcon(icon12)
+        self.Preset5Save.setIcon(icon1)
         self.Preset5Save.setIconSize(QSize(30, 30))
         self.Preset5Save.setFlat(True)
 
@@ -1645,7 +1271,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Save.setIcon(icon12)
+        self.Preset3Save.setIcon(icon1)
         self.Preset3Save.setIconSize(QSize(30, 30))
         self.Preset3Save.setFlat(True)
 
@@ -1668,7 +1294,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset9Save.setIcon(icon12)
+        self.Preset9Save.setIcon(icon1)
         self.Preset9Save.setIconSize(QSize(30, 30))
         self.Preset9Save.setFlat(True)
 
@@ -1737,9 +1363,9 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/load_blue.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.Preset4Load.setIcon(icon14)
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/load_blue.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Preset4Load.setIcon(icon3)
         self.Preset4Load.setIconSize(QSize(30, 30))
         self.Preset4Load.setFlat(True)
 
@@ -1783,7 +1409,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Load.setIcon(icon14)
+        self.Preset8Load.setIcon(icon3)
         self.Preset8Load.setIconSize(QSize(30, 30))
         self.Preset8Load.setFlat(True)
 
@@ -1806,7 +1432,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset4Save.setIcon(icon12)
+        self.Preset4Save.setIcon(icon1)
         self.Preset4Save.setIconSize(QSize(30, 30))
         self.Preset4Save.setFlat(True)
 
@@ -1831,7 +1457,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset7EditName.setIcon(icon13)
+        self.Preset7EditName.setIcon(icon2)
         self.Preset7EditName.setIconSize(QSize(30, 30))
         self.Preset7EditName.setFlat(True)
 
@@ -1858,7 +1484,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset3Load.setIcon(icon14)
+        self.Preset3Load.setIcon(icon3)
         self.Preset3Load.setIconSize(QSize(30, 30))
         self.Preset3Load.setFlat(True)
 
@@ -1881,7 +1507,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Load.setIcon(icon14)
+        self.Preset2Load.setIcon(icon3)
         self.Preset2Load.setIconSize(QSize(30, 30))
         self.Preset2Load.setFlat(True)
 
@@ -1927,7 +1553,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset10EditName.setIcon(icon13)
+        self.Preset10EditName.setIcon(icon2)
         self.Preset10EditName.setIconSize(QSize(30, 30))
         self.Preset10EditName.setFlat(True)
 
@@ -1958,7 +1584,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset7Load.setIcon(icon14)
+        self.Preset7Load.setIcon(icon3)
         self.Preset7Load.setIconSize(QSize(30, 30))
         self.Preset7Load.setFlat(True)
 
@@ -1987,7 +1613,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset5EditName.setIcon(icon13)
+        self.Preset5EditName.setIcon(icon2)
         self.Preset5EditName.setIconSize(QSize(30, 30))
         self.Preset5EditName.setFlat(True)
 
@@ -2014,7 +1640,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Save.setIcon(icon12)
+        self.Preset6Save.setIcon(icon1)
         self.Preset6Save.setIconSize(QSize(30, 30))
         self.Preset6Save.setFlat(True)
 
@@ -2039,7 +1665,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset8EditName.setIcon(icon13)
+        self.Preset8EditName.setIcon(icon2)
         self.Preset8EditName.setIconSize(QSize(30, 30))
         self.Preset8EditName.setFlat(True)
 
@@ -2062,7 +1688,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset8Save.setIcon(icon12)
+        self.Preset8Save.setIcon(icon1)
         self.Preset8Save.setIconSize(QSize(30, 30))
         self.Preset8Save.setFlat(True)
 
@@ -2085,7 +1711,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Save.setIcon(icon12)
+        self.Preset10Save.setIcon(icon1)
         self.Preset10Save.setIconSize(QSize(30, 30))
         self.Preset10Save.setFlat(True)
 
@@ -2108,7 +1734,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset5Load.setIcon(icon14)
+        self.Preset5Load.setIcon(icon3)
         self.Preset5Load.setIconSize(QSize(30, 30))
         self.Preset5Load.setFlat(True)
 
@@ -2131,7 +1757,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Load.setIcon(icon14)
+        self.Preset1Load.setIcon(icon3)
         self.Preset1Load.setIconSize(QSize(30, 30))
         self.Preset1Load.setFlat(True)
 
@@ -2154,7 +1780,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset9Load.setIcon(icon14)
+        self.Preset9Load.setIcon(icon3)
         self.Preset9Load.setIconSize(QSize(30, 30))
         self.Preset9Load.setFlat(True)
 
@@ -2200,7 +1826,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset4EditName.setIcon(icon13)
+        self.Preset4EditName.setIcon(icon2)
         self.Preset4EditName.setIconSize(QSize(30, 30))
         self.Preset4EditName.setFlat(True)
 
@@ -2244,7 +1870,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset1Save.setIcon(icon12)
+        self.Preset1Save.setIcon(icon1)
         self.Preset1Save.setIconSize(QSize(30, 30))
         self.Preset1Save.setFlat(True)
 
@@ -2271,7 +1897,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset10Load.setIcon(icon14)
+        self.Preset10Load.setIcon(icon3)
         self.Preset10Load.setIconSize(QSize(30, 30))
         self.Preset10Load.setFlat(True)
 
@@ -2294,7 +1920,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset6Load.setIcon(icon14)
+        self.Preset6Load.setIcon(icon3)
         self.Preset6Load.setIconSize(QSize(30, 30))
         self.Preset6Load.setFlat(True)
 
@@ -2317,7 +1943,7 @@ class Ui_MainWindow(object):
 "    QPushButton:pressed {\n"
 "        background-color: rgba(128, 128, 128, 100);\n"
 "    }")
-        self.Preset2Save.setIcon(icon12)
+        self.Preset2Save.setIcon(icon1)
         self.Preset2Save.setIconSize(QSize(30, 30))
         self.Preset2Save.setFlat(True)
 
@@ -2363,7 +1989,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset3EditName.setIcon(icon13)
+        self.Preset3EditName.setIcon(icon2)
         self.Preset3EditName.setIconSize(QSize(30, 30))
         self.Preset3EditName.setFlat(True)
 
@@ -2388,7 +2014,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset6EditName.setIcon(icon13)
+        self.Preset6EditName.setIcon(icon2)
         self.Preset6EditName.setIconSize(QSize(30, 30))
         self.Preset6EditName.setFlat(True)
 
@@ -2413,7 +2039,7 @@ class Ui_MainWindow(object):
 "    background-color: rgba(128, 128, 128, 100);\n"
 "}\n"
 "")
-        self.Preset2EditName.setIcon(icon13)
+        self.Preset2EditName.setIcon(icon2)
         self.Preset2EditName.setIconSize(QSize(30, 30))
         self.Preset2EditName.setFlat(True)
 
@@ -2429,6 +2055,18 @@ class Ui_MainWindow(object):
 
 
         self.gridLayout_13.addWidget(self.frame_2, 2, 0, 1, 1)
+
+        self.label_17 = QLabel(self.savePage)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setWordWrap(True)
+
+        self.gridLayout_13.addWidget(self.label_17, 1, 0, 1, 1)
+
+        self.label_3 = QLabel(self.savePage)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMaximumSize(QSize(16777215, 50))
+
+        self.gridLayout_13.addWidget(self.label_3, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.savePage)
         self.runPage = QWidget()
@@ -2575,7 +2213,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 576, 1372))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 625, 1372))
         self.gridLayout_20 = QGridLayout(self.scrollAreaWidgetContents_5)
         self.gridLayout_20.setObjectName(u"gridLayout_20")
         self.MessageHotkeyLabel = QLabel(self.scrollAreaWidgetContents_5)
@@ -3228,10 +2866,335 @@ class Ui_MainWindow(object):
 
         self.stackedWidget.addWidget(self.silentheartPage)
 
-        self.gridLayout_4.addWidget(self.stackedWidget, 0, 0, 1, 1)
+        self.gridLayout_4.addWidget(self.stackedWidget, 0, 1, 1, 1)
 
 
-        self.gridLayout.addWidget(self.frame, 1, 1, 1, 1)
+        self.gridLayout_24.addWidget(self.frame, 0, 1, 1, 1)
+
+        self.menuBar = QFrame(self.container)
+        self.menuBar.setObjectName(u"menuBar")
+        self.menuBar.setMinimumSize(QSize(50, 0))
+        self.menuBar.setMaximumSize(QSize(50, 16777215))
+        self.menuBar.setFrameShape(QFrame.Shape.StyledPanel)
+        self.menuBar.setFrameShadow(QFrame.Shadow.Raised)
+        self.gridLayout_3 = QGridLayout(self.menuBar)
+        self.gridLayout_3.setSpacing(0)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.progressionButton = QPushButton(self.menuBar)
+        self.progressionButton.setObjectName(u"progressionButton")
+        self.progressionButton.setMinimumSize(QSize(50, 50))
+        self.progressionButton.setMaximumSize(QSize(50, 50))
+        self.progressionButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/progression.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.progressionButton.setIcon(icon4)
+        self.progressionButton.setIconSize(QSize(35, 35))
+        self.progressionButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.progressionButton, 4, 0, 1, 1)
+
+        self.chatButton = QPushButton(self.menuBar)
+        self.chatButton.setObjectName(u"chatButton")
+        self.chatButton.setMinimumSize(QSize(50, 50))
+        self.chatButton.setMaximumSize(QSize(50, 50))
+        self.chatButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/chat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.chatButton.setIcon(icon5)
+        self.chatButton.setIconSize(QSize(35, 35))
+
+        self.gridLayout_3.addWidget(self.chatButton, 8, 0, 1, 1)
+
+        self.combatButton = QPushButton(self.menuBar)
+        self.combatButton.setObjectName(u"combatButton")
+        self.combatButton.setMinimumSize(QSize(50, 50))
+        self.combatButton.setMaximumSize(QSize(50, 50))
+        self.combatButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/combat.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.combatButton.setIcon(icon6)
+        self.combatButton.setIconSize(QSize(35, 35))
+
+        self.gridLayout_3.addWidget(self.combatButton, 7, 0, 1, 1)
+
+        self.saveButton = QPushButton(self.menuBar)
+        self.saveButton.setObjectName(u"saveButton")
+        self.saveButton.setMinimumSize(QSize(50, 50))
+        self.saveButton.setMaximumSize(QSize(50, 50))
+        self.saveButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/Save.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.saveButton.setIcon(icon7)
+        self.saveButton.setIconSize(QSize(30, 30))
+        self.saveButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.saveButton, 0, 0, 1, 1)
+
+        self.bellButton = QPushButton(self.menuBar)
+        self.bellButton.setObjectName(u"bellButton")
+        self.bellButton.setMinimumSize(QSize(50, 50))
+        self.bellButton.setMaximumSize(QSize(50, 50))
+        self.bellButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/bell.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.bellButton.setIcon(icon8)
+        self.bellButton.setIconSize(QSize(30, 30))
+        self.bellButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.bellButton, 1, 0, 1, 1)
+
+        self.playButton = QPushButton(self.menuBar)
+        self.playButton.setObjectName(u"playButton")
+        self.playButton.setMinimumSize(QSize(50, 50))
+        self.playButton.setMaximumSize(QSize(50, 50))
+        self.playButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/play.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.playButton.setIcon(icon9)
+        self.playButton.setIconSize(QSize(35, 35))
+
+        self.gridLayout_3.addWidget(self.playButton, 10, 0, 1, 1)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_3.addItem(self.verticalSpacer, 12, 0, 1, 1)
+
+        self.settingsButton = QPushButton(self.menuBar)
+        self.settingsButton.setObjectName(u"settingsButton")
+        self.settingsButton.setMinimumSize(QSize(50, 50))
+        self.settingsButton.setMaximumSize(QSize(50, 50))
+        self.settingsButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/settings.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.settingsButton.setIcon(icon10)
+        self.settingsButton.setIconSize(QSize(35, 35))
+        self.settingsButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.settingsButton, 11, 0, 1, 1)
+
+        self.mantrasButton = QPushButton(self.menuBar)
+        self.mantrasButton.setObjectName(u"mantrasButton")
+        self.mantrasButton.setMinimumSize(QSize(50, 50))
+        self.mantrasButton.setMaximumSize(QSize(50, 50))
+        self.mantrasButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/mantras.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.mantrasButton.setIcon(icon11)
+        self.mantrasButton.setIconSize(QSize(35, 35))
+        self.mantrasButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.mantrasButton, 2, 0, 1, 1)
+
+        self.weaponsButton = QPushButton(self.menuBar)
+        self.weaponsButton.setObjectName(u"weaponsButton")
+        self.weaponsButton.setMinimumSize(QSize(50, 50))
+        self.weaponsButton.setMaximumSize(QSize(50, 50))
+        self.weaponsButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/weapons.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.weaponsButton.setIcon(icon12)
+        self.weaponsButton.setIconSize(QSize(35, 35))
+        self.weaponsButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.weaponsButton, 3, 0, 1, 1)
+
+        self.silentheartButton = QPushButton(self.menuBar)
+        self.silentheartButton.setObjectName(u"silentheartButton")
+        self.silentheartButton.setMinimumSize(QSize(50, 50))
+        self.silentheartButton.setMaximumSize(QSize(50, 50))
+        self.silentheartButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/silentheart.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.silentheartButton.setIcon(icon13)
+        self.silentheartButton.setIconSize(QSize(35, 35))
+
+        self.gridLayout_3.addWidget(self.silentheartButton, 9, 0, 1, 1)
+
+        self.miscButton = QPushButton(self.menuBar)
+        self.miscButton.setObjectName(u"miscButton")
+        self.miscButton.setMinimumSize(QSize(50, 50))
+        self.miscButton.setMaximumSize(QSize(50, 50))
+        self.miscButton.setStyleSheet(u"\n"
+"    QPushButton {\n"
+"        border: none;\n"
+"        background-color: transparent;\n"
+"        padding: 2px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: rgba(128, 128, 128, 50);\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: rgba(128, 128, 128, 100);\n"
+"    }")
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/miscellaneous.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.miscButton.setIcon(icon14)
+        self.miscButton.setIconSize(QSize(35, 35))
+        self.miscButton.setFlat(True)
+
+        self.gridLayout_3.addWidget(self.miscButton, 5, 0, 1, 1)
+
+
+        self.gridLayout_24.addWidget(self.menuBar, 0, 0, 1, 1)
+
+        self.contacts_frame = QFrame(self.container)
+        self.contacts_frame.setObjectName(u"contacts_frame")
+        self.contacts_frame.setMinimumSize(QSize(0, 30))
+        self.contacts_frame.setStyleSheet(u"border:none;")
+        self.contacts_frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.contacts_frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout = QHBoxLayout(self.contacts_frame)
+        self.horizontalLayout.setSpacing(3)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(9, 3, -1, 3)
+        self.horizontalSpacer_14 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer_14)
+
+        self.label_144 = QLabel(self.contacts_frame)
+        self.label_144.setObjectName(u"label_144")
+        self.label_144.setOpenExternalLinks(False)
+
+        self.horizontalLayout.addWidget(self.label_144)
+
+        self.label_143 = QLabel(self.contacts_frame)
+        self.label_143.setObjectName(u"label_143")
+
+        self.horizontalLayout.addWidget(self.label_143, 0, Qt.AlignmentFlag.AlignVCenter)
+
+        self.lineEdit = QLineEdit(self.contacts_frame)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMaximumSize(QSize(60, 16777215))
+        self.lineEdit.setStyleSheet(u"border:none;background:transparent;color:grey;qproperty-alignment: 'AlignHCenter | AlignVCenter';")
+        self.lineEdit.setReadOnly(True)
+
+        self.horizontalLayout.addWidget(self.lineEdit)
+
+        self.label_73 = QLabel(self.contacts_frame)
+        self.label_73.setObjectName(u"label_73")
+
+        self.horizontalLayout.addWidget(self.label_73)
+
+        self.horizontalSpacer_13 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer_13)
+
+
+        self.gridLayout_24.addWidget(self.contacts_frame, 1, 0, 1, 2)
+
+
+        self.gridLayout.addWidget(self.container, 1, 0, 1, 2)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -3245,23 +3208,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.progressionButton.setText("")
-        self.chatButton.setText("")
-        self.combatButton.setText("")
-        self.saveButton.setText("")
-        self.bellButton.setText("")
-        self.playButton.setText("")
-        self.settingsButton.setText("")
-        self.mantrasButton.setText("")
-        self.weaponsButton.setText("")
-        self.silentheartButton.setText("")
-        self.miscButton.setText("")
-        self.menuButton.setText("")
         self.pageName.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Save</span></p></body></html>", None))
+        self.menuButton.setText("")
+        self.BellMovestack.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Bell Movestack</span></p></body></html>", None))
         self.MovestackChoice.setItemText(0, QCoreApplication.translate("MainWindow", u"Roll", None))
         self.MovestackChoice.setItemText(1, QCoreApplication.translate("MainWindow", u"Parry", None))
 
-        self.BellMovestack.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Bell Movestack</span></p></body></html>", None))
         self.label_40.setText(QCoreApplication.translate("MainWindow", u"Rolls or parries whenever you press C (activating bell)", None))
         self.AutoMantraVariantsDescriptor.setText(QCoreApplication.translate("MainWindow", u"Performs the special variant of a mantra activated by pressing F during windup", None))
         self.label_47.setText(QCoreApplication.translate("MainWindow", u"Performs a roll when using a mantra", None))
@@ -3385,54 +3337,37 @@ class Ui_MainWindow(object):
         self.label_116.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
         self.AutoBuySubmitCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the submit purchase button to fill in the above field", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Username</span></p></body></html>", None))
-        self.AutoEatHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to start eating food ", None))
-        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
-        self.label_70.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Coordinates</span></p></body></html>", None))
-        self.AutoBankVowCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Accept knowledge payment button, leave blank if doesn't need", None))
-        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
-        self.label_61.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Eat</span></p></body></html>", None))
-        self.label_79.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Confirmation Coordinates</span></p></body></html>", None))
-        self.label_73.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Bank</span></p></body></html>", None))
-        self.AutoEatFoodCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where the food appears after you search it up (X + space + Y)", None))
-        self.AutoBankBoxCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where you search for items (X + space + Y)", None))
-        self.AutoBankVowCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the Yes button to fill in the above field automatically", None))
-        self.label_71.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.label_67.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt;\">Automatically opens up your inventory and eats a food. Inventory must not be open before using</span></p></body></html>", None))
-        self.FlashmapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Flash Map</span></p></body></html>", None))
-        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
-        self.label_78.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Item Coordinates</span></p></body></html>", None))
-        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
-        self.label_72.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Monitor to Screenshot</span></p></body></html>", None))
-        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
-        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
-        self.label_74.setText(QCoreApplication.translate("MainWindow", u"Automatically banks a certain item one/multiple times, good for banking bulk/duplicates. Inventory must be open before using", None))
-        self.AutoBankItemCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the item to fill in the above field automatically", None))
-        self.label_76.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Item Name</span></p></body></html>", None))
-        self.label_31.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Take Screenshot</span></p></body></html>", None))
-        self.label_75.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.monitorToScreenshot.setPlainText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.monitorToScreenshot.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Monitor number you want to screenshot", None))
-        self.AutoEatFoodName.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Full name of the food you want to eat", None))
-        self.AutoEatBoxCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where you search for items (X + space + Y)", None))
-        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
-        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.autoBankBoxCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the search box to fill in the above field automatically", None))
-        self.label_69.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Search Box Coordinates</span></p></body></html>", None))
-        self.label_68.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Name</span></p></body></html>", None))
-        self.label_77.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Search Box Coordinates</span></p></body></html>", None))
-        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
-        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
-        self.AutoBankItemCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where the item appears after you search it up (X + space + Y)", None))
-        self.AutoEatBoxCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the search box to fill in the above field automatically", None))
         self.plainTextEdit_14.setPlainText("")
         self.plainTextEdit_14.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
+        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Found in Server Settings > Integrations > Webhooks", None))
+        self.plainTextEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Message you want the bot to send", None))
+        self.label_69.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Search Box Coordinates</span></p></body></html>", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Profile Picture Link</span></p></body></html>", None))
+        self.AutoEatFoodCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where the food appears after you search it up (X + space + Y)", None))
+        self.monitorToScreenshot.setPlainText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.monitorToScreenshot.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Monitor number you want to screenshot", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Name</span></p></body></html>", None))
+        self.plainTextEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Leave blank if you do not want a custom one", None))
+        self.FlashmapLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Flash Map</span></p></body></html>", None))
+        self.AutoEatFoodName.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Full name of the food you want to eat", None))
         self.AutoEatFoodCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the food item to fill in the above field automatically", None))
-        self.AutoBankHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to start banking the item", None))
-        self.AutoBankItemName.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Name of the item you want to bank", None))
-        self.label_80.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Repetitions</span></p></body></html>", None))
-        self.autoBankRepetitions.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Amount of times you want to bank the item", None))
+        self.label_70.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Food Coordinates</span></p></body></html>", None))
+        self.DiscordGankPingLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Discord Message</span></p></body></html>", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Useful to let people know where you are", None))
+        self.label_61.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Auto Eat</span></p></body></html>", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"Automatically sends a discord message when a key is pressed", None))
+        self.label_72.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Monitor to Screenshot</span></p></body></html>", None))
+        self.AutoEatBoxCoordsButton.setText(QCoreApplication.translate("MainWindow", u"Click me and click on the search box to fill in the above field automatically", None))
+        self.plainTextEdit_15.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to send the message", None))
+        self.label_67.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt;\">Automatically opens up your inventory and eats a food. Inventory must not be open before using</span></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Keeps map open while holding m and then closes it when you release m", None))
+        self.DiscordGankPingSettings.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Discord Webhook</span></p></body></html>", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Take Screenshot</span></p></body></html>", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Message</span></p></body></html>", None))
+        self.AutoEatHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to start eating food ", None))
+        self.label_71.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
+        self.AutoEatBoxCoords.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Where you search for items (X + space + Y)", None))
         self.savePage.setStyleSheet(QCoreApplication.translate("MainWindow", u"QLineEdit\n"
 "{\n"
 "color:grey;\n"
@@ -3442,8 +3377,6 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "}\n"
 "", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Presets</span></p></body></html>", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt;\">Note: If you load a preset and change it, it will NOT automatically save.</span></p></body></html>", None))
         self.Preset10Name.setText(QCoreApplication.translate("MainWindow", u"Preset 10", None))
         self.Preset7Save.setText("")
         self.Preset9EditName.setText("")
@@ -3484,6 +3417,8 @@ class Ui_MainWindow(object):
         self.Preset3EditName.setText("")
         self.Preset6EditName.setText("")
         self.Preset2EditName.setText("")
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt;\">Note: If you load a preset and change it, it will NOT automatically save.</span></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Presets</span></p></body></html>", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Activates / deactivates all toggled macros", None))
         self.label_43.setText(QCoreApplication.translate("MainWindow", u"Activates / deactivates macros with a keypress instead of having to click the toggle", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Activate Macros</span></p></body></html>", None))
@@ -3609,7 +3544,28 @@ class Ui_MainWindow(object):
         self.label_133.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
         self.FlowStateKeybind_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Flow state keybind", None))
         self.label_138.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Flow state</span></p></body></html>", None))
+        self.progressionButton.setText("")
+        self.chatButton.setText("")
+        self.combatButton.setText("")
+        self.saveButton.setText("")
+        self.bellButton.setText("")
+        self.playButton.setText("")
+        self.settingsButton.setText("")
+        self.mantrasButton.setText("")
+        self.weaponsButton.setText("")
+        self.silentheartButton.setText("")
+        self.miscButton.setText("")
+        self.label_144.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:10pt; color:#808080;\">For new versions: </span><a href=\"https://github.com/swinelike/DeepWarden\"><span style=\" font-size:10pt; text-decoration: underline; color:#99ebff;\">https://github.com/swinelike/DeepWarden</span></a></p></body></html>", None))
+        self.label_143.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:10pt; color:#808080;\">For support, DM me:</span></p></body></html>", None))
+        self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"pigyboi", None))
+        self.label_73.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:10pt; color:#808080;\">or join </span><a href=\"https://discord.com/invite/Wg5ccj6vE6\"><span style=\" font-size:10pt; text-decoration: underline; color:#99ebff;\">this discord server</span></a></p></body></html>", None))
     # retranslateUi
+
+
+
+
+
+
 
 
 
@@ -3633,7 +3589,7 @@ class Ui_MainWindow(object):
         print('importing macros')
         from macros.rolling import rollCrit, rollM1, rollParry
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
-        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast, autotacet, autotrashtalk, autolog, autoeat, autobank, uppercutAssassinate, autobuy, autodropnotes, autosell, autorollcancel
+        from macros import threadedkeyb, holdm1, autovariants, mball, goldentongue, motifswap, gankpinger, flashmap, autofeint, autoritualcast, autotacet, autotrashtalk, autolog, autoeat, uppercutAssassinate, autobuy, autodropnotes, autosell, autorollcancel
         from macros.bellStack import bellStackParry, bellStackDodge
         from macros.mantraTech import mantraTechRoll, mantraTechSlide
         from macros.uppercuts import autoUppercutAlways, autoUppercutDYNAMIC
@@ -3666,9 +3622,6 @@ class Ui_MainWindow(object):
         self.autoLogCoordButton.clicked.connect(lambda: set_pos(self.autoLogCoords))
         self.AutoEatBoxCoordsButton.clicked.connect(lambda: set_pos(self.AutoEatBoxCoords))
         self.AutoEatFoodCoordsButton.clicked.connect(lambda: set_pos(self.AutoEatFoodCoords))
-        self.autoBankBoxCoordsButton.clicked.connect(lambda: set_pos(self.AutoBankBoxCoords))
-        self.AutoBankItemCoordsButton.clicked.connect(lambda: set_pos(self.AutoBankItemCoords))
-        self.AutoBankVowCoordsButton.clicked.connect(lambda: set_pos(self.AutoBankVowCoords))
         self.AutoBuyBarStartCoordsButton.clicked.connect(lambda: set_pos(self.AutoBuyBarStartCoords))
         self.AutoBuyBarEndCoordsButton.clicked.connect(lambda: set_pos(self.AutoBuyBarEndCoords))
         self.AutoBuySubmitCoordsButton.clicked.connect(lambda: set_pos(self.AutoBuySubmitCoords))
@@ -3762,8 +3715,6 @@ class Ui_MainWindow(object):
         self.scrollAreaWidgetContents_2.layout().addWidget(self.FlashMapToggle, 10,1,1,2)
         self.AutoEatToggle = CustomToggle(self.miscPage)
         self.scrollAreaWidgetContents_2.layout().addWidget(self.AutoEatToggle, 12, 1, 1, 2)
-        self.AutoBankToggle = CustomToggle(self.miscPage)
-        self.scrollAreaWidgetContents_2.layout().addWidget(self.AutoBankToggle, 20, 1, 1, 2)
 
         #! CHAT
 
@@ -3871,7 +3822,6 @@ class Ui_MainWindow(object):
                 self.ScreenshotToggle,
                 self.AutoLogToggle,
                 self.AutoEatToggle,
-                self.AutoBankToggle,
 
                 self.MbAllToggle,
                 self.GoldenTongueToggle,
@@ -4045,7 +3995,6 @@ class Ui_MainWindow(object):
                         addMacro('Trash Talk', self.TrashTalkToggle, autotrashtalk.TrashTalkListener, keybind=self.TrashTalkHotkey.toPlainText(), txtpath=txtpath)
                         addMacro('Auto Log', self.AutoLogToggle, autolog.AutoLogListener, keybind=self.autoLogHotkey.toPlainText(), coordinates=self.autoLogCoords.toPlainText())
                         addMacro('Auto Eat', self.AutoEatToggle, autoeat.AutoEatListener, keybind=self.AutoEatHotkey.toPlainText(), foodname=self.AutoEatFoodName.toPlainText(), boxcoordinates=self.AutoEatBoxCoords.toPlainText(), foodcoordinates=self.AutoEatFoodCoords.toPlainText())
-                        addMacro('Auto Bank', self.AutoBankToggle, autobank.AutoBankListener, keybind=self.AutoBankHotkey.toPlainText(), itemname=self.AutoBankItemName.toPlainText(), boxcoordinates=self.AutoBankBoxCoords.toPlainText(), itemcoordinates=self.AutoBankItemCoords.toPlainText(), vowcoordinates=self.AutoBankVowCoords.toPlainText(), repetitions=self.autoBankRepetitions.toPlainText())
                         addMacro('Roll M1', self.rollM1Toggle, rollM1.rollM1Listener, keybind=self.RollM1Hotkey.toPlainText())
                         addMacro('Roll Crit', self.rollCritToggle, rollCrit.rollCritListener)
                         addMacro('Roll Parry', self.rollParryToggle, rollParry.rollParryListener, keybind=self.rollParryHotkey.toPlainText())
@@ -4212,7 +4161,7 @@ class Ui_MainWindow(object):
                 saveMacro(currentData, 'ScreenshotToggle')
                 saveMacro(currentData, 'AutoLogToggle', params=['autoLogHotkey', 'autoLogCoords'], elements=['autoLogHotkey', 'autoLogCoords'])
                 saveMacro(currentData, 'AutoEatToggle', params=['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'], elements=['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'])
-                saveMacro(currentData, 'AutoBankToggle', params=['AutoBankHotkey', 'AutoBankItemName', 'AutoBankBoxCoords', 'AutoBankItemCoords', 'AutoBankVowCoords', 'autoBankRepetitions'], elements=['AutoBankHotkey', 'AutoBankItemName', 'AutoBankBoxCoords', 'AutoBankItemCoords', 'AutoBankVowCoords', 'autoBankRepetitions'])
+
 
                 #! chatting
 
@@ -4342,7 +4291,7 @@ class Ui_MainWindow(object):
                 loadMacro(savedData, 'FlashMapToggle')
                 loadMacro(savedData, 'AutoLogToggle', ['autoLogHotkey', 'autoLogCoords'], ['autoLogHotkey', 'autoLogCoords'])
                 loadMacro(savedData, 'AutoEatToggle', ['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'], ['AutoEatHotkey', 'AutoEatFoodName', 'AutoEatBoxCoords', 'AutoEatFoodCoords'])
-                loadMacro(savedData, 'AutoBankToggle', ['AutoBankHotkey', 'AutoBankItemName', 'AutoBankBoxCoords', 'AutoBankItemCoords', 'AutoBankVowCoords', 'autoBankRepetitions'], ['AutoBankHotkey', 'AutoBankItemName', 'AutoBankBoxCoords', 'AutoBankItemCoords', 'AutoBankVowCoords', 'autoBankRepetitions'])
+
                 
                        
                 #!progression
