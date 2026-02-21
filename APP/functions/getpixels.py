@@ -1,5 +1,4 @@
 from pynput import mouse
-import pyautogui
 import time
 
 def get_pos():

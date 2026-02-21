@@ -21,21 +21,21 @@ COLUMNS_SMALL_125 = [
     [{"left": 1035, "top": 250, "width": 50, "height": 50}, {"left": 1035, "top": 300, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 250, "width": 50, "height": 50}, {"left": 1135, "top": 300, "width": 50, "height": 50}]  # Column 4
 ]
-
+#1200 x 1920, 125%
 COLUMNS_LARGE_125 = [
     [{"left": 835, "top": 262, "width": 50, "height": 50}, {"left": 835, "top": 312, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 262, "width": 50, "height": 50}, {"left": 935, "top": 312, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 262, "width": 50, "height": 50}, {"left": 1035, "top": 312, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 262, "width": 50, "height": 50}, {"left": 1135, "top": 312, "width": 50, "height": 50}]  # Column 4
 ]
-
+#1080 x 1920, 100%
 COLUMNS_SMALL_100 = [
     [{"left": 858, "top": 217, "width": 50, "height": 50}, {"left": 858, "top": 257, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 217, "width": 50, "height": 50}, {"left": 938, "top": 257, "width": 50, "height": 50}], # Column 2
     [{"left": 1018, "top": 217, "width": 50, "height": 50}, {"left": 1018, "top": 257, "width": 50, "height": 50}], # Column 3
     [{"left": 1098, "top": 217, "width": 50, "height": 50}, {"left": 1098, "top": 257, "width": 50, "height": 50}]  # Column 4
 ]
-
+#1200 x 1920, 100%
 COLUMNS_LARGE_100 = [
     [{"left": 858, "top": 229, "width": 50, "height": 50}, {"left": 858, "top": 269, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 229, "width": 50, "height": 50}, {"left": 938, "top": 269, "width": 50, "height": 50}], # Column 2
