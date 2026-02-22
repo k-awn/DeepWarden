@@ -15,33 +15,51 @@ MAX_SCAN_DURATION = 1.0    # Hard limit for scanning before forcing execution
 DEFAULT_PING = 100
 
 #1080 x 1920, 125% 
-COLUMNS_SMALL_125 = [
+POS_1080_1920_125 = [
     [{"left": 835, "top": 250, "width": 50, "height": 50}, {"left": 835, "top": 300, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 250, "width": 50, "height": 50}, {"left": 935, "top": 300, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 250, "width": 50, "height": 50}, {"left": 1035, "top": 300, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 250, "width": 50, "height": 50}, {"left": 1135, "top": 300, "width": 50, "height": 50}]  # Column 4
 ]
 #1200 x 1920, 125%
-COLUMNS_LARGE_125 = [
+POS_1200_1920_125 = [
     [{"left": 835, "top": 262, "width": 50, "height": 50}, {"left": 835, "top": 312, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 262, "width": 50, "height": 50}, {"left": 935, "top": 312, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 262, "width": 50, "height": 50}, {"left": 1035, "top": 312, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 262, "width": 50, "height": 50}, {"left": 1135, "top": 312, "width": 50, "height": 50}]  # Column 4
 ]
 #1080 x 1920, 100%
-COLUMNS_SMALL_100 = [
+POS_1080_1920_100 = [
     [{"left": 858, "top": 217, "width": 50, "height": 50}, {"left": 858, "top": 257, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 217, "width": 50, "height": 50}, {"left": 938, "top": 257, "width": 50, "height": 50}], # Column 2
     [{"left": 1018, "top": 217, "width": 50, "height": 50}, {"left": 1018, "top": 257, "width": 50, "height": 50}], # Column 3
     [{"left": 1098, "top": 217, "width": 50, "height": 50}, {"left": 1098, "top": 257, "width": 50, "height": 50}]  # Column 4
 ]
 #1200 x 1920, 100%
-COLUMNS_LARGE_100 = [
+POS_1200_1920_100 = [
     [{"left": 858, "top": 229, "width": 50, "height": 50}, {"left": 858, "top": 269, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 229, "width": 50, "height": 50}, {"left": 938, "top": 269, "width": 50, "height": 50}], # Column 2
     [{"left": 1018, "top": 229, "width": 50, "height": 50}, {"left": 1018, "top": 269, "width": 50, "height": 50}], # Column 3
     [{"left": 1098, "top": 229, "width": 50, "height": 50}, {"left": 1098, "top": 269, "width": 50, "height": 50}]  # Column 4
 ]
+
+# thanks Wormcave for this resolution
+POS_2560_1440_100 = [ # the placements of the symbols
+    [{"left": 1178, "top": 253, "width": 50, "height": 50}, {"left": 1178, "top": 293, "width": 50, "height": 50}], #column 1
+    [{"left": 1258, "top": 253, "width": 50, "height": 50}, {"left": 1258, "top": 293, "width": 50, "height": 50}], # column 2
+    [{"left": 1338, "top": 253, "width": 50, "height": 50}, {"left": 1338, "top": 293, "width": 50, "height": 50}], # column 3
+    [{"left": 1418, "top": 253, "width": 50, "height": 50}, {"left": 1418, "top": 293, "width": 50, "height": 50}] # column 4
+]
+
+# thanks Wormcave for this resolution
+POS_2560_1440_125 = [ # the placements of the symbols
+    [{"left": 1155, "top": 286, "width": 50, "height": 50},{"left": 1155, "top": 336, "width": 50, "height": 50}], #column 1
+    [{"left": 1255, "top": 286, "width": 50, "height": 50}, {"left": 1255, "top": 336, "width": 50, "height": 50}], # column 2
+    [{"left": 1355, "top": 286, "width": 50, "height": 50}, {"left": 1355, "top": 336, "width": 50, "height": 50}], # column 3
+    [{"left": 1455, "top": 286, "width": 50, "height": 50}, {"left": 1455, "top": 336, "width": 50, "height": 50}] # column 4
+]
+positions100 = [POS_1080_1920_100, POS_1200_1920_100, POS_2560_1440_100]
+positions125 = [POS_1080_1920_125, POS_1200_1920_125, POS_2560_1440_125]
 class RitualCastListener:  
     def __init__(self):
         self.running = False
@@ -219,23 +237,13 @@ class RitualCastListener:
                     time.sleep(0.5)
 
     def run(self, basepath, ping_ms, resolution, scale):
-        
-        if resolution == 0:
-            if scale == 0:
-                filepath = os.path.join(basepath, '100')
-                column_regions = COLUMNS_SMALL_100
-            else: #scale == 1
-                filepath = os.path.join(basepath, '125')
-                column_regions = COLUMNS_SMALL_125
-            
-        else: # (resolution == 1)
-            if scale == 0: 
-                filepath = os.path.join(basepath, '100')
-                column_regions = COLUMNS_LARGE_100
-            else: #scale == 1
-                filepath = os.path.join(basepath, '125')
 
-                column_regions = COLUMNS_LARGE_125
+        if scale == 0: #scale 100
+            filepath = os.path.join(basepath, '100')
+            column_regions = positions100[resolution]
+        elif scale == 1:
+            filepath = os.path.join(basepath, '125')
+            column_regions = positions125[resolution]
             
         
         self.flat_regions = [r for col in column_regions for r in col]
