@@ -278,7 +278,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 615, 1038))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 625, 1038))
         self.gridLayout_19 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.MotifHotkeyLabel = QLabel(self.scrollAreaWidgetContents_3)
@@ -513,7 +513,7 @@ class Ui_MainWindow(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 562, 1364))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 625, 1364))
         self.gridLayout_21 = QGridLayout(self.scrollAreaWidgetContents_6)
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.label_117 = QLabel(self.scrollAreaWidgetContents_6)
@@ -851,7 +851,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 495, 705))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 625, 705))
         self.scrollAreaWidgetContents_2.setMaximumSize(QSize(16777215, 16777212))
         self.gridLayout_17 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_17.setObjectName(u"gridLayout_17")
@@ -1078,7 +1078,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 392, 572))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 633, 587))
         self.gridLayout_15 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
@@ -3547,13 +3547,13 @@ class Ui_MainWindow(object):
         self.RelentlessHuntLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Relentless Hunt</span></p></body></html>", None))
         self.RelentlessHuntHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to do relentless hunt", None))
         self.MayhemHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to do mayhem", None))
-        self.label_134.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
+        self.label_134.setText(QCoreApplication.translate("MainWindow", u"Automatically does Ankle Cutter when you press the hotkey", None))
         self.FlowStateKeybind_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Flow state keybind", None))
         self.AnkleCutterHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
         self.RisingStarHotkey.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Key you want to press to do rising star", None))
         self.MayhemHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
         self.RisingStarHotkeyLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Hotkey</span></p></body></html>", None))
-        self.label_133.setText(QCoreApplication.translate("MainWindow", u"Automatically opens the chat and says mb all whenever you press the hotkey", None))
+        self.label_133.setText(QCoreApplication.translate("MainWindow", u"Automatically does Rising Star when you press the hotkey", None))
         self.FlowStateKeybind_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Flow state keybind", None))
         self.label_138.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Flow state</span></p></body></html>", None))
         self.progressionButton.setText("")
@@ -3572,6 +3572,8 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"pigyboi", None))
         self.label_73.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:10pt; color:#808080;\">or join </span><a href=\"https://discord.com/invite/Wg5ccj6vE6\"><span style=\" font-size:10pt; text-decoration: underline; color:#99ebff;\">this discord server</span></a></p></body></html>", None))
     # retranslateUi
+
+
 
 
 
