@@ -32,7 +32,6 @@ class AirListener:
         start_time = time.time()
         while time.time() - start_time < 0.5:
             if self.click_detected:
-                print("Mouse click detected, pressing 'q'")
                 time.sleep(0.07)
                 self.keyboard_controller.press('q')
                 self.keyboard_controller.release('q')
@@ -58,7 +57,6 @@ class AirListener:
         
 
     def stop(self):
-        print("Stopping listeners...")
         self.running = False
         if self.mouse_listener:
             self.mouse_listener.stop()

@@ -14,16 +14,6 @@ class GankPingListener:
 
     def stack(self, webhook_url, message, takeimage, username, avatar_url, hotkey, monitornumber):
         def send_discord_message(webhook_url, message, takeimage=False, username=None, avatar_url=None):
-            """
-            Send a Discord webhook message with optional image, username, and avatar_url
-            
-            Parameters:
-                webhook_url (str): Discord webhook URL
-                message (str): Message content
-                takeimage (bool): Whether to take and attach a screenshot
-                username (str, optional): Custom username for the webhook
-                avatar_url (str, optional): HTTPS URL for the webhook avatar
-            """
             # Prepare the payload
             payload = {
                 "content": message,
@@ -67,7 +57,7 @@ class GankPingListener:
                     )
                 
                 if response.status_code in [200, 204]:
-                    print("Message sent successfully!")
+                    print(f"Message sent successfully with status code {response.status_code}")
                 else:
                     print(f"Failed to send message. Status code: {response.status_code}")
                     print(f"Response content: {response.text}")
@@ -85,16 +75,14 @@ class GankPingListener:
 
     def run(self, webhook_url, message, username, avatar_url, takeimage, hotkey, monitornumber):
         print('checking')
-        """Start the macro thread"""
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(webhook_url=webhook_url, hotkey=hotkey, message=message, username=username, avatar_url=avatar_url, takeimage=takeimage, monitornumber=monitornumber)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
     def stop(self):
-        """Stop the macro thread"""
         self.running = False
         keyboard.unhook(self.hotkey)  # Remove all hotkeys when stopping
         if self.thread and self.thread.is_alive():

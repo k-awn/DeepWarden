@@ -251,6 +251,11 @@ class Ui_MainWindow(object):
         self.screenResolution.addItem("")
         self.screenResolution.addItem("")
         self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
+        self.screenResolution.addItem("")
         self.screenResolution.setObjectName(u"screenResolution")
 
         self.gridLayout_6.addWidget(self.screenResolution, 3, 1, 1, 1)
@@ -273,7 +278,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 625, 1038))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 615, 1038))
         self.gridLayout_19 = QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.MotifHotkeyLabel = QLabel(self.scrollAreaWidgetContents_3)
@@ -508,7 +513,7 @@ class Ui_MainWindow(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 625, 1364))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 562, 1364))
         self.gridLayout_21 = QGridLayout(self.scrollAreaWidgetContents_6)
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.label_117 = QLabel(self.scrollAreaWidgetContents_6)
@@ -846,7 +851,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 625, 705))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 495, 705))
         self.scrollAreaWidgetContents_2.setMaximumSize(QSize(16777215, 16777212))
         self.gridLayout_17 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_17.setObjectName(u"gridLayout_17")
@@ -3164,7 +3169,7 @@ class Ui_MainWindow(object):
 
         self.label_144 = QLabel(self.contacts_frame)
         self.label_144.setObjectName(u"label_144")
-        self.label_144.setOpenExternalLinks(False)
+        self.label_144.setOpenExternalLinks(True)
 
         self.horizontalLayout.addWidget(self.label_144)
 
@@ -3183,6 +3188,7 @@ class Ui_MainWindow(object):
 
         self.label_73 = QLabel(self.contacts_frame)
         self.label_73.setObjectName(u"label_73")
+        self.label_73.setOpenExternalLinks(True)
 
         self.horizontalLayout.addWidget(self.label_73)
 
@@ -3234,9 +3240,14 @@ class Ui_MainWindow(object):
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Automatically activates all ritual casts.</p></body></html>", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt;\">Mantra Roll Tech</span></p></body></html>", None))
         self.label_44.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">Screen Scale</span></p></body></html>", None))
-        self.screenResolution.setItemText(0, QCoreApplication.translate("MainWindow", u"1920 x 1080", None))
-        self.screenResolution.setItemText(1, QCoreApplication.translate("MainWindow", u"1920 x 1200", None))
-        self.screenResolution.setItemText(2, QCoreApplication.translate("MainWindow", u"2560 x 1400", None))
+        self.screenResolution.setItemText(0, QCoreApplication.translate("MainWindow", u"1128 x 634", None))
+        self.screenResolution.setItemText(1, QCoreApplication.translate("MainWindow", u"1600x900", None))
+        self.screenResolution.setItemText(2, QCoreApplication.translate("MainWindow", u"1600x1200", None))
+        self.screenResolution.setItemText(3, QCoreApplication.translate("MainWindow", u"1920 x 1080", None))
+        self.screenResolution.setItemText(4, QCoreApplication.translate("MainWindow", u"1920 x 1200", None))
+        self.screenResolution.setItemText(5, QCoreApplication.translate("MainWindow", u"2560x1080", None))
+        self.screenResolution.setItemText(6, QCoreApplication.translate("MainWindow", u"2560 x 1440", None))
+        self.screenResolution.setItemText(7, QCoreApplication.translate("MainWindow", u"3440x1440", None))
 
         self.screenResolution.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Your computer's screen resolution", None))
         self.screenScale.setItemText(0, QCoreApplication.translate("MainWindow", u"100%", None))
@@ -3589,6 +3600,10 @@ class Ui_MainWindow(object):
 
 
 
+
+
+
+
         print('importing macros')
         from macros.rolling import rollCrit, rollM1, rollParry
         from macros.training import autocharisma, autofortitude, autoagility, autowillpower
@@ -3618,7 +3633,7 @@ class Ui_MainWindow(object):
             elif self.menuBar.isHidden():
                 self.menuBar.show()
         self.menuButton.clicked.connect(changeBarVis)
-
+        self.screenResolution.setCurrentIndex(3)
         def set_pos(element):
                coords = get_pos()
                element.setPlainText(str(coords[0]) + ' ' + str(coords[1]))
@@ -4073,12 +4088,11 @@ class Ui_MainWindow(object):
                         elif self.RunToggle._is_checked == 0:
                                show_toast(title='Macro disabled.')
                 else:
-                       print('no')
+                       print('notif would have been played if not disabled')
         self.RunToggle.toggled.connect(notifs)
         def toggling():
                 def on_key(event):
                         if event.name == self.plainTextEdit_17.toPlainText():
-                                print('toggling the toggle')
                                 if self.RunToggle._is_checked == 2:
                                         self.RunToggle.setChecked(False)
                                 elif self.RunToggle._is_checked == 0:
@@ -4096,8 +4110,7 @@ class Ui_MainWindow(object):
                         t1.daemon = True
                         t1.start()
                 elif self.RunKeybindToggle._is_checked == 0:
-                        print('disabling!')
-                        # Unregister all keyboard handlers when stopping
+                        print('disabling hotkeys')
                         keyboard.unhook_all()
 
         self.RunKeybindToggle.toggled.connect(startStopToggling)

@@ -48,17 +48,6 @@ class AutoSellListener:
                     time.sleep(0.01)
                     win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP if is_mouse_swapped() else win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
                     time.sleep(0.25)
-
-
-
-
-
-
-
-
-                
-
-
         # Register the key press handler
         self.hotkey = keyboard.on_press(on_key)
 
@@ -68,16 +57,16 @@ class AutoSellListener:
         print('checking')
 
         repetitions = int(repetitions)
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(keybind=keybind, repetitions=repetitions, itemcoordinates=itemcoordinates, confirmationcoordinates=confirmationcoordinates)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         keyboard.unhook(self.hotkey)  # Remove all hotkeys when stopping
         if self.thread and self.thread.is_alive():

@@ -124,7 +124,7 @@ class autoCharismaListener:
             print("\nScript stopped.")
 
     def run(self):
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
             print('Starting charisma listener...')
             self.running = True
@@ -132,7 +132,7 @@ class autoCharismaListener:
             self.thread.start()
 
     def stop(self):
-        """Stop the macro thread"""
+        
         if self.running:
             print('Stopping charisma listener...')
             self.running = False

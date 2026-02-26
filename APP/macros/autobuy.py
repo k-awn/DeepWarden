@@ -64,16 +64,16 @@ class AutoBuyListener:
         startcoordinates = startcoordinates.split(' ')
         endcoordinates = endcoordinates.split(' ')
         submitcoordinates = submitcoordinates.split(' ')
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(keybind=keybind, startcoordinates=startcoordinates, endcoordinates=endcoordinates, submitcoordinates=submitcoordinates)  # Just call stack directly
             while self.running:  # Keep the thread alive
                 time.sleep(0.1)  # Add a small sleep to prevent CPU hogging
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         keyboard.unhook(self.hotkey)  # Remove all hotkeys when stopping
         if self.thread and self.thread.is_alive():

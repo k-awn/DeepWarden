@@ -38,9 +38,9 @@ class flashMapListener:
 
     def run(self):
         print('checking')
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.thread = threading.Thread(target=self.stack)
             self.thread.daemon = True
@@ -48,7 +48,7 @@ class flashMapListener:
             
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         # Unhook all keyboard hooks
         if self.hotkey:

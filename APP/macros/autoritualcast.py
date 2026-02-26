@@ -15,35 +15,35 @@ MAX_SCAN_DURATION = 1.0    # Hard limit for scanning before forcing execution
 DEFAULT_PING = 100
 
 #1080 x 1920, 125% 
-POS_1080_1920_125 = [
+POS_1920_1080_125 = [
     [{"left": 835, "top": 250, "width": 50, "height": 50}, {"left": 835, "top": 300, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 250, "width": 50, "height": 50}, {"left": 935, "top": 300, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 250, "width": 50, "height": 50}, {"left": 1035, "top": 300, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 250, "width": 50, "height": 50}, {"left": 1135, "top": 300, "width": 50, "height": 50}]  # Column 4
 ]
 #1200 x 1920, 125%
-POS_1200_1920_125 = [
+POS_1920_1200_125 = [
     [{"left": 835, "top": 262, "width": 50, "height": 50}, {"left": 835, "top": 312, "width": 50, "height": 50}], # Column 1
     [{"left": 935, "top": 262, "width": 50, "height": 50}, {"left": 935, "top": 312, "width": 50, "height": 50}], # Column 2
     [{"left": 1035, "top": 262, "width": 50, "height": 50}, {"left": 1035, "top": 312, "width": 50, "height": 50}], # Column 3
     [{"left": 1135, "top": 262, "width": 50, "height": 50}, {"left": 1135, "top": 312, "width": 50, "height": 50}]  # Column 4
 ]
 #1080 x 1920, 100%
-POS_1080_1920_100 = [
+POS_1920_1080_100 = [
     [{"left": 858, "top": 217, "width": 50, "height": 50}, {"left": 858, "top": 257, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 217, "width": 50, "height": 50}, {"left": 938, "top": 257, "width": 50, "height": 50}], # Column 2
     [{"left": 1018, "top": 217, "width": 50, "height": 50}, {"left": 1018, "top": 257, "width": 50, "height": 50}], # Column 3
     [{"left": 1098, "top": 217, "width": 50, "height": 50}, {"left": 1098, "top": 257, "width": 50, "height": 50}]  # Column 4
 ]
 #1200 x 1920, 100%
-POS_1200_1920_100 = [
+POS_1920_1200_100 = [
     [{"left": 858, "top": 229, "width": 50, "height": 50}, {"left": 858, "top": 269, "width": 50, "height": 50}], # Column 1
     [{"left": 938, "top": 229, "width": 50, "height": 50}, {"left": 938, "top": 269, "width": 50, "height": 50}], # Column 2
     [{"left": 1018, "top": 229, "width": 50, "height": 50}, {"left": 1018, "top": 269, "width": 50, "height": 50}], # Column 3
     [{"left": 1098, "top": 229, "width": 50, "height": 50}, {"left": 1098, "top": 269, "width": 50, "height": 50}]  # Column 4
 ]
 
-# thanks Wormcave for this resolution
+# thanks Wormcave for these resolutions
 POS_2560_1440_100 = [ # the placements of the symbols
     [{"left": 1178, "top": 253, "width": 50, "height": 50}, {"left": 1178, "top": 293, "width": 50, "height": 50}], #column 1
     [{"left": 1258, "top": 253, "width": 50, "height": 50}, {"left": 1258, "top": 293, "width": 50, "height": 50}], # column 2
@@ -51,15 +51,169 @@ POS_2560_1440_100 = [ # the placements of the symbols
     [{"left": 1418, "top": 253, "width": 50, "height": 50}, {"left": 1418, "top": 293, "width": 50, "height": 50}] # column 4
 ]
 
-# thanks Wormcave for this resolution
 POS_2560_1440_125 = [ # the placements of the symbols
     [{"left": 1155, "top": 286, "width": 50, "height": 50},{"left": 1155, "top": 336, "width": 50, "height": 50}], #column 1
     [{"left": 1255, "top": 286, "width": 50, "height": 50}, {"left": 1255, "top": 336, "width": 50, "height": 50}], # column 2
     [{"left": 1355, "top": 286, "width": 50, "height": 50}, {"left": 1355, "top": 336, "width": 50, "height": 50}], # column 3
     [{"left": 1455, "top": 286, "width": 50, "height": 50}, {"left": 1455, "top": 336, "width": 50, "height": 50}] # column 4
 ]
-positions100 = [POS_1080_1920_100, POS_1200_1920_100, POS_2560_1440_100]
-positions125 = [POS_1080_1920_125, POS_1200_1920_125, POS_2560_1440_125]
+
+
+
+
+
+
+
+
+
+POS_1600_900_125 = [ # the placements of the symbols
+       [{"left": 675, "top": 232, "width": 50, "height": 50},
+      {"left": 675, "top": 282, "width": 50, "height": 50}], #column 1
+
+    [{"left": 775, "top": 232, "width": 50, "height": 50}, 
+     {"left": 775, "top": 282, "width": 50, "height": 50}], # column 2
+
+    [{"left": 875, "top": 232, "width": 50, "height": 50}, 
+     {"left": 875, "top": 282, "width": 50, "height": 50}], # column 3
+
+    [{"left": 975, "top": 232, "width": 50, "height": 50}, 
+     {"left": 975, "top": 282, "width": 50, "height": 50}] # column 4
+]
+
+POS_1600_900_100 = [ # the placements of the symbols
+        [{"left": 698, "top": 199, "width": 50, "height": 50},
+      {"left": 698, "top": 239, "width": 50, "height": 50}], #column 1
+
+    [{"left": 778, "top": 199, "width": 50, "height": 50}, 
+     {"left": 778, "top": 239, "width": 50, "height": 50}], # column 2
+
+    [{"left": 858, "top": 199, "width": 50, "height": 50}, 
+     {"left": 858, "top": 239, "width": 50, "height": 50}], # column 3
+
+   [ {"left": 938, "top": 199, "width": 50, "height": 50}, 
+     {"left": 938, "top": 239, "width": 50, "height": 50}] # column 4
+]
+
+POS_1128_634_100 = [ # the placements of the symbols
+      [{"left": 462, "top": 173, "width": 50, "height": 50},
+      {"left": 462, "top": 213, "width": 50, "height": 50}], #column 1
+
+    [{"left": 542, "top": 173, "width": 50, "height": 50}, 
+     {"left": 542, "top": 213, "width": 50, "height": 50}], # column 2
+
+    [{"left": 622, "top": 173, "width": 50, "height": 50}, 
+     {"left": 622, "top": 213, "width": 50, "height": 50}], # column 3
+
+    [{"left": 702, "top": 173, "width": 50, "height": 50}, 
+     {"left": 702, "top": 213, "width": 50, "height": 50}] # column 4
+] 
+# According to Wormcave, there is no 125 option so we will leave it as is for now
+POS_1128_634_125 = [ # the placements of the symbols
+      [{"left": 462, "top": 173, "width": 50, "height": 50},
+      {"left": 462, "top": 213, "width": 50, "height": 50}], #column 1
+
+    [{"left": 542, "top": 173, "width": 50, "height": 50}, 
+     {"left": 542, "top": 213, "width": 50, "height": 50}], # column 2
+
+    [{"left": 622, "top": 173, "width": 50, "height": 50}, 
+     {"left": 622, "top": 213, "width": 50, "height": 50}], # column 3
+
+    [{"left": 702, "top": 173, "width": 50, "height": 50}, 
+     {"left": 702, "top": 213, "width": 50, "height": 50}] # column 4
+] 
+
+POS_1600_1200_125 = [ # the placements of the symbols
+       [{"left": 675, "top": 262, "width": 50, "height": 50},
+      {"left": 675, "top": 312, "width": 50, "height": 50}], #column 1
+
+    [{"left": 775, "top": 262, "width": 50, "height": 50}, 
+     {"left": 775, "top": 312, "width": 50, "height": 50}], # column 2
+
+    [{"left": 875, "top": 262, "width": 50, "height": 50}, 
+     {"left": 875, "top": 312, "width": 50, "height": 50}], # column 3
+
+    [{"left": 975, "top": 262, "width": 50, "height": 50}, 
+     {"left": 975, "top": 312, "width": 50, "height": 50}] # column 4
+
+]
+
+POS_1600_1200_100 = [ # the placements of the symbols
+       [{"left": 698, "top": 229, "width": 50, "height": 50},
+      {"left": 698, "top": 269, "width": 50, "height": 50}], #column 1
+
+    [{"left": 778, "top": 229, "width": 50, "height": 50}, 
+     {"left": 778, "top": 269, "width": 50, "height": 50}], # column 2
+
+    [{"left": 858, "top": 229, "width": 50, "height": 50}, 
+     {"left": 858, "top": 269, "width": 50, "height": 50}], # column 3
+
+    [{"left": 938, "top": 229, "width": 50, "height": 50}, 
+     {"left": 938, "top": 269, "width": 50, "height": 50}] # column 4
+
+]
+
+POS_3440_1440_125 = [ # the placements of the symbols
+     [ {"left": 1595, "top": 286, "width": 50, "height": 50},
+      {"left": 1595, "top": 336, "width": 50, "height": 50}], #column 1
+
+    [{"left": 1695, "top": 286, "width": 50, "height": 50}, 
+     {"left": 1695, "top": 336, "width": 50, "height": 50}], # column 2
+
+   [ {"left": 1795, "top": 286, "width": 50, "height": 50}, 
+     {"left": 1795, "top": 336, "width": 50, "height": 50}], # column 3
+
+    [{"left": 1895, "top": 286, "width": 50, "height": 50}, 
+     {"left": 1895, "top": 336, "width": 50, "height": 50}] # column 4
+]
+
+
+POS_3440_1440_100 = [ # the placements of the symbols
+      [{"left": 1618, "top": 253, "width": 50, "height": 50},
+      {"left": 1618, "top": 293, "width": 50, "height": 50}], #column 1
+
+    [{"left": 1698, "top": 253, "width": 50, "height": 50}, 
+     {"left": 1698, "top": 293, "width": 50, "height": 50}], # column 2
+
+    [{"left": 1778, "top": 253, "width": 50, "height": 50}, 
+     {"left": 1778, "top": 293, "width": 50, "height": 50}], # column 3
+
+    [{"left": 1858, "top": 253, "width": 50, "height": 50}, 
+     {"left": 1858, "top": 293, "width": 50, "height": 50}] # column 4
+]
+
+POS_2560_1080_125 = [ # the placements of the symbols
+      [{"left": 1155, "top": 250, "width": 50, "height": 50},
+      {"left": 1155, "top": 300, "width": 50, "height": 50}], #column 1
+
+      [{"left": 1255, "top": 250, "width": 50, "height": 50}, 
+     {"left": 1255, "top": 300, "width": 50, "height": 50}], # column 2
+
+    [{"left": 1355, "top": 250, "width": 50, "height": 50}, 
+     {"left": 1355, "top": 300, "width": 50, "height": 50}], # column 3
+
+    [{"left": 1455, "top": 250, "width": 50, "height": 50}, 
+     {"left": 1455, "top": 300, "width": 50, "height": 50}] # column 4
+]
+
+POS_2560_1080_100 = [ # the placements of the symbols
+      [{"left": 1178, "top": 217, "width": 50, "height": 50},
+      {"left": 1178, "top": 257, "width": 50, "height": 50}], #column 1
+
+    [{"left": 1258, "top": 217, "width": 50, "height": 50}, 
+     {"left": 1258, "top": 257, "width": 50, "height": 50}], # column 2
+
+    [{"left": 1338, "top": 217, "width": 50, "height": 50}, 
+     {"left": 1338, "top": 257, "width": 50, "height": 50}], # column 3
+
+    [{"left": 1418, "top": 217, "width": 50, "height": 50}, 
+     {"left": 1418, "top": 257, "width": 50, "height": 50}] # column 4
+]
+
+positions100 = [POS_1128_634_100, POS_1600_900_100, POS_1600_1200_100, POS_1920_1080_100, POS_1920_1200_100, POS_2560_1080_100, POS_2560_1440_100, POS_3440_1440_100]
+positions125 = [POS_1128_634_125, POS_1600_900_125, POS_1600_1200_125, POS_1920_1080_125, POS_1920_1200_125, POS_2560_1080_125, POS_2560_1440_125, POS_3440_1440_125]
+
+
+
 class RitualCastListener:  
     def __init__(self):
         self.running = False

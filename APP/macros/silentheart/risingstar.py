@@ -47,9 +47,9 @@ class risingStarListener:
         
 
     def run(self, keybind, flowstatekeybind):
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(keybind=keybind, flowstatekeybind=flowstatekeybind)
             while self.running:
@@ -57,7 +57,7 @@ class risingStarListener:
                 
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         keyboard.unhook(self.hotkey) 
         if self.thread and self.thread.is_alive():

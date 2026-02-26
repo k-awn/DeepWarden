@@ -29,9 +29,9 @@ class rollM1Listener:
         
 
     def run(self, keybind):
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(keybind=keybind)  # Just call stack directly
             while self.running:  # Keep the thread alive
@@ -39,7 +39,7 @@ class rollM1Listener:
                 
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         if self.hotkey is not None:
             keyboard.unhook(self.hotkey) 

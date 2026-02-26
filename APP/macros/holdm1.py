@@ -72,16 +72,16 @@ class M1Listener:
         print('checking')
         if len(key) != 1:
             key = '`'
-        """Start the macro thread"""
+        
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.thread = threading.Thread(target=self.macro_thread, args=key)
             self.thread.daemon = True
             self.thread.start()
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         if self.thread and self.thread.is_alive():
             self.thread.join(timeout=1.0)  # Wait up to 1 second for the thread to stop

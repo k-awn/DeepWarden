@@ -77,7 +77,7 @@ class DynamicUppercutListener:
     def run(self, toRoll):
         print('checking')
         if not self.thread or not self.thread.is_alive():
-            print('starting!!')
+            print('starting ' + (__file__).split("\\")[-1])
             self.running = True
             self.stack(toRoll=toRoll)
             while self.running:

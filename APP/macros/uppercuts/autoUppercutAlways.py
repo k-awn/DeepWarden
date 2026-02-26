@@ -65,7 +65,7 @@ class UppercutListener:
         print('checking')
         try:
             if not self.thread or not self.thread.is_alive():
-                print('starting!!')
+                print('starting ' + (__file__).split("\\")[-1])
                 self.running = True
                 self.stack()
                 while self.running:

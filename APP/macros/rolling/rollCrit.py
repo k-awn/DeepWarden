@@ -18,9 +18,9 @@ class rollCritListener:
         
 
     def run(self):
-            """Start the macro thread"""
+            
             if not self.thread or not self.thread.is_alive():
-                print('starting!!')
+                print('starting ' + (__file__).split("\\")[-1])
                 self.running = True
                 self.thread = threading.Thread(target=self.stack)
                 self.thread.daemon = True
@@ -30,7 +30,7 @@ class rollCritListener:
                 
 
     def stop(self):
-        """Stop the macro thread"""
+        
         self.running = False
         if self.hotkey is not None:
             keyboard.unhook(self.hotkey)
